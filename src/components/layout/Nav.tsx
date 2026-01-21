@@ -1,10 +1,14 @@
 import { Link } from 'react-router-dom'
+import { useLanguage } from '@/i18n'
+import LanguageSelector from '@/components/LanguageSelector'
 
 interface NavProps {
   isArticlePage?: boolean
 }
 
 export default function Nav({ isArticlePage = false }: NavProps) {
+  const { t } = useLanguage()
+
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
     if (isArticlePage) return // Let the link navigate to home
     e.preventDefault()
@@ -28,7 +32,7 @@ export default function Nav({ isArticlePage = false }: NavProps) {
                 href={isArticlePage ? "/#sequence" : "#sequence"}
                 onClick={(e) => scrollToSection(e, 'sequence')}
               >
-                The Sequence
+                {t.nav.sequence}
               </a>
             </li>
             <li>
@@ -36,7 +40,7 @@ export default function Nav({ isArticlePage = false }: NavProps) {
                 href={isArticlePage ? "/#topics" : "#topics"}
                 onClick={(e) => scrollToSection(e, 'topics')}
               >
-                Topics
+                {t.nav.topics}
               </a>
             </li>
             <li>
@@ -44,7 +48,7 @@ export default function Nav({ isArticlePage = false }: NavProps) {
                 href={isArticlePage ? "/#library" : "#library"}
                 onClick={(e) => scrollToSection(e, 'library')}
               >
-                Featured
+                {t.nav.featured}
               </a>
             </li>
             <li>
@@ -52,7 +56,7 @@ export default function Nav({ isArticlePage = false }: NavProps) {
                 href={isArticlePage ? "/#posts" : "#posts"}
                 onClick={(e) => scrollToSection(e, 'posts')}
               >
-                Archive
+                {t.nav.posts}
               </a>
             </li>
             <li>
@@ -60,10 +64,11 @@ export default function Nav({ isArticlePage = false }: NavProps) {
                 href={isArticlePage ? "/#subscribe" : "#subscribe"}
                 onClick={(e) => scrollToSection(e, 'subscribe')}
               >
-                Subscribe
+                {t.nav.subscribe}
               </a>
             </li>
           </ul>
+          <LanguageSelector />
         </div>
       </div>
     </nav>

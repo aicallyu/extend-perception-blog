@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { articles } from '@/data/articles'
+import { useLanguage } from '@/i18n'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Posts() {
   const sectionRef = useRef<HTMLElement>(null)
+  const { t } = useLanguage()
 
   useEffect(() => {
     if (!sectionRef.current) return
@@ -61,7 +63,7 @@ export default function Posts() {
             className="sequence-label font-mono text-xs tracking-[0.25em] uppercase mb-5 flex items-center gap-4"
             style={{ color: 'var(--accent-cyan)' }}
           >
-            ALL POSTS
+            {t.posts.label}
           </div>
           <h2
             className="sequence-title font-display text-[52px] font-extrabold tracking-tight"
@@ -73,7 +75,7 @@ export default function Posts() {
               letterSpacing: '-0.02em',
             }}
           >
-            The full archive
+            {t.posts.title}
           </h2>
         </div>
 

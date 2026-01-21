@@ -1,18 +1,20 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useLanguage } from '@/i18n'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const steps = [
-  { number: '01', icon: '👁', title: 'PERCEPTION', desc: 'What you see', active: true },
-  { number: '02', icon: '🧠', title: 'INTERPRETATION', desc: 'What you think it means', active: false },
-  { number: '03', icon: '⚖️', title: 'DECISION', desc: 'What you choose', active: false },
-  { number: '04', icon: '⚡', title: 'ACTION', desc: 'What you do', active: false },
-]
-
 export default function Sequence() {
   const sectionRef = useRef<HTMLElement>(null)
+  const { t } = useLanguage()
+
+  const steps = [
+    { number: '01', icon: '👁', title: t.sequence.steps.perception.title, desc: t.sequence.steps.perception.desc, active: true },
+    { number: '02', icon: '🧠', title: t.sequence.steps.interpretation.title, desc: t.sequence.steps.interpretation.desc, active: false },
+    { number: '03', icon: '⚖️', title: t.sequence.steps.decision.title, desc: t.sequence.steps.decision.desc, active: false },
+    { number: '04', icon: '⚡', title: t.sequence.steps.action.title, desc: t.sequence.steps.action.desc, active: false },
+  ]
 
   useEffect(() => {
     if (!sectionRef.current) return
@@ -82,7 +84,7 @@ export default function Sequence() {
             className="sequence-label font-mono text-xs tracking-[0.25em] uppercase mb-5 flex items-center gap-4"
             style={{ color: 'var(--accent-cyan)' }}
           >
-            THE HUMAN DECISION SEQUENCE
+            {t.sequence.label}
           </div>
           <h2
             className="sequence-title font-display text-[52px] font-extrabold tracking-tight"
@@ -94,7 +96,7 @@ export default function Sequence() {
               letterSpacing: '-0.02em',
             }}
           >
-            Where most fail. Where we begin.
+            {t.sequence.title}
           </h2>
         </div>
 
@@ -146,7 +148,7 @@ export default function Sequence() {
                     animation: 'pulseGlow 2s ease-in-out infinite',
                   }}
                 >
-                  WE INTERVENE HERE
+                  {t.sequence.intervene}
                 </div>
               )}
 

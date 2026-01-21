@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
 import { getLatestArticle } from '@/data/articles'
+import { useLanguage } from '@/i18n'
 
 export default function FeaturedPost() {
   const article = getLatestArticle()
+  const { t } = useLanguage()
 
   return (
     <section className="featured-section py-[100px_0_60px]">
@@ -18,7 +20,7 @@ export default function FeaturedPost() {
               animation: 'pulse 2s ease-in-out infinite',
             }}
           />
-          LATEST POST
+          {t.featured.label}
         </div>
 
         <Link
@@ -92,7 +94,7 @@ export default function FeaturedPost() {
               className="featured-cta inline-flex items-center gap-2.5 mt-8 font-display text-sm font-bold tracking-[0.1em] uppercase transition-all duration-300"
               style={{ color: 'var(--accent-cyan)' }}
             >
-              Read Article
+              {t.featured.cta}
               <span
                 className="arrow w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-[var(--accent-cyan)] group-hover:text-black group-hover:translate-x-1"
                 style={{

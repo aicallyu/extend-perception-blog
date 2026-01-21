@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useLanguage } from '@/i18n'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Subscribe() {
   const sectionRef = useRef<HTMLElement>(null)
   const [email, setEmail] = useState('')
+  const { t } = useLanguage()
 
   useEffect(() => {
     if (!sectionRef.current) return
@@ -72,14 +74,14 @@ export default function Subscribe() {
             <h2
               className="subscribe-title font-display text-[52px] font-black mb-6"
             >
-              GET <span className="gradient-text">UNBLINDED</span>
+              {t.subscribe.title} <span className="gradient-text">{t.subscribe.titleHighlight}</span>
             </h2>
 
             <p
               className="subscribe-desc text-[19px] mb-[52px] max-w-[520px] mx-auto"
               style={{ color: 'var(--text-secondary)' }}
             >
-              New posts delivered when they're ready. No spam. No fluff. Just signal.
+              {t.subscribe.subtitle}
             </p>
 
             <form
@@ -89,7 +91,7 @@ export default function Subscribe() {
               <input
                 type="email"
                 className="subscribe-input flex-1 min-w-[300px] py-[22px] px-[30px] rounded-[14px] font-main text-base outline-none transition-all duration-400"
-                placeholder="your@email.com"
+                placeholder={t.subscribe.placeholder}
                 required
                 value={email}
                 onChange={e => setEmail(e.target.value)}
@@ -100,7 +102,7 @@ export default function Subscribe() {
                 }}
               />
               <button type="submit" className="btn btn-primary subscribe-btn py-[22px] px-11">
-                SUBSCRIBE
+                {t.subscribe.button}
               </button>
             </form>
 

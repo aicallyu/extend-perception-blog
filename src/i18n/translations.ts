@@ -3,12 +3,15 @@ export type Language = 'en' | 'de' | 'es'
 export interface Translations {
   // Navigation
   nav: {
+    sequence: string
     topics: string
+    featured: string
     posts: string
     subscribe: string
   }
   // Hero Section
   hero: {
+    label: string
     tagline: string
     title: {
       line1: string
@@ -19,14 +22,21 @@ export interface Translations {
     cta: {
       explore: string
       subscribe: string
+      blog: string
+      sequence: string
     }
   }
   // Sequence Section
   sequence: {
-    signal: string
-    filter: string
-    perception: string
-    tagline: string
+    label: string
+    title: string
+    intervene: string
+    steps: {
+      perception: { title: string; desc: string }
+      interpretation: { title: string; desc: string }
+      decision: { title: string; desc: string }
+      action: { title: string; desc: string }
+    }
   }
   // Quote Section
   quote: {
@@ -35,6 +45,7 @@ export interface Translations {
   }
   // Topics Section
   topics: {
+    label: string
     title: string
     subtitle: string
   }
@@ -59,6 +70,7 @@ export interface Translations {
   }
   // Posts Section
   posts: {
+    label: string
     title: string
     readMore: string
   }
@@ -96,35 +108,46 @@ export interface Translations {
 export const translations: Record<Language, Translations> = {
   en: {
     nav: {
+      sequence: 'The Sequence',
       topics: 'Topics',
-      posts: 'Posts',
+      featured: 'Featured',
+      posts: 'Archive',
       subscribe: 'Subscribe',
     },
     hero: {
+      label: 'EXPANDING PERCEPTION',
       tagline: 'SEE WHAT OTHERS MISS',
       title: {
         line1: 'THE SIGNAL',
         highlight: 'ARRIVES',
         line2: 'BEFORE THE NOISE',
       },
-      subtitle: 'Most decisions are made before the meeting starts. Most perceptions are filtered before they reach consciousness. UNBLIND explores the invisible forces that shape what you see, what you miss, and what you never knew existed.',
+      subtitle: 'Most interventions happen too late. We work at the perception layer—before interpretation, before decisions, before action. Where reality is shaped.',
       cta: {
         explore: 'EXPLORE',
         subscribe: 'SUBSCRIBE',
+        blog: 'READ THE BLOG',
+        sequence: 'UNDERSTAND THE SEQUENCE',
       },
     },
     sequence: {
-      signal: 'SIGNAL',
-      filter: 'FILTER',
-      perception: 'PERCEPTION',
-      tagline: 'See what others miss',
+      label: 'THE HUMAN DECISION SEQUENCE',
+      title: 'Where most fail. Where we begin.',
+      intervene: 'WE INTERVENE HERE',
+      steps: {
+        perception: { title: 'PERCEPTION', desc: 'What you see' },
+        interpretation: { title: 'INTERPRETATION', desc: 'What you think it means' },
+        decision: { title: 'DECISION', desc: 'What you choose' },
+        action: { title: 'ACTION', desc: 'What you do' },
+      },
     },
     quote: {
       text: 'The most dangerous blind spot is the one that makes you certain you see clearly.',
       attribution: 'THE UNBLIND PRINCIPLE',
     },
     topics: {
-      title: 'EXPLORE THE TERRITORY',
+      label: 'CORE TOPICS',
+      title: 'What we explore',
       subtitle: 'Six domains where perception shapes reality before you even notice.',
     },
     stats: {
@@ -144,7 +167,8 @@ export const translations: Record<Language, Translations> = {
       title: 'THE PERCEPTION LIBRARY',
     },
     posts: {
-      title: 'LATEST POSTS',
+      label: 'ALL POSTS',
+      title: 'The full archive',
       readMore: 'READ MORE',
     },
     subscribe: {
@@ -175,35 +199,46 @@ export const translations: Record<Language, Translations> = {
   },
   de: {
     nav: {
+      sequence: 'Die Sequenz',
       topics: 'Themen',
-      posts: 'Beiträge',
+      featured: 'Empfohlen',
+      posts: 'Archiv',
       subscribe: 'Abonnieren',
     },
     hero: {
+      label: 'WAHRNEHMUNG ERWEITERN',
       tagline: 'SIEH, WAS ANDERE ÜBERSEHEN',
       title: {
         line1: 'DAS SIGNAL',
         highlight: 'KOMMT',
         line2: 'VOR DEM RAUSCHEN',
       },
-      subtitle: 'Die meisten Entscheidungen werden getroffen, bevor das Meeting beginnt. Die meisten Wahrnehmungen werden gefiltert, bevor sie das Bewusstsein erreichen. UNBLIND erforscht die unsichtbaren Kräfte, die bestimmen, was du siehst, was du verpasst und was du nie wusstest, dass es existiert.',
+      subtitle: 'Die meisten Interventionen kommen zu spät. Wir arbeiten auf der Wahrnehmungsebene—vor der Interpretation, vor den Entscheidungen, vor dem Handeln. Wo Realität geformt wird.',
       cta: {
         explore: 'ERKUNDEN',
         subscribe: 'ABONNIEREN',
+        blog: 'BLOG LESEN',
+        sequence: 'DIE SEQUENZ VERSTEHEN',
       },
     },
     sequence: {
-      signal: 'SIGNAL',
-      filter: 'FILTER',
-      perception: 'WAHRNEHMUNG',
-      tagline: 'Sieh, was andere übersehen',
+      label: 'DIE MENSCHLICHE ENTSCHEIDUNGSSEQUENZ',
+      title: 'Wo die meisten scheitern. Wo wir beginnen.',
+      intervene: 'HIER GREIFEN WIR EIN',
+      steps: {
+        perception: { title: 'WAHRNEHMUNG', desc: 'Was du siehst' },
+        interpretation: { title: 'INTERPRETATION', desc: 'Was du denkst, dass es bedeutet' },
+        decision: { title: 'ENTSCHEIDUNG', desc: 'Was du wählst' },
+        action: { title: 'HANDLUNG', desc: 'Was du tust' },
+      },
     },
     quote: {
       text: 'Der gefährlichste blinde Fleck ist der, der dich sicher macht, dass du klar siehst.',
       attribution: 'DAS UNBLIND PRINZIP',
     },
     topics: {
-      title: 'DAS TERRITORIUM ERKUNDEN',
+      label: 'KERNTHEMEN',
+      title: 'Was wir erforschen',
       subtitle: 'Sechs Bereiche, in denen Wahrnehmung die Realität formt, bevor du es bemerkst.',
     },
     stats: {
@@ -223,7 +258,8 @@ export const translations: Record<Language, Translations> = {
       title: 'DIE WAHRNEHMUNGSBIBLIOTHEK',
     },
     posts: {
-      title: 'NEUESTE BEITRÄGE',
+      label: 'ALLE BEITRÄGE',
+      title: 'Das vollständige Archiv',
       readMore: 'WEITERLESEN',
     },
     subscribe: {
@@ -254,35 +290,46 @@ export const translations: Record<Language, Translations> = {
   },
   es: {
     nav: {
+      sequence: 'La Secuencia',
       topics: 'Temas',
-      posts: 'Artículos',
+      featured: 'Destacados',
+      posts: 'Archivo',
       subscribe: 'Suscribirse',
     },
     hero: {
+      label: 'EXPANDIENDO LA PERCEPCIÓN',
       tagline: 'VE LO QUE OTROS NO VEN',
       title: {
         line1: 'LA SEÑAL',
         highlight: 'LLEGA',
         line2: 'ANTES DEL RUIDO',
       },
-      subtitle: 'La mayoría de las decisiones se toman antes de que comience la reunión. La mayoría de las percepciones se filtran antes de llegar a la conciencia. UNBLIND explora las fuerzas invisibles que determinan lo que ves, lo que te pierdes y lo que nunca supiste que existía.',
+      subtitle: 'La mayoría de las intervenciones llegan demasiado tarde. Trabajamos en la capa de percepción—antes de la interpretación, antes de las decisiones, antes de la acción. Donde se forma la realidad.',
       cta: {
         explore: 'EXPLORAR',
         subscribe: 'SUSCRIBIRSE',
+        blog: 'LEER EL BLOG',
+        sequence: 'ENTENDER LA SECUENCIA',
       },
     },
     sequence: {
-      signal: 'SEÑAL',
-      filter: 'FILTRO',
-      perception: 'PERCEPCIÓN',
-      tagline: 'Ve lo que otros no ven',
+      label: 'LA SECUENCIA DE DECISIÓN HUMANA',
+      title: 'Donde la mayoría falla. Donde comenzamos.',
+      intervene: 'AQUÍ INTERVENIMOS',
+      steps: {
+        perception: { title: 'PERCEPCIÓN', desc: 'Lo que ves' },
+        interpretation: { title: 'INTERPRETACIÓN', desc: 'Lo que crees que significa' },
+        decision: { title: 'DECISIÓN', desc: 'Lo que eliges' },
+        action: { title: 'ACCIÓN', desc: 'Lo que haces' },
+      },
     },
     quote: {
       text: 'El punto ciego más peligroso es el que te hace creer que ves con claridad.',
       attribution: 'EL PRINCIPIO UNBLIND',
     },
     topics: {
-      title: 'EXPLORA EL TERRITORIO',
+      label: 'TEMAS PRINCIPALES',
+      title: 'Lo que exploramos',
       subtitle: 'Seis dominios donde la percepción moldea la realidad antes de que lo notes.',
     },
     stats: {
@@ -302,7 +349,8 @@ export const translations: Record<Language, Translations> = {
       title: 'LA BIBLIOTECA DE PERCEPCIÓN',
     },
     posts: {
-      title: 'ÚLTIMOS ARTÍCULOS',
+      label: 'TODOS LOS ARTÍCULOS',
+      title: 'El archivo completo',
       readMore: 'LEER MÁS',
     },
     subscribe: {

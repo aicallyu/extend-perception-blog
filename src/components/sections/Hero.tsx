@@ -1,8 +1,10 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
+import { useLanguage } from '@/i18n'
 
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null)
+  const { t } = useLanguage()
 
   useEffect(() => {
     if (!heroRef.current) return
@@ -66,7 +68,7 @@ export default function Hero() {
                 boxShadow: '0 0 10px var(--accent-cyan)',
               }}
             />
-            EXPANDING PERCEPTION
+            {t.hero.label}
           </div>
 
           <h1
@@ -79,12 +81,12 @@ export default function Hero() {
           >
             <span className="line block overflow-hidden">
               <span className="line-inner block" style={{ transform: 'translateY(100%)' }}>
-                SEE WHAT OTHERS
+                {t.hero.tagline.split(' ').slice(0, -1).join(' ')}
               </span>
             </span>
             <span className="line block overflow-hidden">
               <span className="line-inner block gradient-text" style={{ transform: 'translateY(100%)' }}>
-                MISS.
+                {t.hero.tagline.split(' ').slice(-1)[0]}.
               </span>
             </span>
           </h1>
@@ -97,15 +99,15 @@ export default function Hero() {
               opacity: 0,
             }}
           >
-            Most interventions happen too late. We work at the perception layer—before interpretation, before decisions, before action. Where reality is shaped.
+            {t.hero.subtitle}
           </p>
 
           <div className="hero-cta flex gap-5" style={{ opacity: 0 }}>
             <a href="#library" className="btn btn-primary">
-              READ THE BLOG<span>→</span>
+              {t.hero.cta.blog}<span>→</span>
             </a>
             <a href="#sequence" className="btn btn-secondary">
-              UNDERSTAND THE SEQUENCE
+              {t.hero.cta.sequence}
             </a>
           </div>
         </div>
