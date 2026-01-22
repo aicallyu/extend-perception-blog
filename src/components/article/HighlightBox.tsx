@@ -31,11 +31,11 @@ export default function HighlightBox({ children, copyText, shareText }: Highligh
 
   const handleShare = async () => {
     const url = window.location.href
-    const text = `"${shareText}" – from UNBLIND`
+    const text = `"${shareText}" – from Extend Perception`
 
     if (navigator.share) {
       try {
-        await navigator.share({ title: 'UNBLIND', text, url })
+        await navigator.share({ title: 'Extend Perception', text, url })
       } catch {
         // User cancelled or share failed - fallback to clipboard
         await navigator.clipboard.writeText(`${text} ${url}`)

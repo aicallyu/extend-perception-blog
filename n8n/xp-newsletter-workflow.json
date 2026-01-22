@@ -1,0 +1,175 @@
+{
+  "name": "Extend Perception Newsletter Subscription",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "xp-subscribe",
+        "responseMode": "responseNode",
+        "options": {
+          "allowedOrigins": "*"
+        }
+      },
+      "id": "webhook-1",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [250, 300],
+      "webhookId": "xp-subscribe"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_GOOGLE_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Subscribers",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Name": "={{ $json.body.name }}",
+            "Email": "={{ $json.body.email }}",
+            "Language": "={{ $json.body.language }}",
+            "Source": "={{ $json.body.source }}",
+            "Subscribed At": "={{ $json.body.timestamp }}",
+            "Status": "active"
+          }
+        },
+        "options": {}
+      },
+      "id": "sheets-1",
+      "name": "Save to Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.4,
+      "position": [500, 300],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YOUR_GOOGLE_CREDENTIALS_ID",
+          "name": "Google Sheets Account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "email",
+        "toEmail": "={{ $('Webhook').item.json.body.email }}",
+        "subject": "={{ $('Webhook').item.json.body.language === 'de' ? 'Willkommen bei Extend Perception!' : $('Webhook').item.json.body.language === 'es' ? '¡Bienvenido a Extend Perception!' : 'Welcome to Extend Perception!' }}",
+        "emailType": "html",
+        "message": "={{ $('Webhook').item.json.body.language === 'de' ? '<html><body style=\"font-family: Arial, sans-serif; background: #0a0a0f; color: #ffffff; padding: 40px;\"><div style=\"max-width: 600px; margin: 0 auto;\"><h1 style=\"color: #00f0ff;\">Willkommen bei <span style=\"color:#00f0ff\">X</span><span style=\"color:#a855f7\">P</span>, ' + $('Webhook').item.json.body.name + '!</h1><p style=\"font-size: 16px; line-height: 1.6; color: #a0a0a0;\">Danke für deine Anmeldung! Du wirst ab jetzt benachrichtigt, wenn wir neue Artikel veröffentlichen.</p><p style=\"font-size: 16px; line-height: 1.6; color: #a0a0a0;\">Extend Perception erforscht Wahrnehmung, Macht und die unsichtbaren Kräfte, die unsere Entscheidungen formen.</p><a href=\"https://extendperception.com\" style=\"display: inline-block; margin-top: 20px; padding: 12px 24px; background: linear-gradient(135deg, #00f0ff, #a855f7); color: #000; text-decoration: none; border-radius: 8px; font-weight: bold;\">Artikel entdecken</a><p style=\"margin-top: 40px; font-size: 12px; color: #666;\">– Das Extend Perception Team</p></div></body></html>' : $('Webhook').item.json.body.language === 'es' ? '<html><body style=\"font-family: Arial, sans-serif; background: #0a0a0f; color: #ffffff; padding: 40px;\"><div style=\"max-width: 600px; margin: 0 auto;\"><h1 style=\"color: #00f0ff;\">¡Bienvenido a <span style=\"color:#00f0ff\">X</span><span style=\"color:#a855f7\">P</span>, ' + $('Webhook').item.json.body.name + '!</h1><p style=\"font-size: 16px; line-height: 1.6; color: #a0a0a0;\">¡Gracias por suscribirte! Te notificaremos cuando publiquemos nuevos artículos.</p><p style=\"font-size: 16px; line-height: 1.6; color: #a0a0a0;\">Extend Perception explora la percepción, el poder y las fuerzas invisibles que moldean nuestras decisiones.</p><a href=\"https://extendperception.com\" style=\"display: inline-block; margin-top: 20px; padding: 12px 24px; background: linear-gradient(135deg, #00f0ff, #a855f7); color: #000; text-decoration: none; border-radius: 8px; font-weight: bold;\">Descubrir artículos</a><p style=\"margin-top: 40px; font-size: 12px; color: #666;\">– El equipo de Extend Perception</p></div></body></html>' : '<html><body style=\"font-family: Arial, sans-serif; background: #0a0a0f; color: #ffffff; padding: 40px;\"><div style=\"max-width: 600px; margin: 0 auto;\"><h1 style=\"color: #00f0ff;\">Welcome to <span style=\"color:#00f0ff\">X</span><span style=\"color:#a855f7\">P</span>, ' + $('Webhook').item.json.body.name + '!</h1><p style=\"font-size: 16px; line-height: 1.6; color: #a0a0a0;\">Thanks for subscribing! You will be notified when we publish new articles.</p><p style=\"font-size: 16px; line-height: 1.6; color: #a0a0a0;\">Extend Perception explores perception, power, and the invisible forces that shape our decisions.</p><a href=\"https://extendperception.com\" style=\"display: inline-block; margin-top: 20px; padding: 12px 24px; background: linear-gradient(135deg, #00f0ff, #a855f7); color: #000; text-decoration: none; border-radius: 8px; font-weight: bold;\">Discover Articles</a><p style=\"margin-top: 40px; font-size: 12px; color: #666;\">– The Extend Perception Team</p></div></body></html>' }}",
+        "additionalFields": {
+          "fromName": "Extend Perception"
+        }
+      },
+      "id": "resend-1",
+      "name": "Send Welcome Email",
+      "type": "n8n-nodes-base.resend",
+      "typeVersion": 1,
+      "position": [750, 300],
+      "credentials": {
+        "resendApi": {
+          "id": "YOUR_RESEND_CREDENTIALS_ID",
+          "name": "Resend API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ success: true, message: 'Subscription successful' }) }}",
+        "options": {
+          "responseCode": 200,
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Access-Control-Allow-Origin",
+                "value": "*"
+              }
+            ]
+          }
+        }
+      },
+      "id": "respond-1",
+      "name": "Respond Success",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [1000, 300]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ success: false, message: 'Subscription failed' }) }}",
+        "options": {
+          "responseCode": 500,
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Access-Control-Allow-Origin",
+                "value": "*"
+              }
+            ]
+          }
+        }
+      },
+      "id": "respond-error",
+      "name": "Respond Error",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [1000, 500]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Save to Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save to Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "Send Welcome Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Welcome Email": {
+      "main": [
+        [
+          {
+            "node": "Respond Success",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "name": "Extend Perception",
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z"
+    }
+  ],
+  "triggerCount": 0,
+  "updatedAt": "2024-01-01T00:00:00.000Z",
+  "versionId": "1"
+}

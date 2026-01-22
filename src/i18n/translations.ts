@@ -233,7 +233,7 @@ export const translations: Record<Language, Translations> = {
     },
     quote: {
       text: 'The most dangerous blind spot is the one that makes you certain you see clearly.',
-      attribution: 'THE UNBLIND PRINCIPLE',
+      attribution: 'THE XP PRINCIPLE',
     },
     quotes: {
       proust: {
@@ -332,13 +332,13 @@ export const translations: Record<Language, Translations> = {
     },
     subscribe: {
       title: 'GET',
-      titleHighlight: 'UNBLINDED',
+      titleHighlight: 'EXTENDED',
       subtitle: "New posts delivered when they're ready. No spam. No fluff. Just signal.",
       namePlaceholder: 'Your name',
       placeholder: 'your@email.com',
       button: 'SUBSCRIBE',
       note: '// JOIN FOUNDERS, EXECUTIVES, AND SYSTEM THINKERS',
-      success: 'Welcome to UNBLIND. The signal has arrived.',
+      success: 'Welcome to Extend Perception. The signal has arrived.',
       error: 'Something went wrong. Please try again.',
       sending: 'SENDING...',
     },
@@ -346,13 +346,13 @@ export const translations: Record<Language, Translations> = {
       rss: 'RSS',
       archive: 'Archive',
       about: 'About',
-      copyright: '© 2026 UNBLIND. All rights reserved.',
+      copyright: '© 2026 Extend Perception. All rights reserved.',
     },
     article: {
       continueReading: 'CONTINUE READING',
       author: {
         name: 'Juan Schubert',
-        bio: "Founder of UNBLIND. Exploring perception, power, and the invisible forces that shape decisions before they're made.",
+        bio: "Founder of Extend Perception. Exploring perception, power, and the invisible forces that shape decisions before they're made.",
       },
     },
     common: {
@@ -459,7 +459,7 @@ export const translations: Record<Language, Translations> = {
     },
     quote: {
       text: 'Der gefährlichste blinde Fleck ist der, der dich sicher macht, dass du klar siehst.',
-      attribution: 'DAS UNBLIND PRINZIP',
+      attribution: 'DAS XP PRINZIP',
     },
     quotes: {
       proust: {
@@ -561,13 +561,13 @@ export const translations: Record<Language, Translations> = {
     },
     subscribe: {
       title: 'WERDE',
-      titleHighlight: 'UNBLINDED',
+      titleHighlight: 'EXTENDED',
       subtitle: 'Neue Beiträge, wenn sie fertig sind. Kein Spam. Kein Füllmaterial. Nur Signal.',
       namePlaceholder: 'Dein Name',
       placeholder: 'deine@email.de',
       button: 'ABONNIEREN',
       note: '// WERDE TEIL VON GRÜNDERN, FÜHRUNGSKRÄFTEN UND SYSTEMDENKERN',
-      success: 'Willkommen bei UNBLIND. Das Signal ist angekommen.',
+      success: 'Willkommen bei Extend Perception. Das Signal ist angekommen.',
       error: 'Etwas ist schiefgelaufen. Bitte versuche es erneut.',
       sending: 'WIRD GESENDET...',
     },
@@ -575,13 +575,13 @@ export const translations: Record<Language, Translations> = {
       rss: 'RSS',
       archive: 'Archiv',
       about: 'Über uns',
-      copyright: '© 2026 UNBLIND. Alle Rechte vorbehalten.',
+      copyright: '© 2026 Extend Perception. Alle Rechte vorbehalten.',
     },
     article: {
       continueReading: 'WEITERLESEN',
       author: {
         name: 'Juan Schubert',
-        bio: 'Gründer von UNBLIND. Erforschung von Wahrnehmung, Macht und den unsichtbaren Kräften, die Entscheidungen formen, bevor sie getroffen werden.',
+        bio: 'Gründer von Extend Perception. Erforschung von Wahrnehmung, Macht und den unsichtbaren Kräften, die Entscheidungen formen, bevor sie getroffen werden.',
       },
     },
     common: {
@@ -688,7 +688,7 @@ export const translations: Record<Language, Translations> = {
     },
     quote: {
       text: 'El punto ciego más peligroso es el que te hace creer que ves con claridad.',
-      attribution: 'EL PRINCIPIO UNBLIND',
+      attribution: 'EL PRINCIPIO XP',
     },
     quotes: {
       proust: {
@@ -785,13 +785,13 @@ export const translations: Record<Language, Translations> = {
     },
     subscribe: {
       title: 'OBTÉN',
-      titleHighlight: 'UNBLINDED',
+      titleHighlight: 'EXTENDED',
       subtitle: 'Nuevos artículos cuando estén listos. Sin spam. Sin relleno. Solo señal.',
       namePlaceholder: 'Tu nombre',
       placeholder: 'tu@email.com',
       button: 'SUSCRIBIRSE',
       note: '// ÚNETE A FUNDADORES, EJECUTIVOS Y PENSADORES SISTÉMICOS',
-      success: 'Bienvenido a UNBLIND. La señal ha llegado.',
+      success: 'Bienvenido a Extend Perception. La señal ha llegado.',
       error: 'Algo salió mal. Por favor intenta de nuevo.',
       sending: 'ENVIANDO...',
     },
@@ -799,13 +799,13 @@ export const translations: Record<Language, Translations> = {
       rss: 'RSS',
       archive: 'Archivo',
       about: 'Acerca de',
-      copyright: '© 2026 UNBLIND. Todos los derechos reservados.',
+      copyright: '© 2026 Extend Perception. Todos los derechos reservados.',
     },
     article: {
       continueReading: 'CONTINUAR LEYENDO',
       author: {
         name: 'Juan Schubert',
-        bio: 'Fundador de UNBLIND. Explorando la percepción, el poder y las fuerzas invisibles que moldean las decisiones antes de que se tomen.',
+        bio: 'Fundador de Extend Perception. Explorando la percepción, el poder y las fuerzas invisibles que moldean las decisiones antes de que se tomen.',
       },
     },
     common: {
