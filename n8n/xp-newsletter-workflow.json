@@ -10,7 +10,7 @@
           "allowedOrigins": "*"
         }
       },
-      "id": "webhook-1",
+      "id": "a1b2c3d4-0001-0001-0001-000000000001",
       "name": "Webhook",
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2,
@@ -37,16 +37,16 @@
             "Email": "={{ $json.body.email }}",
             "Language": "={{ $json.body.language }}",
             "Source": "={{ $json.body.source }}",
-            "Subscribed At": "={{ $json.body.timestamp }}",
+            "Subscribed At": "={{ $now.format('yyyy-MM-dd HH:mm:ss') }}",
             "Status": "active"
           }
         },
         "options": {}
       },
-      "id": "sheets-1",
+      "id": "a1b2c3d4-0001-0001-0001-000000000002",
       "name": "Save to Google Sheets",
       "type": "n8n-nodes-base.googleSheets",
-      "typeVersion": 4.4,
+      "typeVersion": 4.5,
       "position": [500, 300],
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -57,24 +57,21 @@
     },
     {
       "parameters": {
-        "resource": "email",
-        "toEmail": "={{ $('Webhook').item.json.body.email }}",
-        "subject": "={{ $('Webhook').item.json.body.language === 'de' ? 'Willkommen bei Extend Perception!' : $('Webhook').item.json.body.language === 'es' ? '¡Bienvenido a Extend Perception!' : 'Welcome to Extend Perception!' }}",
-        "emailType": "html",
-        "message": "={{ $('Webhook').item.json.body.language === 'de' ? '<html><body style=\"font-family: Arial, sans-serif; background: #0a0a0f; color: #ffffff; padding: 40px;\"><div style=\"max-width: 600px; margin: 0 auto;\"><h1 style=\"color: #00f0ff;\">Willkommen bei <span style=\"color:#00f0ff\">X</span><span style=\"color:#a855f7\">P</span>, ' + $('Webhook').item.json.body.name + '!</h1><p style=\"font-size: 16px; line-height: 1.6; color: #a0a0a0;\">Danke für deine Anmeldung! Du wirst ab jetzt benachrichtigt, wenn wir neue Artikel veröffentlichen.</p><p style=\"font-size: 16px; line-height: 1.6; color: #a0a0a0;\">Extend Perception erforscht Wahrnehmung, Macht und die unsichtbaren Kräfte, die unsere Entscheidungen formen.</p><a href=\"https://extendperception.com\" style=\"display: inline-block; margin-top: 20px; padding: 12px 24px; background: linear-gradient(135deg, #00f0ff, #a855f7); color: #000; text-decoration: none; border-radius: 8px; font-weight: bold;\">Artikel entdecken</a><p style=\"margin-top: 40px; font-size: 12px; color: #666;\">– Das Extend Perception Team</p></div></body></html>' : $('Webhook').item.json.body.language === 'es' ? '<html><body style=\"font-family: Arial, sans-serif; background: #0a0a0f; color: #ffffff; padding: 40px;\"><div style=\"max-width: 600px; margin: 0 auto;\"><h1 style=\"color: #00f0ff;\">¡Bienvenido a <span style=\"color:#00f0ff\">X</span><span style=\"color:#a855f7\">P</span>, ' + $('Webhook').item.json.body.name + '!</h1><p style=\"font-size: 16px; line-height: 1.6; color: #a0a0a0;\">¡Gracias por suscribirte! Te notificaremos cuando publiquemos nuevos artículos.</p><p style=\"font-size: 16px; line-height: 1.6; color: #a0a0a0;\">Extend Perception explora la percepción, el poder y las fuerzas invisibles que moldean nuestras decisiones.</p><a href=\"https://extendperception.com\" style=\"display: inline-block; margin-top: 20px; padding: 12px 24px; background: linear-gradient(135deg, #00f0ff, #a855f7); color: #000; text-decoration: none; border-radius: 8px; font-weight: bold;\">Descubrir artículos</a><p style=\"margin-top: 40px; font-size: 12px; color: #666;\">– El equipo de Extend Perception</p></div></body></html>' : '<html><body style=\"font-family: Arial, sans-serif; background: #0a0a0f; color: #ffffff; padding: 40px;\"><div style=\"max-width: 600px; margin: 0 auto;\"><h1 style=\"color: #00f0ff;\">Welcome to <span style=\"color:#00f0ff\">X</span><span style=\"color:#a855f7\">P</span>, ' + $('Webhook').item.json.body.name + '!</h1><p style=\"font-size: 16px; line-height: 1.6; color: #a0a0a0;\">Thanks for subscribing! You will be notified when we publish new articles.</p><p style=\"font-size: 16px; line-height: 1.6; color: #a0a0a0;\">Extend Perception explores perception, power, and the invisible forces that shape our decisions.</p><a href=\"https://extendperception.com\" style=\"display: inline-block; margin-top: 20px; padding: 12px 24px; background: linear-gradient(135deg, #00f0ff, #a855f7); color: #000; text-decoration: none; border-radius: 8px; font-weight: bold;\">Discover Articles</a><p style=\"margin-top: 40px; font-size: 12px; color: #666;\">– The Extend Perception Team</p></div></body></html>' }}",
+        "chatId": "YOUR_TELEGRAM_CHAT_ID",
+        "text": "=🎉 *Neuer Newsletter-Abonnent!*\n\n👤 *Name:* {{ $('Webhook').item.json.body.name }}\n📧 *Email:* {{ $('Webhook').item.json.body.email }}\n🌐 *Sprache:* {{ $('Webhook').item.json.body.language }}\n📍 *Quelle:* {{ $('Webhook').item.json.body.source }}\n🕐 *Zeit:* {{ $now.format('dd.MM.yyyy HH:mm') }}",
         "additionalFields": {
-          "fromName": "Extend Perception"
+          "parse_mode": "Markdown"
         }
       },
-      "id": "resend-1",
-      "name": "Send Welcome Email",
-      "type": "n8n-nodes-base.resend",
-      "typeVersion": 1,
+      "id": "a1b2c3d4-0001-0001-0001-000000000003",
+      "name": "Telegram Notification",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
       "position": [750, 300],
       "credentials": {
-        "resendApi": {
-          "id": "YOUR_RESEND_CREDENTIALS_ID",
-          "name": "Resend API"
+        "telegramApi": {
+          "id": "YOUR_TELEGRAM_CREDENTIAL_ID",
+          "name": "Telegram Bot"
         }
       }
     },
@@ -94,7 +91,7 @@
           }
         }
       },
-      "id": "respond-1",
+      "id": "a1b2c3d4-0001-0001-0001-000000000004",
       "name": "Respond Success",
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.1,
@@ -116,11 +113,11 @@
           }
         }
       },
-      "id": "respond-error",
+      "id": "a1b2c3d4-0001-0001-0001-000000000005",
       "name": "Respond Error",
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.1,
-      "position": [1000, 500]
+      "position": [750, 500]
     }
   ],
   "connections": {
@@ -139,14 +136,14 @@
       "main": [
         [
           {
-            "node": "Send Welcome Email",
+            "node": "Telegram Notification",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Send Welcome Email": {
+    "Telegram Notification": {
       "main": [
         [
           {
@@ -162,14 +159,7 @@
     "executionOrder": "v1"
   },
   "staticData": null,
-  "tags": [
-    {
-      "name": "Extend Perception",
-      "createdAt": "2024-01-01T00:00:00.000Z",
-      "updatedAt": "2024-01-01T00:00:00.000Z"
-    }
-  ],
+  "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2024-01-01T00:00:00.000Z",
-  "versionId": "1"
+  "pinData": {}
 }
