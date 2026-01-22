@@ -2,9 +2,25 @@ import { Link } from 'react-router-dom'
 import { getLatestArticle } from '@/data/articles'
 import { useLanguage } from '@/i18n'
 
+// Mapping von Kategorie-Name zu Übersetzungs-Key
+const categoryKeyMap: Record<string, 'perceptionReality' | 'blindSpots' | 'decisionErrors' | 'communicationMismatch' | 'powerSystems' | 'aiPerceptionLayer'> = {
+  'Perception vs. Reality': 'perceptionReality',
+  'Blind Spots': 'blindSpots',
+  'Decision Errors': 'decisionErrors',
+  'Communication Mismatch': 'communicationMismatch',
+  'Power & Systems': 'powerSystems',
+  'AI as Perception Layer': 'aiPerceptionLayer',
+}
+
 export default function FeaturedPost() {
   const article = getLatestArticle()
   const { t } = useLanguage()
+
+  // Übersetzte Artikel-Daten
+  const articleId = article.id as keyof typeof t.articles
+  const translated = t.articles[articleId]
+  const categoryKey = categoryKeyMap[article.category.name]
+  const translatedCategory = categoryKey ? t.categories[categoryKey] : article.category.name
 
   return (
     <section className="featured-section py-[100px_0_60px]">
@@ -60,7 +76,7 @@ export default function FeaturedPost() {
                 border: '1px solid rgba(0, 240, 255, 0.2)',
               }}
             >
-              {article.category.icon} {article.category.name}
+              {article.category.icon} {translatedCategory}
             </span>
 
             <h2
@@ -70,15 +86,14 @@ export default function FeaturedPost() {
                 letterSpacing: '-0.02em',
               }}
             >
-              {article.title.split(':')[0]}:{' '}
-              <span className="highlight">{article.title.split(':')[1]}</span>
+              {translated?.title || article.title}
             </h2>
 
             <p
               className="featured-excerpt text-[17px] leading-[1.7] mb-7"
               style={{ color: 'var(--text-secondary)' }}
             >
-              {article.excerpt}
+              {translated?.excerpt || article.excerpt}
             </p>
 
             <div

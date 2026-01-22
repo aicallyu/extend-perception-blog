@@ -77,65 +77,69 @@ export default function Posts() {
         </div>
 
         <div className="posts-list flex flex-col gap-1.5 rounded-[28px] overflow-hidden">
-          {articles.map(article => (
-            <Link
-              key={article.id}
-              to={`/articles/${article.slug}`}
-              className="post-item flex items-center py-7 px-10 gap-7 relative overflow-hidden cursor-pointer no-underline group"
-              style={{
-                background: 'linear-gradient(145deg, rgba(15, 15, 22, 0.9), rgba(8, 8, 14, 0.95))',
-                border: '1px solid rgba(255, 255, 255, 0.03)',
-                color: 'var(--text-primary)',
-                transition: 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
-              }}
-            >
-              {/* Left accent bar */}
-              <div
-                className="absolute left-0 top-0 bottom-0 w-[5px] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          {articles.map(article => {
+            const articleId = article.id as keyof typeof t.articles
+            const translated = t.articles[articleId]
+            return (
+              <Link
+                key={article.id}
+                to={`/articles/${article.slug}`}
+                className="post-item flex items-center py-7 px-10 gap-7 relative overflow-hidden cursor-pointer no-underline group"
                 style={{
-                  background: 'linear-gradient(180deg, var(--accent-cyan), var(--accent-purple))',
+                  background: 'linear-gradient(145deg, rgba(15, 15, 22, 0.9), rgba(8, 8, 14, 0.95))',
+                  border: '1px solid rgba(255, 255, 255, 0.03)',
+                  color: 'var(--text-primary)',
+                  transition: 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
                 }}
-              />
-
-              {/* Image */}
-              <div className="post-image w-20 h-20 rounded-xl overflow-hidden flex-shrink-0">
-                <img
-                  src={article.heroImage}
-                  alt={article.title}
-                  className="w-full h-full object-cover transition-transform duration-400 ease-out group-hover:scale-110"
+              >
+                {/* Left accent bar */}
+                <div
+                  className="absolute left-0 top-0 bottom-0 w-[5px] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{
+                    background: 'linear-gradient(180deg, var(--accent-cyan), var(--accent-purple))',
+                  }}
                 />
-              </div>
 
-              {/* Number */}
-              <div
-                className="post-number font-mono text-sm w-[50px] flex-shrink-0"
-                style={{ color: 'var(--accent-cyan)' }}
-              >
-                {article.number}
-              </div>
-
-              {/* Content */}
-              <div className="post-content flex-1">
-                <div className="post-title font-display text-[21px] font-bold mb-2 transition-all duration-300 group-hover:text-[var(--accent-cyan)]">
-                  {article.title}
+                {/* Image */}
+                <div className="post-image w-20 h-20 rounded-xl overflow-hidden flex-shrink-0">
+                  <img
+                    src={article.heroImage}
+                    alt={translated?.title || article.title}
+                    className="w-full h-full object-cover transition-transform duration-400 ease-out group-hover:scale-110"
+                  />
                 </div>
-                <div className="post-excerpt text-sm" style={{ color: 'var(--text-muted)' }}>
-                  {article.subtitle}
-                </div>
-              </div>
 
-              {/* Arrow */}
-              <div
-                className="post-arrow w-[52px] h-[52px] rounded-full flex items-center justify-center text-[22px] flex-shrink-0 ml-9 transition-all duration-500 group-hover:translate-x-2.5 group-hover:scale-110"
-                style={{
-                  border: '2px solid rgba(255, 255, 255, 0.1)',
-                  color: 'var(--text-muted)',
-                }}
-              >
-                →
-              </div>
-            </Link>
-          ))}
+                {/* Number */}
+                <div
+                  className="post-number font-mono text-sm w-[50px] flex-shrink-0"
+                  style={{ color: 'var(--accent-cyan)' }}
+                >
+                  {article.number}
+                </div>
+
+                {/* Content */}
+                <div className="post-content flex-1">
+                  <div className="post-title font-display text-[21px] font-bold mb-2 transition-all duration-300 group-hover:text-[var(--accent-cyan)]">
+                    {translated?.title || article.title}
+                  </div>
+                  <div className="post-excerpt text-sm" style={{ color: 'var(--text-muted)' }}>
+                    {translated?.subtitle || article.subtitle}
+                  </div>
+                </div>
+
+                {/* Arrow */}
+                <div
+                  className="post-arrow w-[52px] h-[52px] rounded-full flex items-center justify-center text-[22px] flex-shrink-0 ml-9 transition-all duration-500 group-hover:translate-x-2.5 group-hover:scale-110"
+                  style={{
+                    border: '2px solid rgba(255, 255, 255, 0.1)',
+                    color: 'var(--text-muted)',
+                  }}
+                >
+                  →
+                </div>
+              </Link>
+            )
+          })}
         </div>
       </div>
 

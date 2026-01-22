@@ -21,52 +21,12 @@ import FeaturedPost from '@/components/sections/FeaturedPost'
 import Library from '@/components/sections/Library'
 import Posts from '@/components/sections/Posts'
 import Subscribe from '@/components/sections/Subscribe'
+import { useLanguage } from '@/i18n'
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
 
-// Quote data
-const quote1 = {
-  words: [
-    { text: '"The' },
-    { text: 'real' },
-    { text: 'voyage' },
-    { text: 'of' },
-    { text: 'discovery', highlight: true },
-    { text: 'consists' },
-    { text: 'not' },
-    { text: 'in' },
-    { text: 'seeking' },
-    { text: 'new' },
-    { text: 'landscapes,' },
-    { text: 'but' },
-    { text: 'in' },
-    { text: 'having' },
-    { text: 'new', highlight: true },
-    { text: 'eyes."', highlight: true },
-  ],
-  author: 'MARCEL PROUST',
-}
-
-const quote2 = {
-  words: [
-    { text: '"We' },
-    { text: "don't" },
-    { text: 'see' },
-    { text: 'things' },
-    { text: 'as' },
-    { text: 'they' },
-    { text: 'are,', highlight: true },
-    { text: 'we' },
-    { text: 'see' },
-    { text: 'them' },
-    { text: 'as' },
-    { text: 'we', highlight: true },
-    { text: 'are."', highlight: true },
-  ],
-  author: 'ANAÏS NIN',
-}
-
 export default function LandingPage() {
+  const { t } = useLanguage()
   useEffect(() => {
     // Scroll progress animation
     const handleScroll = () => {
@@ -124,7 +84,7 @@ export default function LandingPage() {
 
         <Sequence />
 
-        <Quote words={quote1.words} author={quote1.author} />
+        <Quote words={t.quotes.proust.words} author={t.quotes.proust.author} />
 
         <FlowConnector />
 
@@ -134,7 +94,7 @@ export default function LandingPage() {
 
         <MullerLyer />
 
-        <Quote words={quote2.words} author={quote2.author} />
+        <Quote words={t.quotes.nin.words} author={t.quotes.nin.author} />
 
         <HermannGrid />
 

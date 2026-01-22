@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useMemo } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLanguage } from '@/i18n'
@@ -9,12 +9,12 @@ export default function Sequence() {
   const sectionRef = useRef<HTMLElement>(null)
   const { t } = useLanguage()
 
-  const steps = [
+  const steps = useMemo(() => [
     { number: '01', icon: '👁', title: t.sequence.steps.perception.title, desc: t.sequence.steps.perception.desc, active: true },
     { number: '02', icon: '🧠', title: t.sequence.steps.interpretation.title, desc: t.sequence.steps.interpretation.desc, active: false },
     { number: '03', icon: '⚖️', title: t.sequence.steps.decision.title, desc: t.sequence.steps.decision.desc, active: false },
     { number: '04', icon: '⚡', title: t.sequence.steps.action.title, desc: t.sequence.steps.action.desc, active: false },
-  ]
+  ], [t])
 
   useEffect(() => {
     if (!sectionRef.current) return

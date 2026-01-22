@@ -7,6 +7,16 @@ import { useLanguage } from '@/i18n'
 
 gsap.registerPlugin(ScrollTrigger)
 
+// Mapping von Kategorie-Name zu Übersetzungs-Key
+const categoryKeyMap: Record<string, 'perceptionReality' | 'blindSpots' | 'decisionErrors' | 'communicationMismatch' | 'powerSystems' | 'aiPerceptionLayer'> = {
+  'Perception vs. Reality': 'perceptionReality',
+  'Blind Spots': 'blindSpots',
+  'Decision Errors': 'decisionErrors',
+  'Communication Mismatch': 'communicationMismatch',
+  'Power & Systems': 'powerSystems',
+  'AI as Perception Layer': 'aiPerceptionLayer',
+}
+
 export default function Library() {
   const sectionRef = useRef<HTMLElement>(null)
   const shelfRef = useRef<HTMLDivElement>(null)
@@ -176,89 +186,95 @@ export default function Library() {
           className="library-shelf absolute w-full h-full"
           style={{ transformStyle: 'preserve-3d' }}
         >
-          {articles.map((article, index) => (
-            <Link
-              key={article.id}
-              to={`/articles/${article.slug}`}
-              className="book-card absolute flex flex-col no-underline"
-              style={{
-                width: '380px',
-                height: '580px',
-                left: '50%',
-                top: '50%',
-                marginLeft: '-190px',
-                marginTop: '-290px',
-                background: 'linear-gradient(165deg, rgba(18, 18, 28, 0.98), rgba(8, 8, 14, 0.99))',
-                border: '1px solid rgba(255, 255, 255, 0.08)',
-                borderRadius: '24px',
-                padding: '28px',
-                color: 'var(--text-primary)',
-                backfaceVisibility: 'hidden',
-                transformStyle: 'preserve-3d',
-                boxShadow: '0 30px 60px rgba(0, 0, 0, 0.5)',
-                transition: 'box-shadow 0.5s',
-              }}
-            >
-              {/* Left color stripe */}
-              <div
-                className="absolute left-0 top-0 bottom-0 w-2 rounded-l-[24px] opacity-90"
-                style={{ background: bookColors[index] }}
-              />
-
-              <div
-                className="book-image w-full mb-5 rounded-[16px] overflow-hidden flex-shrink-0"
-                style={{ aspectRatio: '1/1' }}
-              >
-                <img
-                  src={article.heroImage}
-                  alt={article.title}
-                  className="w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-105"
-                />
-              </div>
-
-              <div className="book-title font-display text-xl font-bold mb-3 leading-[1.3]">
-                {article.title}
-              </div>
-
-              <div
-                className="book-desc text-sm leading-[1.6] flex-grow overflow-hidden"
+          {articles.map((article, index) => {
+            const articleId = article.id as keyof typeof t.articles
+            const translated = t.articles[articleId]
+            const categoryKey = categoryKeyMap[article.category.name]
+            const translatedCategory = categoryKey ? t.categories[categoryKey] : article.category.name
+            return (
+              <Link
+                key={article.id}
+                to={`/articles/${article.slug}`}
+                className="book-card absolute flex flex-col no-underline"
                 style={{
-                  color: 'var(--text-secondary)',
-                  display: '-webkit-box',
-                  WebkitLineClamp: 3,
-                  WebkitBoxOrient: 'vertical',
+                  width: '380px',
+                  height: '580px',
+                  left: '50%',
+                  top: '50%',
+                  marginLeft: '-190px',
+                  marginTop: '-290px',
+                  background: 'linear-gradient(165deg, rgba(18, 18, 28, 0.98), rgba(8, 8, 14, 0.99))',
+                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  borderRadius: '24px',
+                  padding: '28px',
+                  color: 'var(--text-primary)',
+                  backfaceVisibility: 'hidden',
+                  transformStyle: 'preserve-3d',
+                  boxShadow: '0 30px 60px rgba(0, 0, 0, 0.5)',
+                  transition: 'box-shadow 0.5s',
                 }}
               >
-                {article.excerpt}
-              </div>
-
-              <div
-                className="book-footer flex justify-between items-center mt-6 pt-5"
-                style={{ borderTop: '1px solid rgba(255, 255, 255, 0.06)' }}
-              >
-                <span
-                  className="book-tag font-mono text-[10px] uppercase tracking-[0.2em] px-4 py-2 rounded-full"
-                  style={{
-                    background: 'rgba(0, 240, 255, 0.1)',
-                    color: 'var(--accent-cyan)',
-                    border: '1px solid rgba(0, 240, 255, 0.2)',
-                  }}
-                >
-                  {article.category.name}
-                </span>
+                {/* Left color stripe */}
+                <div
+                  className="absolute left-0 top-0 bottom-0 w-2 rounded-l-[24px] opacity-90"
+                  style={{ background: bookColors[index] }}
+                />
 
                 <div
-                  className="book-arrow w-12 h-12 rounded-full flex items-center justify-center text-xl transition-all duration-400"
+                  className="book-image w-full mb-5 rounded-[16px] overflow-hidden flex-shrink-0"
+                  style={{ aspectRatio: '1/1' }}
+                >
+                  <img
+                    src={article.heroImage}
+                    alt={translated?.title || article.title}
+                    className="w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-105"
+                  />
+                </div>
+
+                <div className="book-title font-display text-xl font-bold mb-3 leading-[1.3]">
+                  {translated?.title || article.title}
+                </div>
+
+                <div
+                  className="book-desc text-sm leading-[1.6] flex-grow overflow-hidden"
                   style={{
-                    border: '2px solid rgba(255, 255, 255, 0.1)',
-                    color: 'var(--text-muted)',
+                    color: 'var(--text-secondary)',
+                    display: '-webkit-box',
+                    WebkitLineClamp: 3,
+                    WebkitBoxOrient: 'vertical',
                   }}
                 >
-                  →
+                  {translated?.excerpt || article.excerpt}
                 </div>
-              </div>
-            </Link>
-          ))}
+
+                <div
+                  className="book-footer flex justify-between items-center mt-6 pt-5"
+                  style={{ borderTop: '1px solid rgba(255, 255, 255, 0.06)' }}
+                >
+                  <span
+                    className="book-tag font-mono text-[10px] uppercase tracking-[0.2em] px-4 py-2 rounded-full"
+                    style={{
+                      background: 'rgba(0, 240, 255, 0.1)',
+                      color: 'var(--accent-cyan)',
+                      border: '1px solid rgba(0, 240, 255, 0.2)',
+                    }}
+                  >
+                    {translatedCategory}
+                  </span>
+
+                  <div
+                    className="book-arrow w-12 h-12 rounded-full flex items-center justify-center text-xl transition-all duration-400"
+                    style={{
+                      border: '2px solid rgba(255, 255, 255, 0.1)',
+                      color: 'var(--text-muted)',
+                    }}
+                  >
+                    →
+                  </div>
+                </div>
+              </Link>
+            )
+          })}
         </div>
       </div>
 

@@ -43,6 +43,17 @@ export interface Translations {
     text: string
     attribution: string
   }
+  // Named Quotes
+  quotes: {
+    proust: {
+      words: { text: string; highlight?: boolean }[]
+      author: string
+    }
+    nin: {
+      words: { text: string; highlight?: boolean }[]
+      author: string
+    }
+  }
   // Topics Section
   topics: {
     label: string
@@ -217,6 +228,47 @@ export const translations: Record<Language, Translations> = {
     quote: {
       text: 'The most dangerous blind spot is the one that makes you certain you see clearly.',
       attribution: 'THE UNBLIND PRINCIPLE',
+    },
+    quotes: {
+      proust: {
+        words: [
+          { text: '"The' },
+          { text: 'real' },
+          { text: 'voyage' },
+          { text: 'of' },
+          { text: 'discovery', highlight: true },
+          { text: 'consists' },
+          { text: 'not' },
+          { text: 'in' },
+          { text: 'seeking' },
+          { text: 'new' },
+          { text: 'landscapes,' },
+          { text: 'but' },
+          { text: 'in' },
+          { text: 'having' },
+          { text: 'new', highlight: true },
+          { text: 'eyes."', highlight: true },
+        ],
+        author: 'MARCEL PROUST',
+      },
+      nin: {
+        words: [
+          { text: '"We' },
+          { text: "don't" },
+          { text: 'see' },
+          { text: 'things' },
+          { text: 'as' },
+          { text: 'they' },
+          { text: 'are,', highlight: true },
+          { text: 'we' },
+          { text: 'see' },
+          { text: 'them' },
+          { text: 'as' },
+          { text: 'we', highlight: true },
+          { text: 'are."', highlight: true },
+        ],
+        author: 'ANAÏS NIN',
+      },
     },
     topics: {
       label: 'CORE TOPICS',
@@ -397,6 +449,50 @@ export const translations: Record<Language, Translations> = {
       text: 'Der gefährlichste blinde Fleck ist der, der dich sicher macht, dass du klar siehst.',
       attribution: 'DAS UNBLIND PRINZIP',
     },
+    quotes: {
+      proust: {
+        words: [
+          { text: '"Die' },
+          { text: 'wahre' },
+          { text: 'Entdeckungsreise' },
+          { text: 'besteht' },
+          { text: 'nicht' },
+          { text: 'darin,' },
+          { text: 'neue' },
+          { text: 'Landschaften', highlight: true },
+          { text: 'zu' },
+          { text: 'suchen,' },
+          { text: 'sondern' },
+          { text: 'mit' },
+          { text: 'neuen', highlight: true },
+          { text: 'Augen', highlight: true },
+          { text: 'zu' },
+          { text: 'sehen."' },
+        ],
+        author: 'MARCEL PROUST',
+      },
+      nin: {
+        words: [
+          { text: '"Wir' },
+          { text: 'sehen' },
+          { text: 'die' },
+          { text: 'Dinge' },
+          { text: 'nicht' },
+          { text: 'so,' },
+          { text: 'wie', highlight: true },
+          { text: 'sie' },
+          { text: 'sind,', highlight: true },
+          { text: 'wir' },
+          { text: 'sehen' },
+          { text: 'sie' },
+          { text: 'so,' },
+          { text: 'wie', highlight: true },
+          { text: 'wir', highlight: true },
+          { text: 'sind."' },
+        ],
+        author: 'ANAÏS NIN',
+      },
+    },
     topics: {
       label: 'KERNTHEMEN',
       title: 'Was wir erforschen',
@@ -575,6 +671,45 @@ export const translations: Record<Language, Translations> = {
     quote: {
       text: 'El punto ciego más peligroso es el que te hace creer que ves con claridad.',
       attribution: 'EL PRINCIPIO UNBLIND',
+    },
+    quotes: {
+      proust: {
+        words: [
+          { text: '"El' },
+          { text: 'verdadero' },
+          { text: 'viaje' },
+          { text: 'de' },
+          { text: 'descubrimiento', highlight: true },
+          { text: 'no' },
+          { text: 'consiste' },
+          { text: 'en' },
+          { text: 'buscar' },
+          { text: 'nuevos' },
+          { text: 'paisajes,' },
+          { text: 'sino' },
+          { text: 'en' },
+          { text: 'tener' },
+          { text: 'nuevos', highlight: true },
+          { text: 'ojos."', highlight: true },
+        ],
+        author: 'MARCEL PROUST',
+      },
+      nin: {
+        words: [
+          { text: '"No' },
+          { text: 'vemos' },
+          { text: 'las' },
+          { text: 'cosas' },
+          { text: 'como' },
+          { text: 'son,', highlight: true },
+          { text: 'las' },
+          { text: 'vemos' },
+          { text: 'como' },
+          { text: 'somos', highlight: true },
+          { text: 'nosotros."', highlight: true },
+        ],
+        author: 'ANAÏS NIN',
+      },
     },
     topics: {
       label: 'TEMAS PRINCIPALES',

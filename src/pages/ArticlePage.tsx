@@ -4,14 +4,45 @@ import { useTheme } from '@/hooks/useTheme'
 import { getArticleBySlug, articles } from '@/data/articles'
 import { getArticleContent } from '@/data/articleContent'
 import ArticleContentRenderer from '@/components/article/ArticleContentRenderer'
+import { useLanguage } from '@/i18n'
+import LanguageSelector from '@/components/LanguageSelector'
+
+// Mapping von Kategorie-Slug zu Übersetzungs-Key
+const categoryKeyMap: Record<string, keyof typeof import('@/i18n/translations').translations.en.categories> = {
+  'Perception vs. Reality': 'perceptionReality',
+  'Blind Spots': 'blindSpots',
+  'Decision Errors': 'decisionErrors',
+  'Communication Mismatch': 'communicationMismatch',
+  'Power & Systems': 'powerSystems',
+  'AI as Perception Layer': 'aiPerceptionLayer',
+}
 
 export default function ArticlePage() {
   const { slug } = useParams<{ slug: string }>()
   const { isDark, toggleTheme } = useTheme()
   const [progress, setProgress] = useState(0)
+  const { t } = useLanguage()
 
   const article = slug ? getArticleBySlug(slug) : undefined
   const articleContent = slug ? getArticleContent(slug) : undefined
+
+  // Übersetzte Artikel-Daten
+  const getTranslatedArticle = () => {
+    if (!article) return null
+    const articleId = article.id as keyof typeof t.articles
+    const translated = t.articles[articleId]
+    const categoryKey = categoryKeyMap[article.category.name]
+    const translatedCategory = categoryKey ? t.categories[categoryKey] : article.category.name
+
+    return {
+      title: translated?.title || article.title,
+      subtitle: translated?.subtitle || article.subtitle,
+      excerpt: translated?.excerpt || article.excerpt,
+      categoryName: translatedCategory,
+    }
+  }
+
+  const translatedData = getTranslatedArticle()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -129,7 +160,7 @@ export default function ArticlePage() {
                     className="text-sm font-medium tracking-[0.05em] uppercase no-underline transition-colors duration-300 py-2"
                     style={{ color: 'var(--text-secondary)' }}
                   >
-                    Topics
+                    {t.nav.topics}
                   </Link>
                 </li>
                 <li>
@@ -138,7 +169,7 @@ export default function ArticlePage() {
                     className="text-sm font-medium tracking-[0.05em] uppercase no-underline transition-colors duration-300 py-2"
                     style={{ color: 'var(--text-secondary)' }}
                   >
-                    Posts
+                    {t.nav.posts}
                   </Link>
                 </li>
                 <li>
@@ -147,10 +178,12 @@ export default function ArticlePage() {
                     className="text-sm font-medium tracking-[0.05em] uppercase no-underline transition-colors duration-300 py-2"
                     style={{ color: 'var(--text-secondary)' }}
                   >
-                    Subscribe
+                    {t.nav.subscribe}
                   </Link>
                 </li>
               </ul>
+
+              <LanguageSelector />
 
               <button
                 className="theme-toggle w-11 h-11 rounded-xl flex items-center justify-center text-xl cursor-pointer transition-all duration-300"
@@ -179,7 +212,7 @@ export default function ArticlePage() {
               }}
             >
               <span className="icon text-sm">{article.category.icon}</span>
-              {article.category.name}
+              {translatedData?.categoryName}
             </span>
             <span
               className="article-date font-mono text-xs tracking-[0.1em]"
@@ -196,22 +229,14 @@ export default function ArticlePage() {
               letterSpacing: '-0.02em',
             }}
           >
-            {article.titleParts ? (
-              <>
-                {article.titleParts.before}
-                <span className="gradient-text">{article.titleParts.highlight}</span>
-                {article.titleParts.after}
-              </>
-            ) : (
-              article.title
-            )}
+            {translatedData?.title}
           </h1>
 
           <p
             className="article-subtitle text-xl max-w-[640px] mx-auto leading-[1.6]"
             style={{ color: 'var(--text-secondary)' }}
           >
-            {article.subtitle}
+            {translatedData?.subtitle}
           </p>
         </header>
 
@@ -262,9 +287,9 @@ export default function ArticlePage() {
               JS
             </div>
             <div className="author-info">
-              <h4 className="font-display text-xl font-bold mb-1">Juan Schubert</h4>
+              <h4 className="font-display text-xl font-bold mb-1">{t.article.author.name}</h4>
               <p className="text-[15px] m-0" style={{ color: 'var(--text-muted)' }}>
-                Founder of UNBLIND. Exploring perception, power, and the invisible forces that shape decisions before they're made.
+                {t.article.author.bio}
               </p>
             </div>
           </div>
@@ -285,47 +310,51 @@ export default function ArticlePage() {
                 background: 'linear-gradient(90deg, var(--accent-cyan), transparent)',
               }}
             />
-            CONTINUE READING
+            {t.article.continueReading}
           </div>
 
           <div
             className="related-grid grid gap-6"
             style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}
           >
-            {relatedArticles.map(related => (
-              <Link
-                key={related.id}
-                to={`/articles/${related.slug}`}
-                className="related-card p-7 rounded-2xl no-underline relative overflow-hidden transition-all duration-400 group"
-                style={{
-                  background: 'var(--bg-card)',
-                  border: '1px solid var(--border-color)',
-                  color: 'var(--text-primary)',
-                }}
-              >
-                <div
-                  className="absolute top-0 left-0 right-0 h-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            {relatedArticles.map(related => {
+              const relatedId = related.id as keyof typeof t.articles
+              const relatedTranslated = t.articles[relatedId]
+              return (
+                <Link
+                  key={related.id}
+                  to={`/articles/${related.slug}`}
+                  className="related-card p-7 rounded-2xl no-underline relative overflow-hidden transition-all duration-400 group"
                   style={{
-                    background: 'linear-gradient(90deg, var(--accent-cyan), var(--accent-purple))',
+                    background: 'var(--bg-card)',
+                    border: '1px solid var(--border-color)',
+                    color: 'var(--text-primary)',
                   }}
-                />
-                <div
-                  className="related-card-number font-mono text-xs mb-3"
-                  style={{ color: 'var(--accent-cyan)' }}
                 >
-                  {related.number}
-                </div>
-                <div className="related-card-title font-display text-lg font-bold mb-2 leading-[1.3]">
-                  {related.title}
-                </div>
-                <div
-                  className="related-card-excerpt text-sm leading-[1.6]"
-                  style={{ color: 'var(--text-muted)' }}
-                >
-                  {related.subtitle}
-                </div>
-              </Link>
-            ))}
+                  <div
+                    className="absolute top-0 left-0 right-0 h-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    style={{
+                      background: 'linear-gradient(90deg, var(--accent-cyan), var(--accent-purple))',
+                    }}
+                  />
+                  <div
+                    className="related-card-number font-mono text-xs mb-3"
+                    style={{ color: 'var(--accent-cyan)' }}
+                  >
+                    {related.number}
+                  </div>
+                  <div className="related-card-title font-display text-lg font-bold mb-2 leading-[1.3]">
+                    {relatedTranslated?.title || related.title}
+                  </div>
+                  <div
+                    className="related-card-excerpt text-sm leading-[1.6]"
+                    style={{ color: 'var(--text-muted)' }}
+                  >
+                    {relatedTranslated?.subtitle || related.subtitle}
+                  </div>
+                </Link>
+              )
+            })}
           </div>
         </div>
 
@@ -347,16 +376,16 @@ export default function ArticlePage() {
               }}
             />
             <h2 className="subscribe-title font-display text-[32px] font-extrabold tracking-[0.05em] mb-3">
-              GET <span className="gradient-text">UNBLINDED</span>
+              {t.subscribe.title} <span className="gradient-text">{t.subscribe.titleHighlight}</span>
             </h2>
             <p className="subscribe-desc mb-8" style={{ color: 'var(--text-muted)' }}>
-              New posts delivered when they're ready. No spam. No fluff. Just signal.
+              {t.subscribe.subtitle}
             </p>
             <form className="subscribe-form flex gap-3 max-w-[440px] mx-auto flex-wrap justify-center">
               <input
                 type="email"
                 className="subscribe-input flex-1 py-4 px-5 rounded-xl font-main text-[15px] outline-none transition-all duration-300"
-                placeholder="your@email.com"
+                placeholder={t.subscribe.placeholder}
                 style={{
                   background: 'var(--bg-dark)',
                   border: '1px solid var(--border-color)',
@@ -373,7 +402,7 @@ export default function ArticlePage() {
                   color: '#000',
                 }}
               >
-                Subscribe
+                {t.subscribe.button}
               </button>
             </form>
           </div>
@@ -407,18 +436,18 @@ export default function ArticlePage() {
                 className="footer-link text-[13px] font-medium uppercase tracking-[0.05em] no-underline transition-colors duration-300"
                 style={{ color: 'var(--text-muted)' }}
               >
-                RSS
+                {t.footer.rss}
               </a>
               <a
                 href="#"
                 className="footer-link text-[13px] font-medium uppercase tracking-[0.05em] no-underline transition-colors duration-300"
                 style={{ color: 'var(--text-muted)' }}
               >
-                About
+                {t.footer.about}
               </a>
             </div>
             <div className="footer-copy text-[13px]" style={{ color: 'var(--text-muted)' }}>
-              © 2026 UNBLIND. All rights reserved.
+              {t.footer.copyright}
             </div>
           </div>
         </footer>

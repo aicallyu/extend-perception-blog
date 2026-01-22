@@ -78,6 +78,26 @@ export default function Stats() {
       }}
     >
       <div className="container">
+        <div className="section-header mb-16 text-center">
+          <div
+            className="font-mono text-xs tracking-[0.25em] uppercase mb-5"
+            style={{ color: 'var(--accent-cyan)' }}
+          >
+            {t.stats.label}
+          </div>
+          <h2
+            className="font-display text-[42px] font-extrabold tracking-tight"
+            style={{
+              background: 'linear-gradient(135deg, var(--text-primary), var(--text-secondary))',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              letterSpacing: '-0.02em',
+            }}
+          >
+            {t.stats.title}
+          </h2>
+        </div>
         <div
           className="stats-grid grid gap-10"
           style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}
