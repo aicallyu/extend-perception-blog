@@ -7,6 +7,11 @@ import ArticleContentRenderer from '@/components/article/ArticleContentRenderer'
 import { useLanguage } from '@/i18n'
 import LanguageSelector from '@/components/LanguageSelector'
 
+// n8n Webhook URL
+const WEBHOOK_URL = import.meta.env.VITE_SUBSCRIBE_WEBHOOK_URL || 'https://your-n8n-instance.com/webhook/unblind-subscribe'
+
+type SubmitStatus = 'idle' | 'sending' | 'success' | 'error'
+
 // Mapping von Kategorie-Slug zu Übersetzungs-Key
 const categoryKeyMap: Record<string, keyof typeof import('@/i18n/translations').translations.en.categories> = {
   'Perception vs. Reality': 'perceptionReality',
@@ -22,6 +27,11 @@ export default function ArticlePage() {
   const { isDark, toggleTheme } = useTheme()
   const [progress, setProgress] = useState(0)
   const { t, language } = useLanguage()
+
+  // Subscribe form state
+  const [subscribeName, setSubscribeName] = useState('')
+  const [subscribeEmail, setSubscribeEmail] = useState('')
+  const [subscribeStatus, setSubscribeStatus] = useState<SubmitStatus>('idle')
 
   const article = slug ? getArticleBySlug(slug) : undefined
   const articleContent = slug ? getArticleContent(slug, language) : undefined
@@ -57,6 +67,39 @@ export default function ArticlePage() {
 
     return () => window.removeEventListener('scroll', handleScroll)
   }, [slug])
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (subscribeStatus === 'sending') return
+
+    setSubscribeStatus('sending')
+
+    try {
+      const response = await fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: subscribeName,
+          email: subscribeEmail,
+          language,
+          source: `article-${slug}`,
+          timestamp: new Date().toISOString(),
+        }),
+      })
+
+      if (response.ok) {
+        setSubscribeStatus('success')
+        setSubscribeName('')
+        setSubscribeEmail('')
+        setTimeout(() => setSubscribeStatus('idle'), 5000)
+      } else {
+        throw new Error('Subscription failed')
+      }
+    } catch {
+      setSubscribeStatus('error')
+      setTimeout(() => setSubscribeStatus('idle'), 4000)
+    }
+  }
 
   if (!article) {
     return <Navigate to="/" replace />
@@ -381,30 +424,72 @@ export default function ArticlePage() {
             <p className="subscribe-desc mb-8" style={{ color: 'var(--text-muted)' }}>
               {t.subscribe.subtitle}
             </p>
-            <form className="subscribe-form flex gap-3 max-w-[440px] mx-auto flex-wrap justify-center">
-              <input
-                type="email"
-                className="subscribe-input flex-1 py-4 px-5 rounded-xl font-main text-[15px] outline-none transition-all duration-300"
-                placeholder={t.subscribe.placeholder}
-                style={{
-                  background: 'var(--bg-dark)',
-                  border: '1px solid var(--border-color)',
-                  color: 'var(--text-primary)',
-                  minWidth: '200px',
-                }}
-              />
-              <button
-                type="submit"
-                className="subscribe-btn py-4 px-7 rounded-xl font-display text-sm font-bold tracking-[0.1em] uppercase cursor-pointer transition-all duration-300 whitespace-nowrap"
-                style={{
-                  background: 'linear-gradient(135deg, var(--accent-cyan), var(--accent-blue))',
-                  border: 'none',
-                  color: '#000',
-                }}
-              >
-                {t.subscribe.button}
-              </button>
-            </form>
+            {subscribeStatus === 'success' ? (
+              <div className="success-message py-5 px-6 rounded-xl max-w-[440px] mx-auto" style={{
+                background: 'rgba(16, 185, 129, 0.1)',
+                border: '1px solid rgba(16, 185, 129, 0.3)',
+              }}>
+                <p className="text-base font-medium" style={{ color: '#10b981' }}>
+                  {t.subscribe.success}
+                </p>
+              </div>
+            ) : (
+              <form className="subscribe-form flex gap-3 max-w-[500px] mx-auto flex-wrap justify-center" onSubmit={handleSubscribe}>
+                <input
+                  type="text"
+                  className="subscribe-input flex-1 py-4 px-5 rounded-xl font-main text-[15px] outline-none transition-all duration-300"
+                  placeholder={t.subscribe.namePlaceholder}
+                  required
+                  value={subscribeName}
+                  onChange={e => setSubscribeName(e.target.value)}
+                  disabled={subscribeStatus === 'sending'}
+                  style={{
+                    background: 'var(--bg-dark)',
+                    border: '1px solid var(--border-color)',
+                    color: 'var(--text-primary)',
+                    minWidth: '140px',
+                    opacity: subscribeStatus === 'sending' ? 0.6 : 1,
+                  }}
+                />
+                <input
+                  type="email"
+                  className="subscribe-input flex-1 py-4 px-5 rounded-xl font-main text-[15px] outline-none transition-all duration-300"
+                  placeholder={t.subscribe.placeholder}
+                  required
+                  value={subscribeEmail}
+                  onChange={e => setSubscribeEmail(e.target.value)}
+                  disabled={subscribeStatus === 'sending'}
+                  style={{
+                    background: 'var(--bg-dark)',
+                    border: '1px solid var(--border-color)',
+                    color: 'var(--text-primary)',
+                    minWidth: '180px',
+                    opacity: subscribeStatus === 'sending' ? 0.6 : 1,
+                  }}
+                />
+                <button
+                  type="submit"
+                  className="subscribe-btn py-4 px-7 rounded-xl font-display text-sm font-bold tracking-[0.1em] uppercase cursor-pointer transition-all duration-300 whitespace-nowrap"
+                  disabled={subscribeStatus === 'sending'}
+                  style={{
+                    background: subscribeStatus === 'error'
+                      ? 'linear-gradient(135deg, #ef4444, #dc2626)'
+                      : 'linear-gradient(135deg, var(--accent-cyan), var(--accent-blue))',
+                    border: 'none',
+                    color: '#000',
+                    opacity: subscribeStatus === 'sending' ? 0.8 : 1,
+                    minWidth: '130px',
+                  }}
+                >
+                  {subscribeStatus === 'sending' ? t.subscribe.sending : subscribeStatus === 'error' ? '!' : t.subscribe.button}
+                </button>
+              </form>
+            )}
+            {subscribeStatus === 'error' && (
+              <p className="mt-3 text-sm" style={{ color: '#ef4444' }}>
+                {t.subscribe.error}
+              </p>
+            )}
           </div>
         </div>
 

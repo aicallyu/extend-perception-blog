@@ -1,0 +1,224 @@
+{
+  "name": "UNBLIND Newsletter Subscription",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "unblind-subscribe",
+        "responseMode": "responseNode",
+        "options": {
+          "allowedOrigins": "*"
+        }
+      },
+      "id": "webhook-node",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [250, 300],
+      "webhookId": "unblind-subscribe"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_GOOGLE_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Subscribers",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Timestamp": "={{ $now.format('yyyy-MM-dd HH:mm:ss') }}",
+            "Name": "={{ $json.body.name }}",
+            "Email": "={{ $json.body.email }}",
+            "Language": "={{ $json.body.language }}",
+            "Source": "={{ $json.body.source }}"
+          }
+        },
+        "options": {}
+      },
+      "id": "google-sheets-node",
+      "name": "Save to Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.4,
+      "position": [500, 300],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YOUR_CREDENTIAL_ID",
+          "name": "Google Sheets Account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.body.email }}",
+        "subject": "Welcome to UNBLIND – The Signal Has Arrived",
+        "emailType": "html",
+        "message": "={{ $json.body.language === 'de' ? $('Welcome Email DE').item.json.html : ($json.body.language === 'es' ? $('Welcome Email ES').item.json.html : $('Welcome Email EN').item.json.html) }}",
+        "options": {
+          "replyTo": "hello@unblind.co"
+        }
+      },
+      "id": "send-welcome-email",
+      "name": "Send Welcome Email",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [750, 200],
+      "credentials": {
+        "smtp": {
+          "id": "YOUR_SMTP_CREDENTIAL_ID",
+          "name": "SMTP Account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "juan@unblind.co",
+        "subject": "🎯 New UNBLIND Subscriber: {{ $json.body.name }}",
+        "emailType": "html",
+        "message": "<div style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 500px; padding: 30px; background: #0a0a10; color: #fff; border-radius: 12px;\">\n  <h2 style=\"color: #00f0ff; margin-bottom: 20px;\">New Subscriber Alert</h2>\n  <table style=\"width: 100%; border-collapse: collapse;\">\n    <tr>\n      <td style=\"padding: 10px 0; color: #888;\">Name</td>\n      <td style=\"padding: 10px 0; color: #fff; font-weight: bold;\">{{ $json.body.name }}</td>\n    </tr>\n    <tr>\n      <td style=\"padding: 10px 0; color: #888;\">Email</td>\n      <td style=\"padding: 10px 0; color: #00f0ff;\">{{ $json.body.email }}</td>\n    </tr>\n    <tr>\n      <td style=\"padding: 10px 0; color: #888;\">Language</td>\n      <td style=\"padding: 10px 0; color: #fff;\">{{ $json.body.language.toUpperCase() }}</td>\n    </tr>\n    <tr>\n      <td style=\"padding: 10px 0; color: #888;\">Source</td>\n      <td style=\"padding: 10px 0; color: #fff;\">{{ $json.body.source }}</td>\n    </tr>\n    <tr>\n      <td style=\"padding: 10px 0; color: #888;\">Time</td>\n      <td style=\"padding: 10px 0; color: #fff;\">{{ $now.format('dd.MM.yyyy HH:mm') }}</td>\n    </tr>\n  </table>\n  <p style=\"margin-top: 20px; padding-top: 20px; border-top: 1px solid #333; color: #666; font-size: 12px;\">UNBLIND Subscription System</p>\n</div>",
+        "options": {}
+      },
+      "id": "notify-admin",
+      "name": "Notify Admin",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [750, 400],
+      "credentials": {
+        "smtp": {
+          "id": "YOUR_SMTP_CREDENTIAL_ID",
+          "name": "SMTP Account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ { success: true, message: 'Successfully subscribed!' } }}",
+        "options": {
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Access-Control-Allow-Origin",
+                "value": "*"
+              }
+            ]
+          }
+        }
+      },
+      "id": "success-response",
+      "name": "Success Response",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [1000, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{\n  json: {\n    html: `<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n</head>\n<body style=\"margin: 0; padding: 0; background-color: #030305; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;\">\n  <div style=\"max-width: 600px; margin: 0 auto; padding: 60px 40px; background: linear-gradient(180deg, #0a0a10 0%, #030305 100%);\">\n    \n    <!-- Logo -->\n    <div style=\"text-align: center; margin-bottom: 50px;\">\n      <span style=\"font-size: 28px; font-weight: 900; letter-spacing: 0.2em; color: #fff;\">UN<span style=\"background: linear-gradient(135deg, #00f0ff, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;\">BLIND</span></span>\n    </div>\n    \n    <!-- Main Content -->\n    <div style=\"text-align: center;\">\n      <h1 style=\"font-size: 32px; font-weight: 800; color: #fff; margin-bottom: 10px; letter-spacing: -0.02em;\">The Signal Has Arrived.</h1>\n      <p style=\"font-size: 15px; color: #888; margin-bottom: 40px; font-family: 'SF Mono', Monaco, monospace; letter-spacing: 0.05em;\">// WELCOME TO THE PERCEPTION LAYER</p>\n    </div>\n    \n    <!-- Message -->\n    <div style=\"background: rgba(0, 240, 255, 0.03); border: 1px solid rgba(0, 240, 255, 0.15); border-radius: 16px; padding: 35px; margin-bottom: 40px;\">\n      <p style=\"font-size: 17px; line-height: 1.8; color: #e0e0e5; margin: 0 0 20px 0;\">You've just taken a step most never take.</p>\n      <p style=\"font-size: 17px; line-height: 1.8; color: #e0e0e5; margin: 0 0 20px 0;\">While others react to what's visible, you'll learn to see what shapes reality <em style=\"color: #00f0ff;\">before</em> it becomes visible.</p>\n      <p style=\"font-size: 17px; line-height: 1.8; color: #e0e0e5; margin: 0;\">That's the difference between being moved by forces you don't understand—and understanding the forces before they move you.</p>\n    </div>\n    \n    <!-- What to Expect -->\n    <div style=\"margin-bottom: 40px;\">\n      <h2 style=\"font-size: 14px; font-weight: 700; color: #00f0ff; letter-spacing: 0.15em; margin-bottom: 20px;\">WHAT TO EXPECT</h2>\n      <ul style=\"list-style: none; padding: 0; margin: 0;\">\n        <li style=\"font-size: 16px; color: #c0c0c8; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06);\">→ Deep dives on perception, power, and decision-making</li>\n        <li style=\"font-size: 16px; color: #c0c0c8; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06);\">→ Frameworks that reveal what others miss</li>\n        <li style=\"font-size: 16px; color: #c0c0c8; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06);\">→ No spam. No fluff. Only signal.</li>\n        <li style=\"font-size: 16px; color: #c0c0c8; padding: 12px 0;\">→ New posts when they're ready—quality over frequency</li>\n      </ul>\n    </div>\n    \n    <!-- CTA -->\n    <div style=\"text-align: center; margin-bottom: 50px;\">\n      <a href=\"https://unblind.co\" style=\"display: inline-block; padding: 18px 40px; background: linear-gradient(135deg, #00f0ff, #0088ff); color: #000; font-size: 14px; font-weight: 700; letter-spacing: 0.1em; text-decoration: none; border-radius: 10px;\">START READING →</a>\n    </div>\n    \n    <!-- Quote -->\n    <div style=\"text-align: center; padding: 30px 0; border-top: 1px solid rgba(255,255,255,0.06);\">\n      <p style=\"font-size: 18px; font-style: italic; color: #888; margin: 0 0 10px 0;\">"The real voyage of discovery consists not in seeking new landscapes, but in having new eyes."</p>\n      <p style=\"font-size: 12px; color: #555; letter-spacing: 0.1em;\">— MARCEL PROUST</p>\n    </div>\n    \n    <!-- Footer -->\n    <div style=\"text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.06);\">\n      <p style=\"font-size: 12px; color: #444; margin: 0;\">UNBLIND · Expanding Perception</p>\n      <p style=\"font-size: 11px; color: #333; margin-top: 10px;\">You received this because you subscribed at unblind.co</p>\n    </div>\n    \n  </div>\n</body>\n</html>`\n  }\n}];"
+      },
+      "id": "welcome-email-en",
+      "name": "Welcome Email EN",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [500, 100]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{\n  json: {\n    html: `<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n</head>\n<body style=\"margin: 0; padding: 0; background-color: #030305; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;\">\n  <div style=\"max-width: 600px; margin: 0 auto; padding: 60px 40px; background: linear-gradient(180deg, #0a0a10 0%, #030305 100%);\">\n    \n    <!-- Logo -->\n    <div style=\"text-align: center; margin-bottom: 50px;\">\n      <span style=\"font-size: 28px; font-weight: 900; letter-spacing: 0.2em; color: #fff;\">UN<span style=\"background: linear-gradient(135deg, #00f0ff, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;\">BLIND</span></span>\n    </div>\n    \n    <!-- Main Content -->\n    <div style=\"text-align: center;\">\n      <h1 style=\"font-size: 32px; font-weight: 800; color: #fff; margin-bottom: 10px; letter-spacing: -0.02em;\">Das Signal ist angekommen.</h1>\n      <p style=\"font-size: 15px; color: #888; margin-bottom: 40px; font-family: 'SF Mono', Monaco, monospace; letter-spacing: 0.05em;\">// WILLKOMMEN AUF DER WAHRNEHMUNGSEBENE</p>\n    </div>\n    \n    <!-- Message -->\n    <div style=\"background: rgba(0, 240, 255, 0.03); border: 1px solid rgba(0, 240, 255, 0.15); border-radius: 16px; padding: 35px; margin-bottom: 40px;\">\n      <p style=\"font-size: 17px; line-height: 1.8; color: #e0e0e5; margin: 0 0 20px 0;\">Du hast gerade einen Schritt gemacht, den die meisten nie tun.</p>\n      <p style=\"font-size: 17px; line-height: 1.8; color: #e0e0e5; margin: 0 0 20px 0;\">Während andere auf das Sichtbare reagieren, wirst du lernen zu sehen, was die Realität formt, <em style=\"color: #00f0ff;\">bevor</em> es sichtbar wird.</p>\n      <p style=\"font-size: 17px; line-height: 1.8; color: #e0e0e5; margin: 0;\">Das ist der Unterschied zwischen dem Bewegt-Werden durch Kräfte, die du nicht verstehst—und dem Verstehen der Kräfte, bevor sie dich bewegen.</p>\n    </div>\n    \n    <!-- What to Expect -->\n    <div style=\"margin-bottom: 40px;\">\n      <h2 style=\"font-size: 14px; font-weight: 700; color: #00f0ff; letter-spacing: 0.15em; margin-bottom: 20px;\">WAS DICH ERWARTET</h2>\n      <ul style=\"list-style: none; padding: 0; margin: 0;\">\n        <li style=\"font-size: 16px; color: #c0c0c8; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06);\">→ Tiefgehende Analysen zu Wahrnehmung, Macht und Entscheidungsfindung</li>\n        <li style=\"font-size: 16px; color: #c0c0c8; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06);\">→ Frameworks, die enthüllen, was andere übersehen</li>\n        <li style=\"font-size: 16px; color: #c0c0c8; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06);\">→ Kein Spam. Kein Füllmaterial. Nur Signal.</li>\n        <li style=\"font-size: 16px; color: #c0c0c8; padding: 12px 0;\">→ Neue Beiträge, wenn sie fertig sind—Qualität vor Frequenz</li>\n      </ul>\n    </div>\n    \n    <!-- CTA -->\n    <div style=\"text-align: center; margin-bottom: 50px;\">\n      <a href=\"https://unblind.co\" style=\"display: inline-block; padding: 18px 40px; background: linear-gradient(135deg, #00f0ff, #0088ff); color: #000; font-size: 14px; font-weight: 700; letter-spacing: 0.1em; text-decoration: none; border-radius: 10px;\">JETZT LESEN →</a>\n    </div>\n    \n    <!-- Quote -->\n    <div style=\"text-align: center; padding: 30px 0; border-top: 1px solid rgba(255,255,255,0.06);\">\n      <p style=\"font-size: 18px; font-style: italic; color: #888; margin: 0 0 10px 0;\">„Die wahre Entdeckungsreise besteht nicht darin, neue Landschaften zu suchen, sondern mit neuen Augen zu sehen."</p>\n      <p style=\"font-size: 12px; color: #555; letter-spacing: 0.1em;\">— MARCEL PROUST</p>\n    </div>\n    \n    <!-- Footer -->\n    <div style=\"text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.06);\">\n      <p style=\"font-size: 12px; color: #444; margin: 0;\">UNBLIND · Wahrnehmung erweitern</p>\n      <p style=\"font-size: 11px; color: #333; margin-top: 10px;\">Du erhältst diese E-Mail, weil du dich auf unblind.co angemeldet hast</p>\n    </div>\n    \n  </div>\n</body>\n</html>`\n  }\n}];"
+      },
+      "id": "welcome-email-de",
+      "name": "Welcome Email DE",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [500, 0]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{\n  json: {\n    html: `<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n</head>\n<body style=\"margin: 0; padding: 0; background-color: #030305; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;\">\n  <div style=\"max-width: 600px; margin: 0 auto; padding: 60px 40px; background: linear-gradient(180deg, #0a0a10 0%, #030305 100%);\">\n    \n    <!-- Logo -->\n    <div style=\"text-align: center; margin-bottom: 50px;\">\n      <span style=\"font-size: 28px; font-weight: 900; letter-spacing: 0.2em; color: #fff;\">UN<span style=\"background: linear-gradient(135deg, #00f0ff, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;\">BLIND</span></span>\n    </div>\n    \n    <!-- Main Content -->\n    <div style=\"text-align: center;\">\n      <h1 style=\"font-size: 32px; font-weight: 800; color: #fff; margin-bottom: 10px; letter-spacing: -0.02em;\">La señal ha llegado.</h1>\n      <p style=\"font-size: 15px; color: #888; margin-bottom: 40px; font-family: 'SF Mono', Monaco, monospace; letter-spacing: 0.05em;\">// BIENVENIDO A LA CAPA DE PERCEPCIÓN</p>\n    </div>\n    \n    <!-- Message -->\n    <div style=\"background: rgba(0, 240, 255, 0.03); border: 1px solid rgba(0, 240, 255, 0.15); border-radius: 16px; padding: 35px; margin-bottom: 40px;\">\n      <p style=\"font-size: 17px; line-height: 1.8; color: #e0e0e5; margin: 0 0 20px 0;\">Acabas de dar un paso que la mayoría nunca da.</p>\n      <p style=\"font-size: 17px; line-height: 1.8; color: #e0e0e5; margin: 0 0 20px 0;\">Mientras otros reaccionan a lo visible, aprenderás a ver lo que moldea la realidad <em style=\"color: #00f0ff;\">antes</em> de que se vuelva visible.</p>\n      <p style=\"font-size: 17px; line-height: 1.8; color: #e0e0e5; margin: 0;\">Esa es la diferencia entre ser movido por fuerzas que no comprendes—y comprender las fuerzas antes de que te muevan.</p>\n    </div>\n    \n    <!-- What to Expect -->\n    <div style=\"margin-bottom: 40px;\">\n      <h2 style=\"font-size: 14px; font-weight: 700; color: #00f0ff; letter-spacing: 0.15em; margin-bottom: 20px;\">QUÉ ESPERAR</h2>\n      <ul style=\"list-style: none; padding: 0; margin: 0;\">\n        <li style=\"font-size: 16px; color: #c0c0c8; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06);\">→ Análisis profundos sobre percepción, poder y toma de decisiones</li>\n        <li style=\"font-size: 16px; color: #c0c0c8; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06);\">→ Frameworks que revelan lo que otros no ven</li>\n        <li style=\"font-size: 16px; color: #c0c0c8; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06);\">→ Sin spam. Sin relleno. Solo señal.</li>\n        <li style=\"font-size: 16px; color: #c0c0c8; padding: 12px 0;\">→ Nuevos artículos cuando estén listos—calidad sobre frecuencia</li>\n      </ul>\n    </div>\n    \n    <!-- CTA -->\n    <div style=\"text-align: center; margin-bottom: 50px;\">\n      <a href=\"https://unblind.co\" style=\"display: inline-block; padding: 18px 40px; background: linear-gradient(135deg, #00f0ff, #0088ff); color: #000; font-size: 14px; font-weight: 700; letter-spacing: 0.1em; text-decoration: none; border-radius: 10px;\">EMPEZAR A LEER →</a>\n    </div>\n    \n    <!-- Quote -->\n    <div style=\"text-align: center; padding: 30px 0; border-top: 1px solid rgba(255,255,255,0.06);\">\n      <p style=\"font-size: 18px; font-style: italic; color: #888; margin: 0 0 10px 0;\">"El verdadero viaje de descubrimiento no consiste en buscar nuevos paisajes, sino en tener nuevos ojos."</p>\n      <p style=\"font-size: 12px; color: #555; letter-spacing: 0.1em;\">— MARCEL PROUST</p>\n    </div>\n    \n    <!-- Footer -->\n    <div style=\"text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.06);\">\n      <p style=\"font-size: 12px; color: #444; margin: 0;\">UNBLIND · Expandiendo la percepción</p>\n      <p style=\"font-size: 11px; color: #333; margin-top: 10px;\">Recibiste esto porque te suscribiste en unblind.co</p>\n    </div>\n    \n  </div>\n</body>\n</html>`\n  }\n}];"
+      },
+      "id": "welcome-email-es",
+      "name": "Welcome Email ES",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [500, 200]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Welcome Email EN",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Welcome Email DE",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Welcome Email ES",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Save to Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save to Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "Send Welcome Email",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Notify Admin",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Welcome Email": {
+      "main": [
+        [
+          {
+            "node": "Success Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notify Admin": {
+      "main": [
+        [
+          {
+            "node": "Success Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "pinData": {}
+}

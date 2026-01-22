@@ -100,9 +100,13 @@ export interface Translations {
     title: string
     titleHighlight: string
     subtitle: string
+    namePlaceholder: string
     placeholder: string
     button: string
     note: string
+    success: string
+    error: string
+    sending: string
   }
   // Footer
   footer: {
@@ -328,9 +332,13 @@ export const translations: Record<Language, Translations> = {
       title: 'GET',
       titleHighlight: 'UNBLINDED',
       subtitle: "New posts delivered when they're ready. No spam. No fluff. Just signal.",
+      namePlaceholder: 'Your name',
       placeholder: 'your@email.com',
       button: 'SUBSCRIBE',
       note: '// JOIN FOUNDERS, EXECUTIVES, AND SYSTEM THINKERS',
+      success: 'Welcome to UNBLIND. The signal has arrived.',
+      error: 'Something went wrong. Please try again.',
+      sending: 'SENDING...',
     },
     footer: {
       rss: 'RSS',
@@ -551,9 +559,13 @@ export const translations: Record<Language, Translations> = {
       title: 'WERDE',
       titleHighlight: 'UNBLINDED',
       subtitle: 'Neue Beiträge, wenn sie fertig sind. Kein Spam. Kein Füllmaterial. Nur Signal.',
+      namePlaceholder: 'Dein Name',
       placeholder: 'deine@email.de',
       button: 'ABONNIEREN',
       note: '// WERDE TEIL VON GRÜNDERN, FÜHRUNGSKRÄFTEN UND SYSTEMDENKERN',
+      success: 'Willkommen bei UNBLIND. Das Signal ist angekommen.',
+      error: 'Etwas ist schiefgelaufen. Bitte versuche es erneut.',
+      sending: 'WIRD GESENDET...',
     },
     footer: {
       rss: 'RSS',
@@ -769,9 +781,13 @@ export const translations: Record<Language, Translations> = {
       title: 'OBTÉN',
       titleHighlight: 'UNBLINDED',
       subtitle: 'Nuevos artículos cuando estén listos. Sin spam. Sin relleno. Solo señal.',
+      namePlaceholder: 'Tu nombre',
       placeholder: 'tu@email.com',
       button: 'SUSCRIBIRSE',
       note: '// ÚNETE A FUNDADORES, EJECUTIVOS Y PENSADORES SISTÉMICOS',
+      success: 'Bienvenido a UNBLIND. La señal ha llegado.',
+      error: 'Algo salió mal. Por favor intenta de nuevo.',
+      sending: 'ENVIANDO...',
     },
     footer: {
       rss: 'RSS',
