@@ -29,9 +29,6 @@ export default function HermannGrid() {
       },
     })
 
-    return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill())
-    }
   }, [])
 
   return (
@@ -39,14 +36,13 @@ export default function HermannGrid() {
       <div className="perception-container text-center max-w-[900px] mx-auto px-10">
         <h2
           className="perception-title font-display text-4xl font-extrabold mb-4"
-          style={{ opacity: 0 }}
         >
           The Hermann Grid
         </h2>
 
         <p
           className="perception-subtitle text-[17px] mb-[50px] max-w-[600px] mx-auto"
-          style={{ color: 'var(--text-secondary)', opacity: 0 }}
+          style={{ color: 'var(--text-secondary)' }}
         >
           Focus on any white intersection. Do you see gray dots at the intersections you're NOT looking at?
         </p>
@@ -56,7 +52,6 @@ export default function HermannGrid() {
           style={{
             background: '#000',
             border: '1px solid rgba(0, 240, 255, 0.2)',
-            opacity: 0,
           }}
         >
           <div
@@ -81,7 +76,6 @@ export default function HermannGrid() {
           style={{
             background: 'rgba(0, 240, 255, 0.05)',
             border: '1px solid rgba(0, 240, 255, 0.1)',
-            opacity: 0,
           }}
         >
           <p className="m-0 text-[15px] leading-[1.7]" style={{ color: 'var(--text-secondary)' }}>

@@ -63,9 +63,6 @@ export default function Topics() {
       )
     })
 
-    return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill())
-    }
   }, [])
 
   const iconColors = [
@@ -115,8 +112,6 @@ export default function Topics() {
               style={{
                 background: 'linear-gradient(145deg, rgba(15, 15, 22, 0.9), rgba(8, 8, 14, 0.95))',
                 border: '1px solid rgba(255, 255, 255, 0.05)',
-                opacity: 0,
-                transform: 'translateX(-100vw) rotateZ(-45deg)',
               }}
             >
               {/* Top border on hover */}

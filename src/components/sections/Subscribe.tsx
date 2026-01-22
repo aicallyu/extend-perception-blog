@@ -30,9 +30,6 @@ export default function Subscribe() {
       },
     })
 
-    return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill())
-    }
   }, [])
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -49,8 +46,6 @@ export default function Subscribe() {
           style={{
             background: 'linear-gradient(145deg, rgba(0, 240, 255, 0.06), rgba(168, 85, 247, 0.04))',
             border: '1px solid rgba(0, 240, 255, 0.2)',
-            opacity: 0,
-            transform: 'scale(0.95)',
           }}
         >
           {/* Rotating background */}

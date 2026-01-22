@@ -32,9 +32,6 @@ export default function MullerLyer() {
       },
     })
 
-    return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill())
-    }
   }, [])
 
   return (
@@ -42,21 +39,19 @@ export default function MullerLyer() {
       <div className="perception-container text-center max-w-[900px] mx-auto px-10">
         <h2
           className="perception-title font-display text-4xl font-extrabold mb-4"
-          style={{ opacity: 0 }}
         >
           Which Line Is Longer?
         </h2>
 
         <p
           className="perception-subtitle text-[17px] mb-[50px] max-w-[600px] mx-auto"
-          style={{ color: 'var(--text-secondary)', opacity: 0 }}
+          style={{ color: 'var(--text-secondary)' }}
         >
           Your brain lies to you constantly. Here's proof.
         </p>
 
         <div
           className="muller-lyer-test relative w-full max-w-[600px] mx-auto"
-          style={{ opacity: 0 }}
         >
           <div
             className="muller-lyer-container flex flex-col gap-[50px] p-[50px] rounded-[20px]"
@@ -95,7 +90,6 @@ export default function MullerLyer() {
                 background: 'transparent',
                 border: '2px solid rgba(0, 240, 255, 0.3)',
                 color: 'var(--accent-cyan)',
-                opacity: 0,
               }}
               onClick={() => setRevealed(true)}
             >

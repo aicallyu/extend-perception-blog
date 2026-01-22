@@ -61,9 +61,6 @@ export default function Quote({ words, author }: QuoteProps) {
       },
     })
 
-    return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill())
-    }
   }, [])
 
   return (
@@ -106,7 +103,7 @@ export default function Quote({ words, author }: QuoteProps) {
 
         <p
           className="quote-author mt-[30px] font-mono text-sm tracking-[0.1em]"
-          style={{ color: 'var(--text-muted)', opacity: 0 }}
+          style={{ color: 'var(--text-muted)' }}
         >
           — {author}
         </p>

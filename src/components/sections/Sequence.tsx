@@ -71,9 +71,6 @@ export default function Sequence() {
       })
     }
 
-    return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill())
-    }
   }, [])
 
   return (
@@ -130,8 +127,6 @@ export default function Sequence() {
                     ? '0 24px 24px 0'
                     : '0',
                 boxShadow: step.active ? '0 0 80px rgba(0, 240, 255, 0.25)' : 'none',
-                opacity: 0,
-                transform: 'translateY(50px) scale(0.9)',
               }}
             >
               {step.active && (
