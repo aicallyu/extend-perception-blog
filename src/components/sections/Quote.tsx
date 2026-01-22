@@ -19,13 +19,14 @@ export default function Quote({ words, author }: QuoteProps) {
     const wordElements = section.querySelectorAll('.word')
     const authorEl = section.querySelector('.quote-author')
     const bg = section.querySelector('.quote-bg')
+    const triggers: ScrollTrigger[] = []
 
     // Initial states
     gsap.set(wordElements, { opacity: 0, y: 30 })
     gsap.set(authorEl, { opacity: 0 })
 
     // Background fade
-    gsap.to(bg, {
+    const bgTween = gsap.to(bg, {
       opacity: 1,
       scrollTrigger: {
         trigger: section,
@@ -34,10 +35,11 @@ export default function Quote({ words, author }: QuoteProps) {
         scrub: 1,
       },
     })
+    if (bgTween.scrollTrigger) triggers.push(bgTween.scrollTrigger)
 
     // Words animation
     wordElements.forEach((word, i) => {
-      gsap.to(word, {
+      const tween = gsap.to(word, {
         opacity: 1,
         y: 0,
         duration: 0.5,
@@ -48,10 +50,11 @@ export default function Quote({ words, author }: QuoteProps) {
           toggleActions: 'play none none reverse',
         },
       })
+      if (tween.scrollTrigger) triggers.push(tween.scrollTrigger)
     })
 
     // Author animation
-    gsap.to(authorEl, {
+    const authorTween = gsap.to(authorEl, {
       opacity: 1,
       duration: 0.8,
       scrollTrigger: {
@@ -60,7 +63,11 @@ export default function Quote({ words, author }: QuoteProps) {
         toggleActions: 'play none none reverse',
       },
     })
+    if (authorTween.scrollTrigger) triggers.push(authorTween.scrollTrigger)
 
+    return () => {
+      triggers.forEach(trigger => trigger.kill())
+    }
   }, [])
 
   return (

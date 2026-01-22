@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { useTheme } from '@/hooks/useTheme'
 import { getArticleBySlug, articles } from '@/data/articles'
 import { getArticleContent } from '@/data/articleContent'
+import { categoryKeyMap } from '@/data/constants'
 import ArticleContentRenderer from '@/components/article/ArticleContentRenderer'
 import { useLanguage } from '@/i18n'
 import LanguageSelector from '@/components/LanguageSelector'
@@ -11,16 +12,6 @@ import LanguageSelector from '@/components/LanguageSelector'
 const WEBHOOK_URL = import.meta.env.VITE_SUBSCRIBE_WEBHOOK_URL || 'https://your-n8n-instance.com/webhook/unblind-subscribe'
 
 type SubmitStatus = 'idle' | 'sending' | 'success' | 'error'
-
-// Mapping von Kategorie-Slug zu Übersetzungs-Key
-const categoryKeyMap: Record<string, keyof typeof import('@/i18n/translations').translations.en.categories> = {
-  'Perception vs. Reality': 'perceptionReality',
-  'Blind Spots': 'blindSpots',
-  'Decision Errors': 'decisionErrors',
-  'Communication Mismatch': 'communicationMismatch',
-  'Power & Systems': 'powerSystems',
-  'AI as Perception Layer': 'aiPerceptionLayer',
-}
 
 export default function ArticlePage() {
   const { slug } = useParams<{ slug: string }>()

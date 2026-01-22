@@ -26,13 +26,14 @@ export default function Topics() {
     const cards = section.querySelectorAll('.topic-card')
     const label = section.querySelector('.sequence-label')
     const title = section.querySelector('.sequence-title')
+    const triggers: ScrollTrigger[] = []
 
     // Initial states
     gsap.set(label, { opacity: 0 })
     gsap.set(title, { opacity: 0, y: 30 })
 
     // Section enter trigger
-    ScrollTrigger.create({
+    triggers.push(ScrollTrigger.create({
       trigger: section,
       start: 'top 80%',
       onEnter: () => {
@@ -40,11 +41,11 @@ export default function Topics() {
         label?.classList.add('active')
         gsap.to(title, { opacity: 1, y: 0, duration: 0.8, delay: 0.2 })
       },
-    })
+    }))
 
     // Cards fly in animation
     cards.forEach((card, i) => {
-      gsap.fromTo(
+      const tween = gsap.fromTo(
         card,
         {
           x: (i % 2 === 0 ? -100 : 100) + 'vw',
@@ -70,8 +71,12 @@ export default function Topics() {
           },
         }
       )
+      if (tween.scrollTrigger) triggers.push(tween.scrollTrigger)
     })
 
+    return () => {
+      triggers.forEach(trigger => trigger.kill())
+    }
   }, [])
 
   const iconColors = [

@@ -18,6 +18,7 @@ export default function Posts() {
     const label = section.querySelector('.sequence-label')
     const title = section.querySelector('.sequence-title')
     const items = section.querySelectorAll('.post-item')
+    const triggers: ScrollTrigger[] = []
 
     // Initial states
     gsap.set(label, { opacity: 0 })
@@ -25,7 +26,7 @@ export default function Posts() {
     gsap.set(items, { opacity: 0, x: -50 })
 
     // Section enter trigger
-    ScrollTrigger.create({
+    triggers.push(ScrollTrigger.create({
       trigger: section,
       start: 'top 80%',
       onEnter: () => {
@@ -33,11 +34,11 @@ export default function Posts() {
         label?.classList.add('active')
         gsap.to(title, { opacity: 1, y: 0, duration: 0.8, delay: 0.2 })
       },
-    })
+    }))
 
     // Animate each post item
     items.forEach(item => {
-      gsap.to(item, {
+      const tween = gsap.to(item, {
         opacity: 1,
         x: 0,
         duration: 0.8,
@@ -48,8 +49,12 @@ export default function Posts() {
           toggleActions: 'play none none reverse',
         },
       })
+      if (tween.scrollTrigger) triggers.push(tween.scrollTrigger)
     })
 
+    return () => {
+      triggers.forEach(trigger => trigger.kill())
+    }
   }, [])
 
   return (

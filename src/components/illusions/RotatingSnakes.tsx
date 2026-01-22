@@ -60,7 +60,7 @@ export default function RotatingSnakes() {
 
     gsap.set([title, subtitle, illusion, instructions], { opacity: 0, y: 30 })
 
-    ScrollTrigger.create({
+    const trigger = ScrollTrigger.create({
       trigger: section,
       start: 'top 70%',
       onEnter: () => {
@@ -71,6 +71,9 @@ export default function RotatingSnakes() {
       },
     })
 
+    return () => {
+      trigger.kill()
+    }
   }, [])
 
   return (

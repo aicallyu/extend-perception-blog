@@ -3,27 +3,25 @@ import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { articles } from '@/data/articles'
+import { categoryKeyMap } from '@/data/constants'
 import { useLanguage } from '@/i18n'
 
 gsap.registerPlugin(ScrollTrigger)
-
-// Mapping von Kategorie-Name zu Übersetzungs-Key
-const categoryKeyMap: Record<string, 'perceptionReality' | 'blindSpots' | 'decisionErrors' | 'communicationMismatch' | 'powerSystems' | 'aiPerceptionLayer'> = {
-  'Perception vs. Reality': 'perceptionReality',
-  'Blind Spots': 'blindSpots',
-  'Decision Errors': 'decisionErrors',
-  'Communication Mismatch': 'communicationMismatch',
-  'Power & Systems': 'powerSystems',
-  'AI as Perception Layer': 'aiPerceptionLayer',
-}
 
 export default function Library() {
   const sectionRef = useRef<HTMLElement>(null)
   const shelfRef = useRef<HTMLDivElement>(null)
   const [currentIndex, setCurrentIndex] = useState(0)
+  const currentIndexRef = useRef(currentIndex) // Ref to avoid stale closures
   const isAnimating = useRef(false)
   const autoPlayRef = useRef<ReturnType<typeof setInterval> | null>(null)
+  const animationTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const { t } = useLanguage()
+
+  // Keep ref in sync with state
+  useEffect(() => {
+    currentIndexRef.current = currentIndex
+  }, [currentIndex])
 
   const totalBooks = articles.length
   const angleStep = 360 / totalBooks
@@ -70,7 +68,8 @@ export default function Library() {
     if (newIndex >= totalBooks) newIndex = 0
 
     setCurrentIndex(newIndex)
-    setTimeout(() => {
+    if (animationTimeoutRef.current) clearTimeout(animationTimeoutRef.current)
+    animationTimeoutRef.current = setTimeout(() => {
       isAnimating.current = false
     }, 800)
   }, [totalBooks])
@@ -82,7 +81,8 @@ export default function Library() {
         if (isAnimating.current) return prev
         isAnimating.current = true
         const newIndex = prev >= totalBooks - 1 ? 0 : prev + 1
-        setTimeout(() => {
+        if (animationTimeoutRef.current) clearTimeout(animationTimeoutRef.current)
+        animationTimeoutRef.current = setTimeout(() => {
           isAnimating.current = false
         }, 800)
         return newIndex
@@ -111,7 +111,7 @@ export default function Library() {
     gsap.set(label, { opacity: 0 })
     gsap.set(title, { opacity: 0, y: 30 })
 
-    ScrollTrigger.create({
+    const trigger = ScrollTrigger.create({
       trigger: section,
       start: 'top 70%',
       onEnter: () => {
@@ -124,16 +124,18 @@ export default function Library() {
     positionBooks(false)
     startAutoPlay()
 
-    // Keyboard navigation
+    // Keyboard navigation - use ref to avoid stale closure
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowLeft') goToBook(currentIndex - 1)
-      if (e.key === 'ArrowRight') goToBook(currentIndex + 1)
+      if (e.key === 'ArrowLeft') goToBook(currentIndexRef.current - 1)
+      if (e.key === 'ArrowRight') goToBook(currentIndexRef.current + 1)
     }
     document.addEventListener('keydown', handleKeyDown)
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown)
       stopAutoPlay()
+      trigger.kill()
+      if (animationTimeoutRef.current) clearTimeout(animationTimeoutRef.current)
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])

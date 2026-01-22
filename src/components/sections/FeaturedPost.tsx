@@ -1,16 +1,7 @@
 import { Link } from 'react-router-dom'
 import { getLatestArticle } from '@/data/articles'
+import { categoryKeyMap } from '@/data/constants'
 import { useLanguage } from '@/i18n'
-
-// Mapping von Kategorie-Name zu Übersetzungs-Key
-const categoryKeyMap: Record<string, 'perceptionReality' | 'blindSpots' | 'decisionErrors' | 'communicationMismatch' | 'powerSystems' | 'aiPerceptionLayer'> = {
-  'Perception vs. Reality': 'perceptionReality',
-  'Blind Spots': 'blindSpots',
-  'Decision Errors': 'decisionErrors',
-  'Communication Mismatch': 'communicationMismatch',
-  'Power & Systems': 'powerSystems',
-  'AI as Perception Layer': 'aiPerceptionLayer',
-}
 
 export default function FeaturedPost() {
   const article = getLatestArticle()

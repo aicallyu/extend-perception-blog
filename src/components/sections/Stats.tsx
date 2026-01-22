@@ -23,13 +23,14 @@ export default function Stats() {
 
     const section = sectionRef.current
     const items = section.querySelectorAll('.stat-item')
+    const triggers: ScrollTrigger[] = []
 
     // Initial states
     gsap.set(items, { opacity: 0, y: 30 })
 
     // Animate each stat
     items.forEach((item, i) => {
-      ScrollTrigger.create({
+      triggers.push(ScrollTrigger.create({
         trigger: item,
         start: 'top 80%',
         onEnter: () => {
@@ -64,9 +65,12 @@ export default function Stats() {
             }
           )
         },
-      })
+      }))
     })
 
+    return () => {
+      triggers.forEach(trigger => trigger.kill())
+    }
   }, [])
 
   return (

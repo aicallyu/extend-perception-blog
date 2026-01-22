@@ -23,14 +23,19 @@ export default function LanguageSelector() {
           border: '1px solid var(--border-color)',
           color: 'var(--text-secondary)',
         }}
+        aria-label={`Select language. Current: ${currentLang?.label}`}
+        aria-expanded={isOpen}
+        aria-haspopup="listbox"
+        type="button"
       >
-        <span className="text-base sm:text-lg">{currentLang?.flag}</span>
+        <span className="text-base sm:text-lg" aria-hidden="true">{currentLang?.flag}</span>
         <span className="hidden sm:inline">{currentLang?.code.toUpperCase()}</span>
         <svg
           className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
+          aria-hidden="true"
         >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
@@ -42,6 +47,7 @@ export default function LanguageSelector() {
           <div
             className="fixed inset-0 z-40"
             onClick={() => setIsOpen(false)}
+            aria-hidden="true"
           />
 
           {/* Dropdown */}
@@ -51,6 +57,8 @@ export default function LanguageSelector() {
               background: 'var(--bg-card)',
               border: '1px solid var(--border-color)',
             }}
+            role="listbox"
+            aria-label="Select language"
           >
             {languages.map(lang => (
               <button
@@ -66,11 +74,14 @@ export default function LanguageSelector() {
                   color: language === lang.code ? 'var(--accent-cyan)' : 'var(--text-secondary)',
                   background: 'transparent',
                 }}
+                role="option"
+                aria-selected={language === lang.code}
+                type="button"
               >
-                <span>{lang.flag}</span>
+                <span aria-hidden="true">{lang.flag}</span>
                 <span>{lang.label}</span>
                 {language === lang.code && (
-                  <span className="ml-auto" style={{ color: 'var(--accent-cyan)' }}>✓</span>
+                  <span className="ml-auto" aria-hidden="true" style={{ color: 'var(--accent-cyan)' }}>✓</span>
                 )}
               </button>
             ))}

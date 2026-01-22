@@ -24,6 +24,7 @@ export default function Sequence() {
     const sequenceLine = section.querySelector('.sequence-line')
     const label = section.querySelector('.sequence-label')
     const title = section.querySelector('.sequence-title')
+    const triggers: ScrollTrigger[] = []
 
     // Initial states
     gsap.set(label, { opacity: 0 })
@@ -31,7 +32,7 @@ export default function Sequence() {
     gsap.set(sequenceSteps, { opacity: 0, y: 50, scale: 0.9 })
 
     // Section enter trigger
-    ScrollTrigger.create({
+    triggers.push(ScrollTrigger.create({
       trigger: section,
       start: 'top 80%',
       onEnter: () => {
@@ -39,11 +40,11 @@ export default function Sequence() {
         label?.classList.add('active')
         gsap.to(title, { opacity: 1, y: 0, duration: 0.8, delay: 0.2 })
       },
-    })
+    }))
 
     // Animate each step
     sequenceSteps.forEach((step, i) => {
-      gsap.to(step, {
+      const tween = gsap.to(step, {
         opacity: 1,
         y: 0,
         scale: 1,
@@ -55,11 +56,12 @@ export default function Sequence() {
           toggleActions: 'play none none reverse',
         },
       })
+      if (tween.scrollTrigger) triggers.push(tween.scrollTrigger)
     })
 
     // Sequence line animation
     if (sequenceLine) {
-      gsap.to(sequenceLine, {
+      const tween = gsap.to(sequenceLine, {
         width: '100%',
         ease: 'none',
         scrollTrigger: {
@@ -69,8 +71,12 @@ export default function Sequence() {
           scrub: 0.5,
         },
       })
+      if (tween.scrollTrigger) triggers.push(tween.scrollTrigger)
     }
 
+    return () => {
+      triggers.forEach(trigger => trigger.kill())
+    }
   }, [])
 
   return (

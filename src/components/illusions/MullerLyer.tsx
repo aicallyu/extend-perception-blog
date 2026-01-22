@@ -23,7 +23,7 @@ export default function MullerLyer() {
     gsap.set(test, { opacity: 0, y: 30 })
     gsap.set(btn, { opacity: 0 })
 
-    ScrollTrigger.create({
+    const trigger = ScrollTrigger.create({
       trigger: section,
       start: 'top 70%',
       onEnter: () => {
@@ -34,6 +34,9 @@ export default function MullerLyer() {
       },
     })
 
+    return () => {
+      trigger.kill()
+    }
   }, [])
 
   return (

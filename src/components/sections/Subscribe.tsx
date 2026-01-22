@@ -25,7 +25,7 @@ export default function Subscribe() {
 
     gsap.set(box, { opacity: 0, scale: 0.95 })
 
-    gsap.to(box, {
+    const tween = gsap.to(box, {
       opacity: 1,
       scale: 1,
       duration: 1,
@@ -37,6 +37,9 @@ export default function Subscribe() {
       },
     })
 
+    return () => {
+      tween.scrollTrigger?.kill()
+    }
   }, [])
 
   const handleSubmit = async (e: React.FormEvent) => {

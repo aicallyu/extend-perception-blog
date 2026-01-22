@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react'
+import { ReactNode, useState, useEffect, useRef } from 'react'
 
 interface HighlightBoxProps {
   children: ReactNode
@@ -8,14 +8,24 @@ interface HighlightBoxProps {
 
 export default function HighlightBox({ children, copyText, shareText }: HighlightBoxProps) {
   const [copied, setCopied] = useState(false)
+  const [linkCopied, setLinkCopied] = useState(false)
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current)
+    }
+  }, [])
 
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(copyText)
       setCopied(true)
-      setTimeout(() => setCopied(false), 2000)
-    } catch (err) {
-      console.error('Failed to copy:', err)
+      if (timeoutRef.current) clearTimeout(timeoutRef.current)
+      timeoutRef.current = setTimeout(() => setCopied(false), 2000)
+    } catch {
+      // Clipboard API may not be available in some contexts
     }
   }
 
@@ -26,14 +36,18 @@ export default function HighlightBox({ children, copyText, shareText }: Highligh
     if (navigator.share) {
       try {
         await navigator.share({ title: 'UNBLIND', text, url })
-      } catch (err) {
-        // User cancelled or share failed
+      } catch {
+        // User cancelled or share failed - fallback to clipboard
         await navigator.clipboard.writeText(`${text} ${url}`)
-        alert('Link copied to clipboard!')
+        setLinkCopied(true)
+        if (timeoutRef.current) clearTimeout(timeoutRef.current)
+        timeoutRef.current = setTimeout(() => setLinkCopied(false), 2000)
       }
     } else {
       await navigator.clipboard.writeText(`${text} ${url}`)
-      alert('Link copied to clipboard!')
+      setLinkCopied(true)
+      if (timeoutRef.current) clearTimeout(timeoutRef.current)
+      timeoutRef.current = setTimeout(() => setLinkCopied(false), 2000)
     }
   }
 
@@ -79,12 +93,12 @@ export default function HighlightBox({ children, copyText, shareText }: Highligh
           onClick={handleShare}
           className="action-btn px-4 py-2.5 rounded-lg font-mono text-xs font-semibold cursor-pointer flex items-center gap-1.5 transition-all duration-300"
           style={{
-            background: 'rgba(0, 240, 255, 0.1)',
-            border: '1px solid rgba(0, 240, 255, 0.2)',
-            color: 'var(--accent-cyan)',
+            background: linkCopied ? '#10b981' : 'rgba(0, 240, 255, 0.1)',
+            border: linkCopied ? '1px solid #10b981' : '1px solid rgba(0, 240, 255, 0.2)',
+            color: linkCopied ? 'white' : 'var(--accent-cyan)',
           }}
         >
-          ↗ Share
+          {linkCopied ? '✓ Link Copied!' : '↗ Share'}
         </button>
       </div>
 
