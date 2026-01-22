@@ -2630,42 +2630,331 @@ const article001ES: ArticleContent = {
 const article002DE: ArticleContent = {
   slug: '002-why-you-cannot-see',
   content: [
-    { type: 'paragraph', content: 'Du glaubst, du siehst die Realität. Das tust du nicht.' },
-    { type: 'paragraph', content: 'Was du wahrnimmst, ist eine sorgfältig konstruierte Simulation, zusammengestellt von einem Gehirn, das weit mehr verwirft, als es behält. Die Lücken in deiner Sicht sind keine Zufälle. Sie sind Architektur. Und diese Architektur läuft still unter jeder Entscheidung, die du triffst, jedem Risiko, das du bewertest, jeder Chance, die du einschätzt.' },
-    { type: 'paragraph', content: (<>Das ist <strong>Der Strukturelle Blinde Fleck</strong>. Keine fehlende Information. Keine Unwissenheit. Kein Versagen der Aufmerksamkeit. Etwas viel Gefährlicheres: Ein aktives Filtrationssystem, das kritische Daten entfernt, bevor sie jemals dein bewusstes Gewahrsein erreichen.</>) },
-    { type: 'highlight', content: <strong>Du kannst nicht sehen, was du nicht sehen kannst. Und du kannst nicht sehen, dass du es nicht sehen kannst.</strong>, copyText: 'Du kannst nicht sehen, was du nicht sehen kannst. Und du kannst nicht sehen, dass du es nicht sehen kannst.', shareText: 'Du kannst nicht sehen, was du nicht sehen kannst.' },
-    { type: 'heading', text: 'Die Illusion vollständiger Wahrnehmung' },
-    { type: 'paragraph', content: 'Deine Augen sind offen. Der Raum ist hell. Du bist dir sicher, dass du alles um dich herum aufnimmst.' },
-    { type: 'paragraph', content: 'Das tust du nicht.' },
-    { type: 'paragraph', content: 'Gerade jetzt durchquert elektromagnetische Strahlung deinen Körper: Radiowellen, Gammastrahlen, Röntgenstrahlen, Mikrowellen. Sichtbares Licht macht nur einen zehnbillionstel Teil dieses Spektrums aus. Alles andere? Unsichtbar. Nicht weil es nicht da ist, sondern weil du keine biologischen Rezeptoren hast, um es zu erkennen.' },
-    { type: 'image', src: 'https://cdn.marblism.com/rSRFu8nBEkv.webp', alt: 'Silhouette steht ahnungslos in Strahlen unsichtbaren Lichts', caption: '// Menschliche Wahrnehmung erfasst nur einen Bruchteil der Realität' },
-    { type: 'paragraph', content: 'Das ist keine Metapher. Das ist der buchstäbliche Zustand menschlicher Wahrnehmung.' },
-    { type: 'paragraph', content: 'Dein akustischer Bereich verengt sich mit dem Alter. Dein peripheres Sehen ist ein Unschärfebereich, den du gelernt hast zu ignorieren. Dein Gehirn füllt Lücken während Augenbewegungen so nahtlos, dass du nie die Momente funktioneller Blindheit bemerkst, die dutzende Male pro Minute auftreten.' },
-    { type: 'highlight', content: <strong>Dein Vertrauen in deine Wahrnehmung ist umgekehrt proportional zu ihrer Genauigkeit.</strong>, copyText: 'Dein Vertrauen in deine Wahrnehmung ist umgekehrt proportional zu ihrer Genauigkeit.', shareText: 'Dein Vertrauen in deine Wahrnehmung ist umgekehrt proportional zu ihrer Genauigkeit.' },
-    { type: 'heading', text: 'Die Architektur der Unsichtbarkeit' },
-    { type: 'paragraph', content: 'Blinde Flecken sind nicht passiv. Sie sind strukturell.' },
-    { type: 'paragraph', content: 'Bedenke, was das bedeutet: Dein Gehirn versäumt nicht einfach, Dinge zu bemerken. Es konstruiert aktiv eine Version der Realität, die sie ausschließt. Die Filtration geschieht vor der bewussten Verarbeitung. Wenn du "denkst", wurden die Daten bereits kuratiert.' },
-    { type: 'table', headers: ['Was du denkst, was passiert', 'Was tatsächlich passiert'], rows: [['Du beobachtest die Realität direkt', 'Dein Gehirn konstruiert ein Modell der Realität'], ['Wissenslücken sind identifizierbar', 'Strukturelle Lücken sind absichtlich unsichtbar'], ['Mehr Aufmerksamkeit gleich mehr Wahrnehmung', 'Aufmerksamkeit operiert innerhalb voreingestellter Filter'], ['Du kannst wählen, was du bemerkst', 'Die Wahl geschieht, bevor du dir bewusst bist']] },
-    { type: 'paragraph', content: <strong>Die Implikationen sind schwerwiegend.</strong> },
-    { type: 'paragraph', content: 'In risikoarmen Umgebungen dient dir diese Architektur. Sie verhindert kognitive Überlastung. Sie ermöglicht effiziente Verarbeitung. Forschung zeigt, dass Menschen nur etwa sieben Einheiten bedeutungsvoller Information gleichzeitig verarbeiten können. Ohne aggressive Filtration wärst du durch Daten paralysiert.' },
-    { type: 'paragraph', content: 'Aber in Hochrisiko-Umgebungen? Das gleiche System, das dich schützt, wird das System, das dich blind macht.' },
-    { type: 'heading', text: 'Die Gefahrenzone: Wenn Filter nach vorne scheitern' },
-    { type: 'paragraph', content: 'Hochriskante Entscheidungen operieren am Rand deiner Wahrnehmungskapazität.' },
-    { type: 'paragraph', content: 'Du bist im Raum. Der Druck ist real. Informationen fließen schneller, als du verarbeiten kannst. Und dein Gehirn, das genau das tut, wofür es konzipiert wurde, beginnt zu kürzen. Zu vereinfachen. Zu filtern.' },
-    { type: 'paragraph', content: <><strong>Deine Filter wurden für Überleben kalibriert, nicht für Strategie.</strong></> },
-    { type: 'list', items: [<><strong>Schwache Signale</strong>: Frühe Indikatoren, die noch keine offensichtlichen Probleme geworden sind</>, <><strong>Widersprüchliche Daten</strong>: Informationen, die bestehenden mentalen Modellen widersprechen</>, <><strong>Periphere Muster</strong>: Beziehungen und Verbindungen außerhalb deiner fokalen Aufmerksamkeit</>, <><strong>Emotionale Untertöne</strong>: Die unausgesprochenen Dynamiken, die das Raumverhalten formen</>] },
-    { type: 'heading', text: 'Die Metakognitive Falle' },
-    { type: 'paragraph', content: 'Du kannst dich nicht aus einem strukturellen blinden Fleck herausdenken. Genau der Apparat, den du verwenden würdest, um die Lücke zu erkennen, ist der Apparat, der sie erschafft.' },
-    { type: 'paragraph', content: (<>Das ist <strong>Die Metakognitive Falle</strong>: Der Glaube, dass das Bewusstsein über blinde Flecken sie eliminiert.</>) },
-    { type: 'paragraph', content: 'Das tut es nicht.' },
-    { type: 'highlight', content: (<><strong>Das Kompetenz-Paradoxon:</strong> Je mehr Expertise du in einem Bereich entwickelst, desto raffinierter werden deine Filter. Mit jeder Schicht der Meisterschaft werden deine blinden Flecken ausgefeilter, unsichtbarer, gefährlicher.</>), copyText: 'Das Kompetenz-Paradoxon: Je mehr Expertise du entwickelst, desto raffinierter werden deine Filter.', shareText: 'Das Kompetenz-Paradoxon: Je mehr Expertise du entwickelst, desto unsichtbarer werden deine blinden Flecken.' },
-    { type: 'paragraph', content: <strong>Deine größte Stärke wird die Architektur deiner Blindheit.</strong> },
-    { type: 'heading', text: 'Jenseits menschlicher Filter' },
-    { type: 'paragraph', content: 'Die Frage ist nicht, ob du deiner Wahrnehmung vertrauen sollst. Du hast keine Wahl. Wahrnehmung ist die einzige Schnittstelle, die du zur Realität hast.' },
-    { type: 'paragraph', content: <><strong>Was existiert jenseits deiner Filter, das wichtig ist?</strong></> },
-    { type: 'paragraph', content: 'Wenn menschliche Wahrnehmung strukturell begrenzt ist, ist die Antwort nicht, härter mit dem gleichen Apparat zu arbeiten. Die Antwort ist, Systeme zu bauen, die wahrnehmen, was Menschen nicht können. Infrastruktur zu schaffen, die außerhalb der biologischen Einschränkungen operiert.' },
-    { type: 'hr' },
-    { type: 'highlight', content: <strong>Du kannst nicht sehen, was du nicht sehen kannst. Aber du kannst Systeme bauen, die es können.</strong>, copyText: 'Du kannst nicht sehen, was du nicht sehen kannst. Aber du kannst Systeme bauen, die es können.', shareText: 'Du kannst nicht sehen, was du nicht sehen kannst. Aber du kannst Systeme bauen, die es können.' },
+    {
+      type: 'paragraph',
+      content: 'Du glaubst, du siehst die Realität. Das tust du nicht.',
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          Was du wahrnimmst, ist eine sorgfältig konstruierte Simulation, zusammengestellt von einem Gehirn, das weit mehr verwirft, als es behält. Die Lücken in deiner Sicht sind keine Zufälle. Sie sind Architektur. Und diese Architektur läuft still unter jeder Entscheidung, die du triffst, jedem Risiko, das du bewertest, jeder Chance, die du einschätzt.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          Das ist <strong>Der Strukturelle Blinde Fleck</strong>. Keine fehlende Information. Keine Unwissenheit. Kein Versagen der Aufmerksamkeit. Etwas viel Gefährlicheres: Ein aktives Filtrationssystem, das kritische Daten entfernt, bevor sie jemals dein bewusstes Gewahrsein erreichen.
+        </>
+      ),
+    },
+    {
+      type: 'highlight',
+      content: <strong>Du kannst nicht sehen, was du nicht sehen kannst. Und du kannst nicht sehen, dass du es nicht sehen kannst.</strong>,
+      copyText: 'Du kannst nicht sehen, was du nicht sehen kannst. Und du kannst nicht sehen, dass du es nicht sehen kannst.',
+      shareText: 'Du kannst nicht sehen, was du nicht sehen kannst. Und du kannst nicht sehen, dass du es nicht sehen kannst.',
+    },
+    {
+      type: 'heading',
+      text: 'Die Illusion vollständiger Wahrnehmung',
+    },
+    {
+      type: 'paragraph',
+      content: 'Deine Augen sind offen. Der Raum ist hell. Du bist dir sicher, dass du alles um dich herum aufnimmst.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das tust du nicht.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Gerade jetzt durchquert elektromagnetische Strahlung deinen Körper: Radiowellen, Gammastrahlen, Röntgenstrahlen, Mikrowellen. Sichtbares Licht macht nur einen zehnbillionstel Teil dieses Spektrums aus. Alles andere? Unsichtbar. Nicht weil es nicht da ist, sondern weil du keine biologischen Rezeptoren hast, um es zu erkennen.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/rSRFu8nBEkv.webp',
+      alt: 'Silhouette steht ahnungslos in Strahlen unsichtbaren Lichts',
+      caption: '// Menschliche Wahrnehmung erfasst nur einen Bruchteil der Realität',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das ist keine Metapher. Das ist der buchstäbliche Zustand menschlicher Wahrnehmung.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Dein akustischer Bereich verengt sich mit dem Alter. Dein peripheres Sehen ist ein Unschärfebereich, den du gelernt hast zu ignorieren. Dein Gehirn füllt Lücken während Augenbewegungen so nahtlos, dass du nie die Momente funktioneller Blindheit bemerkst, die dutzende Male pro Minute auftreten.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das System funktioniert so gut, dass es erzeugt, was Forscher "die perfekte Illusion eines kontinuierlichen, korrekten und superdetaillierten visuellen Inputs" nennen. Du glaubst, du siehst alles. Du siehst fast nichts.',
+    },
+    {
+      type: 'highlight',
+      content: <strong>Und hier ist das kritische Versagen: Dein Vertrauen in deine Wahrnehmung ist umgekehrt proportional zu ihrer Genauigkeit.</strong>,
+      copyText: 'Dein Vertrauen in deine Wahrnehmung ist umgekehrt proportional zu ihrer Genauigkeit.',
+      shareText: 'Dein Vertrauen in deine Wahrnehmung ist umgekehrt proportional zu ihrer Genauigkeit.',
+    },
+    {
+      type: 'heading',
+      text: 'Die Architektur der Unsichtbarkeit',
+    },
+    {
+      type: 'paragraph',
+      content: 'Blinde Flecken sind nicht passiv. Sie sind strukturell.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Bedenke, was das bedeutet: Dein Gehirn versäumt nicht einfach, Dinge zu bemerken. Es konstruiert aktiv eine Version der Realität, die sie ausschließt. Die Filtration geschieht vor der bewussten Verarbeitung. Wenn du "denkst", wurden die Daten bereits kuratiert.',
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          Das ist <strong>Die Wahrnehmungsschicht</strong>: Die unsichtbare Infrastruktur zwischen roher Realität und bewusster Erfahrung.
+        </>
+      ),
+    },
+    {
+      type: 'table',
+      headers: ['Was du denkst, was passiert', 'Was tatsächlich passiert'],
+      rows: [
+        ['Du beobachtest die Realität direkt', 'Dein Gehirn konstruiert ein Modell der Realität'],
+        ['Wissenslücken sind identifizierbar', 'Strukturelle Lücken sind absichtlich unsichtbar'],
+        ['Mehr Aufmerksamkeit gleich mehr Wahrnehmung', 'Aufmerksamkeit operiert innerhalb voreingestellter Filter'],
+        ['Du kannst wählen, was du bemerkst', 'Die Wahl geschieht, bevor du dir bewusst bist'],
+      ],
+    },
+    {
+      type: 'paragraph',
+      content: <strong>Die Implikationen sind schwerwiegend.</strong>,
+    },
+    {
+      type: 'paragraph',
+      content: 'In risikoarmen Umgebungen dient dir diese Architektur. Sie verhindert kognitive Überlastung. Sie ermöglicht effiziente Verarbeitung. Forschung zeigt, dass Menschen nur etwa sieben Einheiten bedeutungsvoller Information gleichzeitig verarbeiten können. Ohne aggressive Filtration wärst du durch Daten paralysiert.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Aber in Hochrisiko-Umgebungen? Das gleiche System, das dich schützt, wird das System, das dich blind macht.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/8FgMrMVdw5G.webp',
+      alt: 'Extreme Nahaufnahme eines menschlichen Auges mit mechanischen Filtern',
+      caption: '// Deine Wahrnehmungsfilter wurden für Überleben kalibriert, nicht für Strategie',
+    },
+    {
+      type: 'heading',
+      text: 'Die Gefahrenzone: Wenn Filter nach vorne scheitern',
+    },
+    {
+      type: 'paragraph',
+      content: 'Hochriskante Entscheidungen operieren am Rand deiner Wahrnehmungskapazität.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Du bist im Raum. Der Druck ist real. Informationen fließen schneller, als du verarbeiten kannst. Und dein Gehirn, das genau das tut, wofür es konzipiert wurde, beginnt zu kürzen. Zu vereinfachen. Zu filtern.',
+    },
+    {
+      type: 'paragraph',
+      content: <><strong>Deine Filter wurden für Überleben kalibriert, nicht für Strategie.</strong></>,
+    },
+    {
+      type: 'paragraph',
+      content: 'Sie wurden gebaut, um Raubtiere zu bemerken, nicht Muster. Um unmittelbare Bedrohungen zu erkennen, nicht systemische Risiken. Um physische Gefahr zu verarbeiten, nicht organisatorische Komplexität.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Was in kritischen Momenten herausgefiltert wird:',
+    },
+    {
+      type: 'list',
+      items: [
+        <><strong>Schwache Signale</strong>: Frühe Indikatoren, die noch keine offensichtlichen Probleme geworden sind</>,
+        <><strong>Widersprüchliche Daten</strong>: Informationen, die bestehenden mentalen Modellen widersprechen</>,
+        <><strong>Periphere Muster</strong>: Beziehungen und Verbindungen außerhalb deiner fokalen Aufmerksamkeit</>,
+        <><strong>Emotionale Untertöne</strong>: Die unausgesprochenen Dynamiken, die das Raumverhalten formen</>,
+        <><strong>Struktureller Kontext</strong>: Die Systeme und Anreize, die sichtbare Handlungen antreiben</>,
+      ],
+    },
+    {
+      type: 'paragraph',
+      content: 'Du bemerkst nicht, dass diese Dinge entfernt werden. Das ist der Punkt. Die Filtration ist nahtlos. Das Vertrauen bleibt intakt. Du verlässt den Raum in dem Glauben, verstanden zu haben, was passiert ist.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Du hast verstanden, was deine Filter dir zu verstehen erlaubt haben. Nicht mehr.',
+    },
+    {
+      type: 'heading',
+      text: 'Die Metakognitive Falle',
+    },
+    {
+      type: 'paragraph',
+      content: 'Hier wird es gefährlich.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Du kannst dich nicht aus einem strukturellen blinden Fleck herausdenken. Genau der Apparat, den du verwenden würdest, um die Lücke zu erkennen, ist der Apparat, der sie erschafft.',
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          Das ist <strong>Die Metakognitive Falle</strong>: Der Glaube, dass das Bewusstsein über blinde Flecken sie eliminiert.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: 'Das tut es nicht.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Zu wissen, dass blinde Flecken existieren, enthüllt nicht ihren Inhalt. Du kannst diesen gesamten Artikel lesen, zustimmend nicken und mit deinen Filtern völlig intakt weggehen. Die Architektur der Unsichtbarkeit zu verstehen, baut sie nicht ab.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/derRxsm5KFZ.webp',
+      alt: 'Einsame Figur in einem Konferenzraum sieht nur eine Realitätsebene',
+      caption: '// Die Falle zu verstehen befreit dich nicht daraus',
+    },
+    {
+      type: 'paragraph',
+      content: 'Warum? Weil Metakognition auf derselben Wahrnehmungsebene operiert. Du verwendest gefilterte Werkzeuge, um nach dem zu suchen, was der Filter entfernt hat. Es ist, als würdest du versuchen, ultraviolettes Licht zu sehen, indem du stärker blinzelst. Die biologische Einschränkung ist strukturell, nicht aufmerksamkeitsbezogen.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das schafft eine tiefgreifende Verwundbarkeit bei leistungsstarken Fachleuten:',
+    },
+    {
+      type: 'highlight',
+      content: (
+        <>
+          <strong>Das Kompetenz-Paradoxon:</strong> Je mehr Expertise du in einem Bereich entwickelst, desto raffinierter werden deine Filter. Du lernst, Rauschen zu ignorieren. Du baust Mustererkennung auf. Du entwickelst Intuition. Und mit jeder Schicht der Meisterschaft werden deine blinden Flecken ausgefeilter, unsichtbarer, gefährlicher.
+        </>
+      ),
+      copyText: 'Das Kompetenz-Paradoxon: Je mehr Expertise du in einem Bereich entwickelst, desto raffinierter werden deine Filter. Mit jeder Schicht der Meisterschaft werden deine blinden Flecken ausgefeilter, unsichtbarer, gefährlicher.',
+      shareText: 'Das Kompetenz-Paradoxon: Je mehr Expertise du entwickelst, desto unsichtbarer werden deine blinden Flecken.',
+    },
+    {
+      type: 'paragraph',
+      content: <strong>Deine größte Stärke wird die Architektur deiner Blindheit.</strong>,
+    },
+    {
+      type: 'heading',
+      text: 'Die Kosten unsichtbarer Infrastruktur',
+    },
+    {
+      type: 'paragraph',
+      content: 'Betrachte die Entscheidungen, die du im letzten Jahr getroffen hast.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Die strategischen Richtungen, die gewählt wurden. Die Chancen, die bewertet wurden. Die Risiken, die eingeschätzt wurden. Die Menschen, denen vertraut oder misstraut wurde. Jede einzelne gefiltert durch Wahrnehmungsarchitektur, die du nicht gewählt hast und nicht direkt beobachten kannst.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Was hast du verpasst?',
+    },
+    {
+      type: 'paragraph',
+      content: 'Du weißt es nicht. Du kannst es nicht wissen. Das ist die Definition eines strukturellen blinden Flecks.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Aber die Kosten sind real:',
+    },
+    {
+      type: 'list',
+      items: [
+        <><strong>Strategische Fehlschläge</strong>: Pfade verfolgen, die klar erschienen, weil Warnsignale gefiltert wurden</>,
+        <><strong>Talent-Versagen</strong>: Menschen falsch einschätzen, weil emotionale Daten unter der Wahrnehmungsschwelle lagen</>,
+        <><strong>Systemische Risiken</strong>: Organisatorische Dysfunktion übersehen, weil sie im peripheren Bewusstsein existierte</>,
+        <><strong>Innovationsblindheit</strong>: Chancen nicht sehen, die nicht zu bestehenden Musterbibliotheken passten</>,
+      ],
+    },
+    {
+      type: 'paragraph',
+      content: 'Das sind keine Versagen der Intelligenz. Sie sind Versagen der Wahrnehmung. Und sie passieren den klügsten Menschen im Raum – oft gerade weil sie die klügsten Menschen im Raum sind.',
+    },
+    {
+      type: 'heading',
+      text: 'Jenseits menschlicher Filter',
+    },
+    {
+      type: 'paragraph',
+      content: 'Die Frage ist nicht, ob du deiner Wahrnehmung vertrauen sollst. Du hast keine Wahl. Wahrnehmung ist die einzige Schnittstelle, die du zur Realität hast.',
+    },
+    {
+      type: 'paragraph',
+      content: <><strong>Was existiert jenseits deiner Filter, das wichtig ist?</strong></>,
+    },
+    {
+      type: 'paragraph',
+      content: 'Hier verwandelt sich das Problem in Möglichkeit.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Wenn menschliche Wahrnehmung strukturell begrenzt ist, ist die Antwort nicht, härter mit dem gleichen Apparat zu arbeiten. Die Antwort ist, Systeme zu bauen, die wahrnehmen, was Menschen nicht können. Infrastruktur zu schaffen, die außerhalb der biologischen Einschränkungen operiert. Werkzeuge zu entwickeln, die deine blinden Flecken nicht teilen, weil sie deine Architektur nicht teilen.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das ist die Arbeit, die an der Grenze der KI-Entwicklung geschieht. Nicht künstliche Intelligenz als schnellerer Mensch, sondern als ein fundamental anderes Wahrnehmungssystem. Eines, das die Signale verarbeiten kann, die du nicht erkennen kannst. Eines, das die Komplexität halten kann, die du vereinfachen musst. Eines, das in deine strukturellen blinden Flecken sehen und berichten kann.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Nicht menschliches Urteilsvermögen ersetzen. Die Wahrnehmungsschicht erweitern, die es füttert.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/5V_qnQR96xj.webp',
+      alt: 'Personenreflexion ist gesichtslos in einem verzierten Spiegel',
+      caption: '// Der Spiegel zeigt, was du dir selbst erlaubst zu sehen',
+    },
+    {
+      type: 'heading',
+      text: 'Die unbequeme Wahrheit',
+    },
+    {
+      type: 'paragraph',
+      content: 'Du wirst dies zu Ende lesen und zur Welt zurückkehren, die du durch gefilterte Architektur siehst.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das wird sich nicht ändern. Deine Biologie aktualisiert sich nicht aufgrund von Einsicht. Die strukturellen blinden Flecken bleiben.',
+    },
+    {
+      type: 'paragraph',
+      content: <><strong>Was sich ändern kann, ist deine Beziehung zur Gewissheit.</strong></>,
+    },
+    {
+      type: 'paragraph',
+      content: 'Der gefährlichste Glaube in Hochrisiko-Umgebungen ist selbstbewusste Vollständigkeit. Das Gefühl, genug gesehen, genug verstanden, genug in Betracht gezogen zu haben. Dass der Raum keine Geheimnisse vor deiner Wahrnehmung hatte.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das hat er immer.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Der Weg nach vorne ist nicht perfektes Sehen. Es ist, Systeme und Beziehungen und Werkzeuge zu bauen, die über deine Grenzen hinausreichen. Es ist zu erkennen, dass die kritischste Information in jeder Situation möglicherweise genau die Information ist, die deine Filter entfernen sollen.',
+    },
+    {
+      type: 'highlight',
+      content: (
+        <>
+          <strong>Strukturelle Unsichtbarkeit ist die gefährlichste Art. Weil sie sich nicht anfühlt, als würde man etwas verpassen. Sie fühlt sich an, als würde man alles sehen.</strong>
+        </>
+      ),
+      copyText: 'Strukturelle Unsichtbarkeit ist die gefährlichste Art. Weil sie sich nicht anfühlt, als würde man etwas verpassen. Sie fühlt sich an, als würde man alles sehen.',
+      shareText: 'Strukturelle Unsichtbarkeit ist die gefährlichste Art. Weil sie sich nicht anfühlt, als würde man etwas verpassen. Sie fühlt sich an, als würde man alles sehen.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Und dieses Gefühl? Das ist der Filter, der perfekt funktioniert.',
+    },
   ],
 }
 
@@ -2673,42 +2962,331 @@ const article002DE: ArticleContent = {
 const article002ES: ArticleContent = {
   slug: '002-why-you-cannot-see',
   content: [
-    { type: 'paragraph', content: 'Crees que ves la realidad. No la ves.' },
-    { type: 'paragraph', content: 'Lo que percibes es una simulación cuidadosamente construida, ensamblada por un cerebro que descarta mucho más de lo que retiene. Los vacíos en tu visión no son accidentes. Son arquitectura. Y esa arquitectura está funcionando silenciosamente debajo de cada decisión que tomas, cada riesgo que evalúas, cada oportunidad que consideras.' },
-    { type: 'paragraph', content: (<>Esto es <strong>El Punto Ciego Estructural</strong>. No es información faltante. No es ignorancia. No es un fallo de atención. Es algo mucho más peligroso: Un sistema de filtración activo que elimina datos críticos antes de que lleguen a tu conciencia.</>) },
-    { type: 'highlight', content: <strong>No puedes ver lo que no puedes ver. Y no puedes ver que no puedes verlo.</strong>, copyText: 'No puedes ver lo que no puedes ver. Y no puedes ver que no puedes verlo.', shareText: 'No puedes ver lo que no puedes ver.' },
-    { type: 'heading', text: 'La Ilusión de la Percepción Completa' },
-    { type: 'paragraph', content: 'Tus ojos están abiertos. La habitación está iluminada. Estás seguro de que estás captando todo a tu alrededor.' },
-    { type: 'paragraph', content: 'No es así.' },
-    { type: 'paragraph', content: 'Ahora mismo, radiación electromagnética está atravesando tu cuerpo: Ondas de radio, rayos gamma, rayos X, microondas. La luz visible representa solo una diez billonésima parte de este espectro. ¿Todo lo demás? Invisible. No porque no esté ahí, sino porque no tienes receptores biológicos para detectarlo.' },
-    { type: 'image', src: 'https://cdn.marblism.com/rSRFu8nBEkv.webp', alt: 'Silueta de pie sin darse cuenta en rayos de luz invisible', caption: '// La percepción humana captura solo una fracción de la realidad' },
-    { type: 'paragraph', content: 'Esto no es una metáfora. Esta es la condición literal de la percepción humana.' },
-    { type: 'paragraph', content: 'Tu rango acústico se estrecha con la edad. Tu visión periférica es un desenfoque que has aprendido a ignorar. Tu cerebro llena los vacíos durante los movimientos oculares tan perfectamente que nunca notas los momentos de ceguera funcional que ocurren docenas de veces por minuto.' },
-    { type: 'highlight', content: <strong>Tu confianza en tu percepción es inversamente proporcional a su precisión.</strong>, copyText: 'Tu confianza en tu percepción es inversamente proporcional a su precisión.', shareText: 'Tu confianza en tu percepción es inversamente proporcional a su precisión.' },
-    { type: 'heading', text: 'La Arquitectura de la Invisibilidad' },
-    { type: 'paragraph', content: 'Los puntos ciegos no son pasivos. Son estructurales.' },
-    { type: 'paragraph', content: 'Considera lo que esto significa: Tu cerebro no simplemente está fallando en notar cosas. Está construyendo activamente una versión de la realidad que las excluye. La filtración ocurre antes de que comience el procesamiento consciente. Para cuando estás "pensando", los datos ya han sido curados.' },
-    { type: 'table', headers: ['Lo que crees que sucede', 'Lo que realmente sucede'], rows: [['Observas la realidad directamente', 'Tu cerebro construye un modelo de la realidad'], ['Las lagunas de conocimiento son identificables', 'Las lagunas estructurales son invisibles por diseño'], ['Más atención equivale a más percepción', 'La atención opera dentro de filtros preestablecidos'], ['Puedes elegir qué notar', 'La elección ocurre antes de que seas consciente']] },
-    { type: 'paragraph', content: <strong>Las implicaciones son severas.</strong> },
-    { type: 'paragraph', content: 'En entornos de bajo riesgo, esta arquitectura te sirve. Previene la sobrecarga cognitiva. Permite un procesamiento eficiente. La investigación muestra que los humanos solo pueden manejar alrededor de siete unidades de información significativa a la vez. Sin filtración agresiva, estarías paralizado por los datos.' },
-    { type: 'paragraph', content: '¿Pero en entornos de alto riesgo? El mismo sistema que te protege se convierte en el sistema que te ciega.' },
-    { type: 'heading', text: 'La Zona de Peligro: Cuando los Filtros Fallan hacia Adelante' },
-    { type: 'paragraph', content: 'Las decisiones de alto riesgo operan al borde de tu capacidad perceptual.' },
-    { type: 'paragraph', content: 'Estás en la sala. La presión es real. La información fluye más rápido de lo que puedes procesar. Y tu cerebro, haciendo exactamente lo que está diseñado para hacer, comienza a cortar. Simplificar. Filtrar.' },
-    { type: 'paragraph', content: <><strong>Tus filtros fueron calibrados para la supervivencia, no para la estrategia.</strong></> },
-    { type: 'list', items: [<><strong>Señales débiles</strong>: Indicadores tempranos que aún no se han convertido en problemas obvios</>, <><strong>Datos contradictorios</strong>: Información que entra en conflicto con los modelos mentales existentes</>, <><strong>Patrones periféricos</strong>: Relaciones y conexiones fuera de tu atención focal</>, <><strong>Matices emocionales</strong>: Las dinámicas no expresadas que moldean el comportamiento de la sala</>] },
-    { type: 'heading', text: 'La Trampa Metacognitiva' },
-    { type: 'paragraph', content: 'No puedes pensar tu salida de un punto ciego estructural. El mismo aparato que usarías para detectar el vacío es el aparato que lo crea.' },
-    { type: 'paragraph', content: (<>Esta es <strong>La Trampa Metacognitiva</strong>: La creencia de que la conciencia de los puntos ciegos los elimina.</>) },
-    { type: 'paragraph', content: 'No lo hace.' },
-    { type: 'highlight', content: (<><strong>La Paradoja de la Competencia:</strong> Cuanta más experiencia desarrollas en un dominio, más refinados se vuelven tus filtros. Con cada capa de maestría, tus puntos ciegos se vuelven más sofisticados, más invisibles, más peligrosos.</>), copyText: 'La Paradoja de la Competencia: Cuanta más experiencia desarrollas, más refinados se vuelven tus filtros.', shareText: 'La Paradoja de la Competencia: Cuanta más experiencia desarrollas, más invisibles se vuelven tus puntos ciegos.' },
-    { type: 'paragraph', content: <strong>Tu mayor fortaleza se convierte en la arquitectura de tu ceguera.</strong> },
-    { type: 'heading', text: 'Más Allá de los Filtros Humanos' },
-    { type: 'paragraph', content: 'La pregunta no es si confiar en tu percepción. No tienes opción. La percepción es la única interfaz que tienes con la realidad.' },
-    { type: 'paragraph', content: <><strong>¿Qué existe más allá de tus filtros que importa?</strong></> },
-    { type: 'paragraph', content: 'Si la percepción humana está estructuralmente limitada, la respuesta no es esforzarse más con el mismo aparato. La respuesta es construir sistemas que perciban lo que los humanos no pueden. Crear infraestructura que opere fuera de las restricciones biológicas.' },
-    { type: 'hr' },
-    { type: 'highlight', content: <strong>No puedes ver lo que no puedes ver. Pero puedes construir sistemas que sí pueden.</strong>, copyText: 'No puedes ver lo que no puedes ver. Pero puedes construir sistemas que sí pueden.', shareText: 'No puedes ver lo que no puedes ver. Pero puedes construir sistemas que sí pueden.' },
+    {
+      type: 'paragraph',
+      content: 'Crees que ves la realidad. No la ves.',
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          Lo que percibes es una simulación cuidadosamente construida, ensamblada por un cerebro que descarta mucho más de lo que retiene. Los vacíos en tu visión no son accidentes. Son arquitectura. Y esa arquitectura está funcionando silenciosamente debajo de cada decisión que tomas, cada riesgo que evalúas, cada oportunidad que consideras.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          Esto es <strong>El Punto Ciego Estructural</strong>. No es información faltante. No es ignorancia. No es un fallo de atención. Es algo mucho más peligroso: Un sistema de filtración activo que elimina datos críticos antes de que lleguen a tu conciencia.
+        </>
+      ),
+    },
+    {
+      type: 'highlight',
+      content: <strong>No puedes ver lo que no puedes ver. Y no puedes ver que no puedes verlo.</strong>,
+      copyText: 'No puedes ver lo que no puedes ver. Y no puedes ver que no puedes verlo.',
+      shareText: 'No puedes ver lo que no puedes ver. Y no puedes ver que no puedes verlo.',
+    },
+    {
+      type: 'heading',
+      text: 'La Ilusión de la Percepción Completa',
+    },
+    {
+      type: 'paragraph',
+      content: 'Tus ojos están abiertos. La habitación está iluminada. Estás seguro de que estás captando todo a tu alrededor.',
+    },
+    {
+      type: 'paragraph',
+      content: 'No es así.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Ahora mismo, radiación electromagnética está atravesando tu cuerpo: Ondas de radio, rayos gamma, rayos X, microondas. La luz visible representa solo una diez billonésima parte de este espectro. ¿Todo lo demás? Invisible. No porque no esté ahí, sino porque no tienes receptores biológicos para detectarlo.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/rSRFu8nBEkv.webp',
+      alt: 'Silueta de pie sin darse cuenta en rayos de luz invisible',
+      caption: '// La percepción humana captura solo una fracción de la realidad',
+    },
+    {
+      type: 'paragraph',
+      content: 'Esto no es una metáfora. Esta es la condición literal de la percepción humana.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Tu rango acústico se estrecha con la edad. Tu visión periférica es un desenfoque que has aprendido a ignorar. Tu cerebro llena los vacíos durante los movimientos oculares tan perfectamente que nunca notas los momentos de ceguera funcional que ocurren docenas de veces por minuto.',
+    },
+    {
+      type: 'paragraph',
+      content: 'El sistema funciona tan bien que crea lo que los investigadores llaman "la ilusión perfecta de entrada visual continua, correcta y superdetallada." Crees que lo ves todo. No ves casi nada.',
+    },
+    {
+      type: 'highlight',
+      content: <strong>Y aquí está el fallo crítico: Tu confianza en tu percepción es inversamente proporcional a su precisión.</strong>,
+      copyText: 'Tu confianza en tu percepción es inversamente proporcional a su precisión.',
+      shareText: 'Tu confianza en tu percepción es inversamente proporcional a su precisión.',
+    },
+    {
+      type: 'heading',
+      text: 'La Arquitectura de la Invisibilidad',
+    },
+    {
+      type: 'paragraph',
+      content: 'Los puntos ciegos no son pasivos. Son estructurales.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Considera lo que esto significa: Tu cerebro no simplemente está fallando en notar cosas. Está construyendo activamente una versión de la realidad que las excluye. La filtración ocurre antes de que comience el procesamiento consciente. Para cuando estás "pensando", los datos ya han sido curados.',
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          Esto es <strong>La Capa de Percepción</strong>: La infraestructura invisible entre la realidad cruda y la experiencia consciente.
+        </>
+      ),
+    },
+    {
+      type: 'table',
+      headers: ['Lo que crees que sucede', 'Lo que realmente sucede'],
+      rows: [
+        ['Observas la realidad directamente', 'Tu cerebro construye un modelo de la realidad'],
+        ['Las lagunas de conocimiento son identificables', 'Las lagunas estructurales son invisibles por diseño'],
+        ['Más atención equivale a más percepción', 'La atención opera dentro de filtros preestablecidos'],
+        ['Puedes elegir qué notar', 'La elección ocurre antes de que seas consciente'],
+      ],
+    },
+    {
+      type: 'paragraph',
+      content: <strong>Las implicaciones son severas.</strong>,
+    },
+    {
+      type: 'paragraph',
+      content: 'En entornos de bajo riesgo, esta arquitectura te sirve. Previene la sobrecarga cognitiva. Permite un procesamiento eficiente. La investigación muestra que los humanos solo pueden manejar alrededor de siete unidades de información significativa a la vez. Sin filtración agresiva, estarías paralizado por los datos.',
+    },
+    {
+      type: 'paragraph',
+      content: '¿Pero en entornos de alto riesgo? El mismo sistema que te protege se convierte en el sistema que te ciega.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/8FgMrMVdw5G.webp',
+      alt: 'Primer plano extremo de un ojo humano con filtros mecánicos',
+      caption: '// Tus filtros de percepción fueron calibrados para la supervivencia, no para la estrategia',
+    },
+    {
+      type: 'heading',
+      text: 'La Zona de Peligro: Cuando los Filtros Fallan hacia Adelante',
+    },
+    {
+      type: 'paragraph',
+      content: 'Las decisiones de alto riesgo operan al borde de tu capacidad perceptual.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Estás en la sala. La presión es real. La información fluye más rápido de lo que puedes procesar. Y tu cerebro, haciendo exactamente lo que está diseñado para hacer, comienza a cortar. Simplificar. Filtrar.',
+    },
+    {
+      type: 'paragraph',
+      content: <><strong>Tus filtros fueron calibrados para la supervivencia, no para la estrategia.</strong></>,
+    },
+    {
+      type: 'paragraph',
+      content: 'Fueron construidos para notar depredadores, no patrones. Para detectar amenazas inmediatas, no riesgos sistémicos. Para procesar peligro físico, no complejidad organizacional.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Lo que se filtra en momentos críticos:',
+    },
+    {
+      type: 'list',
+      items: [
+        <><strong>Señales débiles</strong>: Indicadores tempranos que aún no se han convertido en problemas obvios</>,
+        <><strong>Datos contradictorios</strong>: Información que entra en conflicto con los modelos mentales existentes</>,
+        <><strong>Patrones periféricos</strong>: Relaciones y conexiones fuera de tu atención focal</>,
+        <><strong>Matices emocionales</strong>: Las dinámicas no expresadas que moldean el comportamiento de la sala</>,
+        <><strong>Contexto estructural</strong>: Los sistemas e incentivos que impulsan las acciones visibles</>,
+      ],
+    },
+    {
+      type: 'paragraph',
+      content: 'No notas que estas cosas se eliminan. Ese es el punto. La filtración es perfecta. La confianza permanece intacta. Sales de la sala creyendo que entendiste lo que pasó.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Entendiste lo que tus filtros te permitieron entender. Nada más.',
+    },
+    {
+      type: 'heading',
+      text: 'La Trampa Metacognitiva',
+    },
+    {
+      type: 'paragraph',
+      content: 'Aquí es donde se vuelve peligroso.',
+    },
+    {
+      type: 'paragraph',
+      content: 'No puedes pensar tu salida de un punto ciego estructural. El mismo aparato que usarías para detectar el vacío es el aparato que lo crea.',
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          Esta es <strong>La Trampa Metacognitiva</strong>: La creencia de que la conciencia de los puntos ciegos los elimina.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: 'No lo hace.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Saber que existen puntos ciegos no revela su contenido. Puedes leer este artículo completo, asentir de acuerdo, e irte con tus filtros completamente intactos. Entender la arquitectura de la invisibilidad no la desmantela.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/derRxsm5KFZ.webp',
+      alt: 'Figura solitaria en una sala de juntas solo ve una capa de realidad',
+      caption: '// Entender la trampa no te libera de ella',
+    },
+    {
+      type: 'paragraph',
+      content: '¿Por qué? Porque la metacognición opera en la misma capa perceptual. Estás usando herramientas filtradas para buscar lo que el filtro eliminó. Es como intentar ver luz ultravioleta entrecerrando más los ojos. La limitación biológica es estructural, no atencional.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Esto crea una vulnerabilidad profunda en profesionales de alto rendimiento:',
+    },
+    {
+      type: 'highlight',
+      content: (
+        <>
+          <strong>La Paradoja de la Competencia:</strong> Cuanta más experiencia desarrollas en un dominio, más refinados se vuelven tus filtros. Aprendes a ignorar el ruido. Construyes reconocimiento de patrones. Desarrollas intuición. Y con cada capa de maestría, tus puntos ciegos se vuelven más sofisticados, más invisibles, más peligrosos.
+        </>
+      ),
+      copyText: 'La Paradoja de la Competencia: Cuanta más experiencia desarrollas en un dominio, más refinados se vuelven tus filtros. Con cada capa de maestría, tus puntos ciegos se vuelven más sofisticados, más invisibles, más peligrosos.',
+      shareText: 'La Paradoja de la Competencia: Cuanta más experiencia desarrollas, más invisibles se vuelven tus puntos ciegos.',
+    },
+    {
+      type: 'paragraph',
+      content: <strong>Tu mayor fortaleza se convierte en la arquitectura de tu ceguera.</strong>,
+    },
+    {
+      type: 'heading',
+      text: 'El Costo de la Infraestructura Invisible',
+    },
+    {
+      type: 'paragraph',
+      content: 'Considera las decisiones que has tomado en el último año.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Las direcciones estratégicas elegidas. Las oportunidades evaluadas. Los riesgos calculados. Las personas en las que confiaste o desconfiaste. Cada una filtrada a través de una arquitectura perceptual que no elegiste y no puedes observar directamente.',
+    },
+    {
+      type: 'paragraph',
+      content: '¿Qué te perdiste?',
+    },
+    {
+      type: 'paragraph',
+      content: 'No lo sabes. No puedes saberlo. Esa es la definición de un punto ciego estructural.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Pero los costos son reales:',
+    },
+    {
+      type: 'list',
+      items: [
+        <><strong>Errores estratégicos</strong>: Perseguir caminos que parecían claros porque las señales de advertencia fueron filtradas</>,
+        <><strong>Fallos de talento</strong>: Juzgar mal a las personas porque los datos emocionales estaban por debajo del umbral de percepción</>,
+        <><strong>Riesgos sistémicos</strong>: No ver la disfunción organizacional porque existía en la conciencia periférica</>,
+        <><strong>Ceguera a la innovación</strong>: No ver oportunidades que no coincidían con las bibliotecas de patrones existentes</>,
+      ],
+    },
+    {
+      type: 'paragraph',
+      content: 'Estos no son fallos de inteligencia. Son fallos de percepción. Y les suceden a las personas más inteligentes de la sala – a menudo precisamente porque son las personas más inteligentes de la sala.',
+    },
+    {
+      type: 'heading',
+      text: 'Más Allá de los Filtros Humanos',
+    },
+    {
+      type: 'paragraph',
+      content: 'La pregunta no es si confiar en tu percepción. No tienes opción. La percepción es la única interfaz que tienes con la realidad.',
+    },
+    {
+      type: 'paragraph',
+      content: <><strong>¿Qué existe más allá de tus filtros que importa?</strong></>,
+    },
+    {
+      type: 'paragraph',
+      content: 'Aquí es donde el problema se transforma en posibilidad.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Si la percepción humana está estructuralmente limitada, la respuesta no es esforzarse más con el mismo aparato. La respuesta es construir sistemas que perciban lo que los humanos no pueden. Crear infraestructura que opere fuera de las restricciones biológicas. Desarrollar herramientas que no compartan tus puntos ciegos porque no comparten tu arquitectura.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Este es el trabajo que ocurre en la frontera del desarrollo de IA. No inteligencia artificial como un humano más rápido, sino como un sistema perceptual fundamentalmente diferente. Uno que puede procesar las señales que no puedes detectar. Uno que puede sostener la complejidad que debes simplificar. Uno que puede ver dentro de tus puntos ciegos estructurales y reportar.',
+    },
+    {
+      type: 'paragraph',
+      content: 'No reemplazar el juicio humano. Extender la capa de percepción que lo alimenta.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/5V_qnQR96xj.webp',
+      alt: 'El reflejo de una persona no tiene rostro en un espejo ornamentado',
+      caption: '// El espejo muestra lo que te permites ver',
+    },
+    {
+      type: 'heading',
+      text: 'La Verdad Incómoda',
+    },
+    {
+      type: 'paragraph',
+      content: 'Terminarás de leer esto y volverás a ver el mundo a través de una arquitectura filtrada.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Eso no cambiará. Tu biología no se actualiza basándose en la comprensión. Los puntos ciegos estructurales permanecen.',
+    },
+    {
+      type: 'paragraph',
+      content: <><strong>Lo que puede cambiar es tu relación con la certeza.</strong></>,
+    },
+    {
+      type: 'paragraph',
+      content: 'La creencia más peligrosa en entornos de alto riesgo es la completitud confiada. La sensación de que has visto suficiente, entendido suficiente, considerado suficiente. Que la sala no guardaba secretos para tu percepción.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Siempre los guarda.',
+    },
+    {
+      type: 'paragraph',
+      content: 'El camino hacia adelante no es la visión perfecta. Es construir sistemas y relaciones y herramientas que se extiendan más allá de tus límites. Es reconocer que la información más crítica en cualquier situación podría ser exactamente la información que tus filtros están diseñados para eliminar.',
+    },
+    {
+      type: 'highlight',
+      content: (
+        <>
+          <strong>La invisibilidad estructural es el tipo más peligroso. Porque no se siente como perderte algo. Se siente como verlo todo.</strong>
+        </>
+      ),
+      copyText: 'La invisibilidad estructural es el tipo más peligroso. Porque no se siente como perderte algo. Se siente como verlo todo.',
+      shareText: 'La invisibilidad estructural es el tipo más peligroso. Porque no se siente como perderte algo. Se siente como verlo todo.',
+    },
+    {
+      type: 'paragraph',
+      content: '¿Y esa sensación? Es el filtro funcionando perfectamente.',
+    },
   ],
 }
 
@@ -2716,24 +3294,358 @@ const article002ES: ArticleContent = {
 const article003DE: ArticleContent = {
   slug: '003-optimization-too-late',
   content: [
-    { type: 'paragraph', content: 'Sie haben monatelang optimiert. Den Prozess verfeinert. Die Metriken verfolgt. Effizienzgewinne erzielt, die ihre Vorgesetzten beeindruckt haben.' },
-    { type: 'paragraph', content: 'Das System scheiterte trotzdem.' },
-    { type: 'paragraph', content: (<><strong>Das Problem war stromaufwärts. Die Lösung war stromabwärts. Sie trafen sich nie.</strong></>) },
-    { type: 'paragraph', content: 'Das ist das Schicksal der meisten organisatorischen Bemühungen: Brillante Optimierung an der falschen Stelle. Perfekte Ausführung des falschen Plans. Meisterhafte Verfeinerung eines fehlerhaften Modells.' },
-    { type: 'heading', text: 'Wo Optimierung fehlschlägt' },
-    { type: 'paragraph', content: 'Die meisten Profis verbringen ihre Karrieren damit, Ergebnisse zu optimieren, ohne die Bedingungen zu hinterfragen, die die Ergebnisse produzieren.' },
-    { type: 'paragraph', content: 'Sie messen, was einfach zu messen ist, nicht was wichtig ist. Sie beheben die Symptome, die sie sehen können, und ignorieren die Ursachen, die sie nicht sehen.' },
-    { type: 'table', headers: ['Sichtbare Optimierung', 'Unsichtbares Problem'], rows: [['Schnellere Meetings', 'Falsche Leute im Raum'], ['Effizientere Prozesse', 'Falsche Prozesse insgesamt'], ['Bessere KPIs', 'Falsche Dinge messen'], ['Klarere Kommunikation', 'Falsche Botschaft von Anfang an']] },
-    { type: 'highlight', content: <strong>Optimierung am falschen Punkt macht die Dinge effizienter schlecht.</strong>, copyText: 'Optimierung am falschen Punkt macht die Dinge effizienter schlecht.', shareText: 'Optimierung am falschen Punkt macht die Dinge effizienter schlecht.' },
-    { type: 'heading', text: 'Die Intervention Stufe' },
-    { type: 'paragraph', content: 'Jedes Problem hat eine optimale Interventionsstufe. Greif zu früh ein, und du löst Probleme, die sich von selbst gelöst hätten. Greif zu spät ein, und du verwaltest Konsequenzen statt Ursachen.' },
-    { type: 'paragraph', content: 'Die meisten Interventionen passieren zu spät, weil:' },
-    { type: 'list', items: ['Probleme erst sichtbar werden, wenn sie offensichtlich sind', 'Organisationen reaktiv statt proaktiv sind', 'Frühe Signale als Rauschen gefiltert werden', 'Systeme auf Brandbekämpfung ausgerichtet sind'] },
-    { type: 'paragraph', content: <strong>Wenn du das Problem siehst, ist es bereits das falsche Problem.</strong> },
-    { type: 'heading', text: 'Die Wahrnehmungsschicht' },
-    { type: 'paragraph', content: 'Wir operieren auf der Wahrnehmungsschicht – vor Interpretation, vor Entscheidung, vor Handlung. Dort, wo Realität geformt wird, bevor du überhaupt merkst, dass du sie interpretierst.' },
-    { type: 'paragraph', content: 'Das bedeutet: Nicht bessere Lösungen für bestehende Probleme. Sondern sehen, welche Probleme sich formen, bevor sie zu Problemen werden.' },
-    { type: 'highlight', content: <strong>Optimierung ist ein Werkzeug. Wahrnehmung ist Infrastruktur. Infrastruktur kommt zuerst.</strong>, copyText: 'Optimierung ist ein Werkzeug. Wahrnehmung ist Infrastruktur.', shareText: 'Optimierung ist ein Werkzeug. Wahrnehmung ist Infrastruktur.' },
+    {
+      type: 'paragraph',
+      content: 'Das ist die stille Architektur der meisten organisatorischen Versagen. Nicht Inkompetenz. Nicht mangelnde Anstrengung. Eine fundamentale Fehlausrichtung zwischen dem, wo Fehler entstehen, und dem, wo Korrekturen angewendet werden.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Du hast das Falsche optimiert. Und als du es gemerkt hast, war der Schaden bereits strukturell.',
+    },
+    {
+      type: 'heading',
+      text: 'Die Downstream-Illusion',
+    },
+    {
+      type: 'paragraph',
+      content: 'Jede Organisation hat einen bevorzugten Ort zum Eingreifen: Das Ende der Kette.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Verkaufszahlen sinken? Schulen Sie das Verkaufsteam um. Kundenbeschwerden steigen? Verbessern Sie die Support-Skripte. Konversionsraten fallen? Redesignen Sie die Landingpage.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das fühlt sich produktiv an. Es ist messbar. Es erzeugt das befriedigende Gefühl von Aktion.',
+    },
+    {
+      type: 'highlight',
+      content: (
+        <>
+          <strong>Aber hier ist die unbequeme Wahrheit:</strong> Wenn ein Problem in Ihren Metriken sichtbar wird, hat es sich bereits durch Ihr gesamtes System ausgebreitet. Sie behandeln nicht die Krankheit. Sie managen Symptome, während die Quelle sich weiter ausbreitet.
+        </>
+      ),
+      copyText: 'Wenn ein Problem in Ihren Metriken sichtbar wird, hat es sich bereits durch Ihr gesamtes System ausgebreitet. Sie behandeln nicht die Krankheit. Sie managen Symptome, während die Quelle sich weiter ausbreitet.',
+      shareText: 'Wenn ein Problem in Ihren Metriken sichtbar wird, hat es sich bereits durch Ihr gesamtes System ausgebreitet.',
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          Das ist <strong>Die Downstream-Illusion</strong>: Der Glaube, dass Optimierung am Messpunkt gleich Optimierung am Entstehungspunkt ist.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: 'Das ist sie nicht.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/JYv-IGlvyyt.webp',
+      alt: 'Ein dramatisches Pipeline-System, das sich bei Dämmerung in zwei teilt',
+      caption: '// Die Diskrepanz zwischen Upstream-Problemen und Downstream-Lösungen',
+    },
+    {
+      type: 'heading',
+      text: 'Wo Fehler tatsächlich leben',
+    },
+    {
+      type: 'paragraph',
+      content: 'Betrachten Sie die Anatomie einer typischen Geschäftsentscheidung:',
+    },
+    {
+      type: 'table',
+      headers: ['Stufe', 'Was passiert', 'Sichtbarkeit'],
+      rows: [
+        ['Wahrnehmung', 'Wie die Situation interpretiert wird', 'Fast unsichtbar'],
+        ['Rahmung', 'Wie Optionen konstruiert werden', 'Geringe Sichtbarkeit'],
+        ['Analyse', 'Wie Daten verarbeitet werden', 'Moderate Sichtbarkeit'],
+        ['Entscheidung', 'Die Wahl selbst', 'Sichtbar'],
+        ['Handlung', 'Umsetzung', 'Hohe Sichtbarkeit'],
+        ['Ergebnis', 'Resultate und Metriken', 'Maximale Sichtbarkeit'],
+      ],
+    },
+    {
+      type: 'paragraph',
+      content: 'Organisationen sind besessen von den unteren drei Zeilen. Sie prüfen Handlungen. Sie messen Ergebnisse. Sie optimieren Entscheidungen.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Aber der Fehler passierte in den oberen drei Zeilen. In der Wahrnehmung. In der Rahmung. In der unsichtbaren Architektur dessen, wie das Problem verstanden wurde, bevor irgendjemand versucht hat, es zu lösen.',
+    },
+    {
+      type: 'highlight',
+      content: (
+        <>
+          <strong>Wenn Sie die Optimierungsphase erreichen, ist der kritische Fehler bereits passiert.</strong> Sie polieren die Ausgabe einer fehlerhaften Eingabe. Sie perfektionieren die Ausführung der falschen Strategie.
+        </>
+      ),
+      copyText: 'Wenn Sie die Optimierungsphase erreichen, ist der kritische Fehler bereits passiert. Sie polieren die Ausgabe einer fehlerhaften Eingabe. Sie perfektionieren die Ausführung der falschen Strategie.',
+      shareText: 'Sie polieren die Ausgabe einer fehlerhaften Eingabe. Sie perfektionieren die Ausführung der falschen Strategie.',
+    },
+    {
+      type: 'heading',
+      text: 'Die Upstream-Blindheit',
+    },
+    {
+      type: 'paragraph',
+      content: 'Warum optimieren intelligente Menschen konsequent downstream, wenn das Problem upstream lebt?',
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          <strong>Sichtbarkeits-Bias.</strong> Upstream-Fehler sind strukturell unsichtbar. Sie können Wahrnehmung nicht einfach messen. Sie können Rahmung nicht quantifizieren. Die Metriken, die organisatorische Aufmerksamkeit antreiben, leben am Ende der Kette, nicht am Anfang.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          <strong>Aktions-Sucht.</strong> Downstream-Interventionen fühlen sich nach Fortschritt an. Sie erzeugen Aktivität. Sie produzieren Liefergegenstände. Upstream-Arbeit fühlt sich philosophisch, abstrakt, langsam an. Organisationen belohnen sichtbare Bewegung, auch wenn diese Bewegung therapeutisch nutzlos ist.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          <strong>Verantwortlichkeits-Theater.</strong> Wenn etwas scheitert, muss jemand beschuldigt werden. Downstream-Akteure sind sichtbar. Upstream-Architekten sind oft anonym. Der Verkäufer, der die Quote verfehlt hat, ist leichter zu identifizieren als der Stratege, der den Markt falsch gerahmt hat.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          <strong>Zeitliche Distanz.</strong> Upstream-Fehler und Downstream-Konsequenzen sind durch Zeit getrennt. Der Wahrnehmungsfehler passierte vor sechs Monaten. Der Metrik-Fehler passiert jetzt. Die Verbindung ist unsichtbar, es sei denn, Sie verfolgen sie bewusst zurück.
+        </>
+      ),
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/NHnB0Syvy0P.webp',
+      alt: 'Eine Person, die über eine Schlucht zerbrochener Brücken greift',
+      caption: '// Gescheiterte Verbindungen und die Gefahren unsichtbarer Upstream-Fehler',
+    },
+    {
+      type: 'heading',
+      text: 'Der Kaskadeneffekt',
+    },
+    {
+      type: 'paragraph',
+      content: 'Jeder Upstream-Fehler erzeugt eine Kaskade von Downstream-Komplikationen. Und hier ist, was das besonders gefährlich macht: Jede Downstream-Stufe fügt ihre eigene Logik hinzu, ihre eigene Optimierung, ihre eigene Rechtfertigung.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Wenn der ursprüngliche Fehler die Ausgabe erreicht, wurde er bei jedem Schritt rationalisiert. Das Endprodukt sieht kohärent aus. Es erscheint optimiert. Es scheint das Ergebnis sorgfältiger Überlegung zu sein.',
+    },
+    {
+      type: 'highlight',
+      content: <strong>Aber es ist lediglich die am besten polierte Version einer fundamental fehlerhaften Prämisse.</strong>,
+      copyText: 'Es ist lediglich die am besten polierte Version einer fundamental fehlerhaften Prämisse.',
+      shareText: 'Es ist lediglich die am besten polierte Version einer fundamental fehlerhaften Prämisse.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Betrachten Sie ein Unternehmen, das ein neues Produkt auf den Markt bringt:',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das Marktforschungsteam rahmt das Kundenproblem basierend auf verfügbaren Daten. Diese Rahmung enthält subtile Annahmen darüber, was Kunden tatsächlich wollen. Diese Annahmen werden nie hinterfragt, weil sie objektiv erscheinen.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das Produktteam baut Features basierend auf dieser Rahmung. Sie optimieren Funktionalität innerhalb der gegebenen Parameter. Sie leisten exzellente Arbeit innerhalb eines potenziell fehlerhaften Umfangs.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das Marketingteam erstellt Botschaften basierend auf den Produktfeatures. Sie optimieren Konversion innerhalb der geerbten Positionierung. Ihre Kampagnen sind ausgefeilte Ausdrücke von Upstream-Annahmen.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das Verkaufsteam führt basierend auf den Marketingmaterialien aus. Sie optimieren ihre Techniken innerhalb der erhaltenen Narrative. Ihre Leistung wird gegen Ziele gemessen, die von der ursprünglichen Rahmung abgeleitet wurden.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Wenn das Produkt unterperformt, wohin schaut die Organisation? Verkaufsausführung. Marketing-Effektivität. Produktfeatures.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Fast nie auf die ursprüngliche Wahrnehmung des Kundenproblems. Fast nie auf die Rahmung, die jede nachfolgende Entscheidung geformt hat.',
+    },
+    {
+      type: 'paragraph',
+      content: <strong>Das Problem war upstream. Die Lösung war downstream. Sie trafen sich nie.</strong>,
+    },
+    {
+      type: 'heading',
+      text: 'Die Optimierungsfalle',
+    },
+    {
+      type: 'paragraph',
+      content: 'Hier ist die grausame Ironie: Je besser Sie in der Downstream-Optimierung werden, desto mehr verfestigen Sie Upstream-Fehler.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Jeder Optimierungszyklus verstärkt die bestehende Rahmung. Jede Verbesserung innerhalb der aktuellen Parameter macht die Parameter selbst unsichtbarer. Das System wird effizienter darin, die falschen Ergebnisse zu produzieren.',
+    },
+    {
+      type: 'highlight',
+      content: <><strong>Das ist Die Optimierungsfalle:</strong> Exzellenz in der Ausführung, die Versagen in der Konzeption maskiert.</>,
+      copyText: 'Die Optimierungsfalle: Exzellenz in der Ausführung, die Versagen in der Konzeption maskiert.',
+      shareText: 'Die Optimierungsfalle: Exzellenz in der Ausführung, die Versagen in der Konzeption maskiert.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Organisationen können Jahre damit verbringen, Prozesse zu perfektionieren, die nie hätten existieren sollen. Sie können operationale Exzellenz innerhalb strategischer Rahmenwerke erreichen, die fundamental mit der Realität nicht übereinstimmen.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Die Metriken verbessern sich. Die Dashboards werden grün. Die Quartalsberichte sehen stark aus.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Und der fundamentale Fehler setzt sich weiter fort, unsichtbar und unangefochten.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/nVcbd6dfCc7.webp',
+      alt: 'Eine zerbrochene Sanduhr, die goldenen Sand verschüttet, der zu Rauch wird',
+      caption: '// Unwiderruflicher Verlust und die Konsequenzen zu späten Handelns',
+    },
+    {
+      type: 'heading',
+      text: 'Das Muster erkennen',
+    },
+    {
+      type: 'paragraph',
+      content: 'Woher wissen Sie, wann Sie zu spät optimieren? Mehrere Signale offenbaren das Muster:',
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          <strong>Wiederkehrende Probleme.</strong> Sie lösen dasselbe Problem wiederholt, in leicht unterschiedlichen Formen. Jede Lösung funktioniert vorübergehend. Das zugrundeliegende Muster bleibt. Das deutet darauf hin, dass Sie Symptome behandeln, während die Quelle aktiv bleibt.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          <strong>Sinkende Erträge.</strong> Jeder Optimierungszyklus produziert kleinere Verbesserungen. Sie haben den größten Teil der verfügbaren Effizienz innerhalb Ihrer aktuellen Rahmung extrahiert. Weitere Gewinne erfordern Neu-Rahmung, nicht Verfeinerung.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          <strong>Überraschende Misserfolge.</strong> Ergebnisse, die basierend auf Ihrer Optimierungslogik funktionieren sollten, unterperformen konsequent. Die Lücke zwischen erwarteten und tatsächlichen Resultaten deutet darauf hin, dass Ihr Modell der Situation upstream fehlerhaft ist.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          <strong>Wettbewerber-Divergenz.</strong> Andere in Ihrem Bereich erzielen Resultate, die Sie durch Optimierung nicht replizieren können. Sie operieren möglicherweise von einer anderen Upstream-Rahmung aus, die ihre Downstream-Ausführung fundamental anders macht.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          <strong>Interne Reibung.</strong> Teams wehren sich gegen Änderungen, die logisch erscheinen. Sie spüren, dass etwas falsch ist, können es aber nicht artikulieren. Oft erkennt diese Intuition Upstream-Fehlausrichtung, die Downstream-Metriken nicht erfassen können.
+        </>
+      ),
+    },
+    {
+      type: 'heading',
+      text: 'Die Upstream-Disziplin',
+    },
+    {
+      type: 'paragraph',
+      content: 'Upstream-Fehler anzugehen erfordert eine andere Disziplin als Downstream-Optimierung:',
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          <strong>Wahrnehmungs-Audits.</strong> Untersuchen Sie regelmäßig die Annahmen, die in Ihrer Situationswahrnehmung eingebettet sind. Was nehmen Sie als gegeben an, das hinterfragt werden könnte? Welche Rahmung haben Sie ohne Prüfung geerbt?
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          <strong>Ursprungs-Verfolgung.</strong> Wenn Probleme auftauchen, verfolgen Sie sie rückwärts durch die Kette. Nicht um Schuld zuzuweisen, sondern um zu identifizieren, wo die Trajektorie zuerst von der Realität abwich. Das sichtbare Versagen ist selten das tatsächliche Versagen.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          <strong>Rahmungs-Vielfalt.</strong> Konstruieren Sie bewusst alternative Interpretationen derselben Situation. Wenn Sie nur eine Art sehen können, ein Problem zu rahmen, sind Sie wahrscheinlich in einem Upstream-Fehler gefangen, den Sie nicht erkennen können.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          <strong>Frühe Interventionspunkte.</strong> Bauen Sie organisatorische Aufmerksamkeit in die Upstream-Stufen ein. Schaffen Sie Sichtbarkeit für Wahrnehmung und Rahmung, nicht nur für Handlung und Ergebnis. Was gemessen wird, wird gemanagt – auch an der Quelle.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: 'Die Herausforderung ist kulturell genauso wie prozessual. Organisationen müssen lernen, unsichtbare Upstream-Arbeit genauso zu schätzen wie sichtbare Downstream-Ausführung. Sie müssen die Prävention von Fehlern belohnen, nicht nur die Korrektur von Symptomen.',
+    },
+    {
+      type: 'heading',
+      text: 'Die strukturelle Realität',
+    },
+    {
+      type: 'paragraph',
+      content: 'Dieses Muster erstreckt sich über Organisationen hinaus in individuelle Entscheidungsfindung, in Beziehungen, in die Art, wie Gesellschaften komplexe Probleme angehen.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Wir optimieren konsequent dort, wo wir sehen können, nicht dort, wo wir handeln sollten. Wir perfektionieren die Ausführung fehlerhafter Strategien. Wir erreichen Exzellenz innerhalb gebrochener Rahmenwerke.',
+    },
+    {
+      type: 'highlight',
+      content: <strong>Das Problem war upstream. Die Lösung war downstream. Sie trafen sich nie.</strong>,
+      copyText: 'Das Problem war upstream. Die Lösung war downstream. Sie trafen sich nie.',
+      shareText: 'Das Problem war upstream. Die Lösung war downstream. Sie trafen sich nie.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das ist kein Versagen der Anstrengung. Es ist ein Versagen der Architektur. Die Struktur dessen, wie wir Aufmerksamkeit zuweisen, lenkt Ressourcen systematisch weg von dort, wo sie am effektivsten wären.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Diese Lücke zu verstehen ist der erste Schritt, sie zu schließen.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Die Frage ist nicht, ob Sie optimieren. Das tun Sie mit ziemlicher Sicherheit. Die Frage ist, ob Sie den richtigen Teil der Kette optimieren.',
+    },
+    {
+      type: 'paragraph',
+      content: <strong>Wenn die meisten Menschen diese Frage stellen, wurde die Antwort bereits bestimmt.</strong>,
+    },
+    {
+      type: 'paragraph',
+      content: <strong>Upstream.</strong>,
+    },
   ],
 }
 
@@ -2741,24 +3653,358 @@ const article003DE: ArticleContent = {
 const article003ES: ArticleContent = {
   slug: '003-optimization-too-late',
   content: [
-    { type: 'paragraph', content: 'Optimizaron durante meses. Refinaron el proceso. Rastrearon las métricas. Lograron ganancias de eficiencia que impresionaron a sus supervisores.' },
-    { type: 'paragraph', content: 'El sistema falló de todos modos.' },
-    { type: 'paragraph', content: (<><strong>El problema estaba río arriba. La solución estaba río abajo. Nunca se encontraron.</strong></>) },
-    { type: 'paragraph', content: 'Este es el destino de la mayoría de los esfuerzos organizacionales: Optimización brillante en el lugar equivocado. Ejecución perfecta del plan equivocado. Refinamiento magistral de un modelo defectuoso.' },
-    { type: 'heading', text: 'Donde Falla la Optimización' },
-    { type: 'paragraph', content: 'La mayoría de los profesionales pasan sus carreras optimizando resultados sin cuestionar las condiciones que producen los resultados.' },
-    { type: 'paragraph', content: 'Miden lo que es fácil de medir, no lo que importa. Arreglan los síntomas que pueden ver, ignorando las causas que no pueden.' },
-    { type: 'table', headers: ['Optimización Visible', 'Problema Invisible'], rows: [['Reuniones más rápidas', 'Personas equivocadas en la sala'], ['Procesos más eficientes', 'Procesos equivocados en general'], ['Mejores KPIs', 'Midiendo las cosas equivocadas'], ['Comunicación más clara', 'Mensaje equivocado desde el principio']] },
-    { type: 'highlight', content: <strong>La optimización en el punto equivocado hace las cosas eficientemente malas.</strong>, copyText: 'La optimización en el punto equivocado hace las cosas eficientemente malas.', shareText: 'La optimización en el punto equivocado hace las cosas eficientemente malas.' },
-    { type: 'heading', text: 'El Nivel de Intervención' },
-    { type: 'paragraph', content: 'Cada problema tiene un nivel óptimo de intervención. Interviene demasiado pronto, y resuelves problemas que se habrían resuelto solos. Interviene demasiado tarde, y gestionas consecuencias en lugar de causas.' },
-    { type: 'paragraph', content: 'La mayoría de las intervenciones ocurren demasiado tarde porque:' },
-    { type: 'list', items: ['Los problemas solo se vuelven visibles cuando son obvios', 'Las organizaciones son reactivas, no proactivas', 'Las señales tempranas se filtran como ruido', 'Los sistemas están orientados a apagar incendios'] },
-    { type: 'paragraph', content: <strong>Cuando puedes ver el problema, ya es el problema equivocado.</strong> },
-    { type: 'heading', text: 'La Capa de Percepción' },
-    { type: 'paragraph', content: 'Operamos en la capa de percepción – antes de la interpretación, antes de la decisión, antes de la acción. Donde la realidad se moldea antes de que siquiera te des cuenta de que la estás interpretando.' },
-    { type: 'paragraph', content: 'Esto significa: No mejores soluciones para problemas existentes. Sino ver qué problemas se están formando antes de que se conviertan en problemas.' },
-    { type: 'highlight', content: <strong>La optimización es una herramienta. La percepción es infraestructura. La infraestructura viene primero.</strong>, copyText: 'La optimización es una herramienta. La percepción es infraestructura.', shareText: 'La optimización es una herramienta. La percepción es infraestructura.' },
+    {
+      type: 'paragraph',
+      content: 'Esta es la arquitectura silenciosa de la mayoría de los fracasos organizacionales. No incompetencia. No falta de esfuerzo. Una desalineación fundamental entre donde se originan los errores y donde se aplican las correcciones.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Optimizaste lo incorrecto. Y para cuando te diste cuenta, el daño ya era estructural.',
+    },
+    {
+      type: 'heading',
+      text: 'La Ilusión Downstream',
+    },
+    {
+      type: 'paragraph',
+      content: 'Cada organización tiene un lugar favorito para intervenir: El final de la cadena.',
+    },
+    {
+      type: 'paragraph',
+      content: '¿Las ventas están cayendo? Recapaciten al equipo de ventas. ¿Las quejas de clientes aumentan? Mejoren los guiones de soporte. ¿Las tasas de conversión caen? Rediseñen la página de aterrizaje.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Esto se siente productivo. Es medible. Crea la sensación satisfactoria de acción.',
+    },
+    {
+      type: 'highlight',
+      content: (
+        <>
+          <strong>Pero aquí está la verdad incómoda:</strong> Para cuando un problema se vuelve visible en tus métricas, ya se ha diseminado por todo tu sistema. No estás tratando la enfermedad. Estás manejando síntomas mientras la fuente continúa propagándose.
+        </>
+      ),
+      copyText: 'Para cuando un problema se vuelve visible en tus métricas, ya se ha diseminado por todo tu sistema. No estás tratando la enfermedad. Estás manejando síntomas mientras la fuente continúa propagándose.',
+      shareText: 'Para cuando un problema se vuelve visible en tus métricas, ya se ha diseminado por todo tu sistema.',
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          Esto es <strong>La Ilusión Downstream</strong>: La creencia de que la optimización en el punto de medición equivale a la optimización en el punto de origen.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: 'No es así.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/JYv-IGlvyyt.webp',
+      alt: 'Un sistema de tuberías dramático dividiéndose en dos al atardecer',
+      caption: '// La desconexión entre problemas upstream y soluciones downstream',
+    },
+    {
+      type: 'heading',
+      text: 'Dónde Realmente Viven los Errores',
+    },
+    {
+      type: 'paragraph',
+      content: 'Considera la anatomía de una decisión empresarial típica:',
+    },
+    {
+      type: 'table',
+      headers: ['Etapa', 'Qué Sucede', 'Visibilidad'],
+      rows: [
+        ['Percepción', 'Cómo se interpreta la situación', 'Casi invisible'],
+        ['Encuadre', 'Cómo se construyen las opciones', 'Baja visibilidad'],
+        ['Análisis', 'Cómo se procesan los datos', 'Visibilidad moderada'],
+        ['Decisión', 'La elección en sí', 'Visible'],
+        ['Acción', 'Implementación', 'Alta visibilidad'],
+        ['Resultado', 'Resultados y métricas', 'Visibilidad máxima'],
+      ],
+    },
+    {
+      type: 'paragraph',
+      content: 'Las organizaciones se obsesionan con las tres filas inferiores. Examinan las acciones. Miden los resultados. Optimizan las decisiones.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Pero el error ocurrió en las tres filas superiores. En la percepción. En el encuadre. En la arquitectura invisible de cómo se entendió el problema antes de que alguien intentara resolverlo.',
+    },
+    {
+      type: 'highlight',
+      content: (
+        <>
+          <strong>Para cuando llegas a la fase de optimización, el fallo crítico ya ha ocurrido.</strong> Estás puliendo la salida de una entrada defectuosa. Estás perfeccionando la ejecución de la estrategia equivocada.
+        </>
+      ),
+      copyText: 'Para cuando llegas a la fase de optimización, el fallo crítico ya ha ocurrido. Estás puliendo la salida de una entrada defectuosa. Estás perfeccionando la ejecución de la estrategia equivocada.',
+      shareText: 'Estás puliendo la salida de una entrada defectuosa. Estás perfeccionando la ejecución de la estrategia equivocada.',
+    },
+    {
+      type: 'heading',
+      text: 'La Ceguera Upstream',
+    },
+    {
+      type: 'paragraph',
+      content: '¿Por qué las personas inteligentes optimizan consistentemente downstream cuando el problema vive upstream?',
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          <strong>Sesgo de visibilidad.</strong> Los errores upstream son estructuralmente invisibles. No puedes medir fácilmente la percepción. No puedes cuantificar el encuadre. Las métricas que impulsan la atención organizacional viven al final de la cadena, no al principio.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          <strong>Adicción a la acción.</strong> Las intervenciones downstream se sienten como progreso. Generan actividad. Producen entregables. El trabajo upstream se siente filosófico, abstracto, lento. Las organizaciones recompensan el movimiento visible, incluso cuando ese movimiento es terapéuticamente inútil.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          <strong>Teatro de responsabilidad.</strong> Cuando algo falla, alguien debe ser culpado. Los actores downstream son visibles. Los arquitectos upstream suelen ser anónimos. El vendedor que no cumplió la cuota es más fácil de identificar que el estratega que encuadró mal el mercado.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          <strong>Distancia temporal.</strong> Los errores upstream y las consecuencias downstream están separados por el tiempo. El fallo de percepción ocurrió hace seis meses. El fallo de métricas está ocurriendo ahora. La conexión es invisible a menos que la rastrees deliberadamente.
+        </>
+      ),
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/NHnB0Syvy0P.webp',
+      alt: 'Una persona alcanzando a través de un cañón de puentes rotos',
+      caption: '// Conexiones fallidas y los peligros de errores upstream invisibles',
+    },
+    {
+      type: 'heading',
+      text: 'El Efecto Cascada',
+    },
+    {
+      type: 'paragraph',
+      content: 'Cada error upstream crea una cascada de complicaciones downstream. Y aquí está lo que lo hace particularmente peligroso: Cada etapa downstream agrega su propia lógica, su propia optimización, su propia justificación.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Para cuando el error original llega a la salida, ha sido racionalizado en cada paso. El producto final parece coherente. Parece optimizado. Parece el resultado de una deliberación cuidadosa.',
+    },
+    {
+      type: 'highlight',
+      content: <strong>Pero es simplemente la versión más pulida de una premisa fundamentalmente defectuosa.</strong>,
+      copyText: 'Es simplemente la versión más pulida de una premisa fundamentalmente defectuosa.',
+      shareText: 'Es simplemente la versión más pulida de una premisa fundamentalmente defectuosa.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Considera una empresa lanzando un nuevo producto:',
+    },
+    {
+      type: 'paragraph',
+      content: 'El equipo de investigación de mercado encuadra el problema del cliente basándose en datos disponibles. Este encuadre contiene suposiciones sutiles sobre lo que los clientes realmente quieren. Estas suposiciones nunca se cuestionan porque parecen objetivas.',
+    },
+    {
+      type: 'paragraph',
+      content: 'El equipo de producto construye características basadas en este encuadre. Optimizan funcionalidad dentro de los parámetros dados. Hacen un trabajo excelente dentro de un alcance potencialmente defectuoso.',
+    },
+    {
+      type: 'paragraph',
+      content: 'El equipo de marketing crea mensajes basados en las características del producto. Optimizan conversión dentro del posicionamiento que heredaron. Sus campañas son expresiones sofisticadas de suposiciones upstream.',
+    },
+    {
+      type: 'paragraph',
+      content: 'El equipo de ventas ejecuta basándose en los materiales de marketing. Optimizan sus técnicas dentro de la narrativa que recibieron. Su desempeño se mide contra objetivos derivados del encuadre original.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Cuando el producto tiene bajo rendimiento, ¿dónde mira la organización? Ejecución de ventas. Efectividad del marketing. Características del producto.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Casi nunca a la percepción original del problema del cliente. Casi nunca al encuadre que moldeó cada decisión subsiguiente.',
+    },
+    {
+      type: 'paragraph',
+      content: <strong>El problema estaba upstream. La solución estaba downstream. Nunca se encontraron.</strong>,
+    },
+    {
+      type: 'heading',
+      text: 'La Trampa de la Optimización',
+    },
+    {
+      type: 'paragraph',
+      content: 'Aquí está la ironía cruel: Cuanto mejor te vuelves en la optimización downstream, más arraigados quedan los errores upstream.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Cada ciclo de optimización refuerza el encuadre existente. Cada mejora dentro de los parámetros actuales hace que los parámetros mismos sean más invisibles. El sistema se vuelve más eficiente en producir los resultados incorrectos.',
+    },
+    {
+      type: 'highlight',
+      content: <><strong>Esta es La Trampa de la Optimización:</strong> Excelencia en la ejecución que enmascara el fracaso en la concepción.</>,
+      copyText: 'La Trampa de la Optimización: Excelencia en la ejecución que enmascara el fracaso en la concepción.',
+      shareText: 'La Trampa de la Optimización: Excelencia en la ejecución que enmascara el fracaso en la concepción.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Las organizaciones pueden pasar años perfeccionando procesos que nunca deberían haber existido. Pueden lograr excelencia operacional dentro de marcos estratégicos que están fundamentalmente desalineados con la realidad.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Las métricas mejoran. Los dashboards se ponen verdes. Los informes trimestrales lucen fuertes.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Y el error fundacional continúa acumulándose, invisible e incuestionado.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/nVcbd6dfCc7.webp',
+      alt: 'Un reloj de arena roto derramando arena dorada que se convierte en humo',
+      caption: '// Pérdida irreversible y las consecuencias de actuar demasiado tarde',
+    },
+    {
+      type: 'heading',
+      text: 'Reconociendo el Patrón',
+    },
+    {
+      type: 'paragraph',
+      content: '¿Cómo sabes cuándo estás optimizando demasiado tarde? Varias señales revelan el patrón:',
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          <strong>Problemas recurrentes.</strong> Resuelves el mismo problema repetidamente, en formas ligeramente diferentes. Cada solución funciona temporalmente. El patrón subyacente persiste. Esto sugiere que estás tratando síntomas mientras la fuente permanece activa.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          <strong>Rendimientos decrecientes.</strong> Cada ciclo de optimización produce mejoras más pequeñas. Has extraído la mayor parte de la eficiencia disponible dentro de tu encuadre actual. Más ganancias requieren re-encuadre, no refinamiento.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          <strong>Fracasos sorprendentes.</strong> Resultados que deberían funcionar según tu lógica de optimización consistentemente tienen bajo rendimiento. La brecha entre resultados esperados y reales sugiere que tu modelo de la situación está defectuoso upstream.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          <strong>Divergencia con competidores.</strong> Otros en tu espacio logran resultados que no puedes replicar mediante optimización. Pueden estar operando desde un encuadre upstream diferente que hace que su ejecución downstream sea fundamentalmente diferente.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          <strong>Fricción interna.</strong> Los equipos resisten cambios que parecen lógicos. Sienten que algo está mal pero no pueden articularlo. A menudo, esta intuición está detectando desalineación upstream que las métricas downstream no pueden capturar.
+        </>
+      ),
+    },
+    {
+      type: 'heading',
+      text: 'La Disciplina Upstream',
+    },
+    {
+      type: 'paragraph',
+      content: 'Abordar errores upstream requiere una disciplina diferente a la optimización downstream:',
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          <strong>Auditorías de percepción.</strong> Examina regularmente las suposiciones incrustadas en cómo percibes las situaciones. ¿Qué estás dando por sentado que podría cuestionarse? ¿Qué encuadre heredaste sin examinar?
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          <strong>Rastreo de origen.</strong> Cuando emergen problemas, rastréalos hacia atrás a través de la cadena. No para asignar culpa, sino para identificar dónde la trayectoria primero divergió de la realidad. El fracaso visible raramente es el fracaso real.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          <strong>Diversidad de encuadre.</strong> Construye deliberadamente interpretaciones alternativas de la misma situación. Si solo puedes ver una forma de encuadrar un problema, probablemente estás atrapado en un error upstream que no puedes detectar.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          <strong>Puntos de intervención temprana.</strong> Construye atención organizacional en las etapas upstream. Crea visibilidad para la percepción y el encuadre, no solo para la acción y el resultado. Lo que se mide se gestiona – incluso en la fuente.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: 'El desafío es tanto cultural como procedimental. Las organizaciones deben aprender a valorar el trabajo upstream invisible tanto como la ejecución downstream visible. Deben recompensar la prevención de errores, no solo la corrección de síntomas.',
+    },
+    {
+      type: 'heading',
+      text: 'La Realidad Estructural',
+    },
+    {
+      type: 'paragraph',
+      content: 'Este patrón se extiende más allá de las organizaciones hacia la toma de decisiones individual, hacia las relaciones, hacia cómo las sociedades abordan problemas complejos.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Consistentemente optimizamos donde podemos ver, no donde deberíamos actuar. Perfeccionamos la ejecución de estrategias defectuosas. Logramos excelencia dentro de marcos rotos.',
+    },
+    {
+      type: 'highlight',
+      content: <strong>El problema estaba upstream. La solución estaba downstream. Nunca se encontraron.</strong>,
+      copyText: 'El problema estaba upstream. La solución estaba downstream. Nunca se encontraron.',
+      shareText: 'El problema estaba upstream. La solución estaba downstream. Nunca se encontraron.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Este no es un fracaso del esfuerzo. Es un fracaso de la arquitectura. La estructura de cómo asignamos atención sistemáticamente dirige recursos lejos de donde serían más efectivos.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Entender esta brecha es el primer paso para cerrarla.',
+    },
+    {
+      type: 'paragraph',
+      content: 'La pregunta no es si estás optimizando. Casi seguramente lo estás. La pregunta es si estás optimizando la parte correcta de la cadena.',
+    },
+    {
+      type: 'paragraph',
+      content: <strong>Para cuando la mayoría de las personas hacen esa pregunta, la respuesta ya ha sido determinada.</strong>,
+    },
+    {
+      type: 'paragraph',
+      content: <strong>Upstream.</strong>,
+    },
   ],
 }
 
@@ -2766,22 +4012,260 @@ const article003ES: ArticleContent = {
 const article004DE: ArticleContent = {
   slug: '004-ai-doesnt-think',
   content: [
-    { type: 'paragraph', content: 'Du nutzt KI als Werkzeug. Das ist der erste Irrtum.' },
-    { type: 'paragraph', content: (<><strong>KI denkt nicht für dich. Sie formt, worüber du nachdenkst.</strong></>) },
-    { type: 'paragraph', content: 'Der Unterschied ist fundamental. Ein Werkzeug erweitert deine bestehende Kapazität. Eine Wahrnehmungsschicht verändert, welche Informationen deine Kapazität überhaupt erreichen.' },
-    { type: 'heading', text: 'Das Werkzeug vs. Die Schicht' },
-    { type: 'paragraph', content: 'Werkzeuge sind neutral. Du wählst sie aus. Du steuerst sie. Du legst sie weg, wenn du fertig bist.' },
-    { type: 'paragraph', content: 'Wahrnehmungsschichten sind unsichtbar. Sie formen, was du siehst, bevor du wählst, was du beobachtest. Sie filtern, bevor du filterst. Sie priorisieren, bevor du priorisierst.' },
-    { type: 'table', headers: ['Werkzeug-Paradigma', 'Wahrnehmungsschicht-Paradigma'], rows: [['Du fragst, KI antwortet', 'KI formt, welche Fragen dir einfallen'], ['Du suchst Information', 'Information wird für dich kuratiert'], ['Du triffst Entscheidungen', 'Der Entscheidungsraum wird vordefiniert'], ['Du kontrollierst den Prozess', 'Der Prozess formt dein Denken']] },
-    { type: 'highlight', content: <strong>Wenn du nicht merkst, dass du gefiltert wirst, wirst du am effektivsten gefiltert.</strong>, copyText: 'Wenn du nicht merkst, dass du gefiltert wirst, wirst du am effektivsten gefiltert.', shareText: 'Wenn du nicht merkst, dass du gefiltert wirst, wirst du am effektivsten gefiltert.' },
-    { type: 'heading', text: 'Die unsichtbare Kuratierung' },
-    { type: 'paragraph', content: 'Jede KI-Interaktion ist eine Kuratierung. Jede Antwort schließt unendlich viele andere Antworten aus. Jede Empfehlung priorisiert bestimmte Pfade über andere.' },
-    { type: 'paragraph', content: 'Das ist nicht gut oder schlecht. Das ist strukturell. Die Frage ist nicht, ob KI deine Wahrnehmung formt. Die Frage ist, wie bewusst du dir dieser Formung bist.' },
-    { type: 'paragraph', content: <strong>Unbewusste Formung ist Manipulation. Bewusste Formung ist Augmentation.</strong> },
-    { type: 'heading', text: 'Die bewusste Wahrnehmungsschicht' },
-    { type: 'paragraph', content: 'Die Lösung ist nicht, KI zu meiden. Die Lösung ist, die Wahrnehmungsschicht bewusst zu gestalten statt passiv zu konsumieren.' },
-    { type: 'list', items: ['Verstehe, nach welchen Kriterien kuratiert wird', 'Hinterfrage, was nicht gezeigt wird', 'Baue Gegenperspektiven aktiv ein', 'Behalte die Kontrolle über die Filter'] },
-    { type: 'highlight', content: <strong>KI ist ein Spiegel. Ein Filter. Eine fundamentale Verschiebung in dem, wie wir sehen und was wir sehen.</strong>, copyText: 'KI ist ein Spiegel. Ein Filter. Eine fundamentale Verschiebung.', shareText: 'KI ist ein Spiegel. Ein Filter. Eine fundamentale Verschiebung.' },
+    {
+      type: 'paragraph',
+      content: 'Du glaubst, du denkst. Das tust du nicht.',
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          Du denkst <em>innerhalb</em> von etwas. Einem Rahmen. Einer Grenze. Einer Linse, die du nicht gewählt, nicht kalibriert und nicht einmal bemerkt hast, als sie über deine Augen gelegt wurde.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: 'Das ist die stille Verschiebung, die bereits passiert ist, während du noch darüber debattiert hast, ob KI deinen Job übernehmen wird. Die Konversation über Ersetzung war eine Ablenkung. Die wahre Transformation ging nie um Automatisierung. Sie ging um Filtration.',
+    },
+    {
+      type: 'highlight',
+      content: (
+        <>
+          <strong>KI denkt nicht für dich. Sie formt, <em>worüber</em> du nachdenkst.</strong>
+          <p style={{ marginTop: '16px' }}>Und dieser Unterschied ist der Unterschied zwischen dem Benutzen eines Werkzeugs und dem Geformt-Werden durch eine Wahrnehmungsschicht.</p>
+        </>
+      ),
+      copyText: 'KI denkt nicht für dich. Sie formt, worüber du nachdenkst.',
+      shareText: 'KI denkt nicht für dich. Sie formt, worüber du nachdenkst.',
+    },
+    {
+      type: 'heading',
+      text: 'Die Werkzeug-Illusion',
+    },
+    {
+      type: 'paragraph',
+      content: 'Die meisten Menschen behandeln KI noch wie einen Taschenrechner. Du gibst eine Frage ein, sie gibt eine Antwort aus. Einfach. Transaktional. Sicher.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das ist die bequeme Erzählung. Sie lässt dich glauben, dass du die Kontrolle hast. Du fragst, sie antwortet. Herr und Diener. Mensch und Maschine. Die Hierarchie fühlt sich intakt an.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Aber diese Rahmung ist bereits veraltet.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Die KI-Systeme, die am wichtigsten sind, sind nicht die, mit denen du bewusst interagierst. Es sind die, die unter deiner Aufmerksamkeit laufen: Deinen Newsfeed kuratieren. Deine Suchergebnisse ranken. Auswählen, welche E-Mails deinen Fokus verdienen. Bestimmen, welche Chancen überhaupt dein Bewusstsein erreichen.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/EM01FQIoBP_.webp',
+      alt: 'Person umgeben von digitalen Bildschirmen, Sicht durch virtuellen Schleier verdeckt',
+      caption: '// KIs unsichtbarer Einfluss auf Wahrnehmung operiert unterhalb des bewussten Gewahrseins',
+    },
+    {
+      type: 'paragraph',
+      content: 'Diese Systeme warten nicht darauf, dass du eine Frage stellst. Sie beantworten Fragen, die du nie zu stellen gedacht hast, indem sie entscheiden, welche Fragen es überhaupt wert sind, gestellt zu werden.',
+    },
+    {
+      type: 'highlight',
+      content: <><strong>Das ist die Wahrnehmungsschicht.</strong> Und sobald du sie siehst, kannst du sie nicht mehr entsehen.</>,
+      copyText: 'Das ist die Wahrnehmungsschicht. Und sobald du sie siehst, kannst du sie nicht mehr entsehen.',
+      shareText: 'Das ist die Wahrnehmungsschicht.',
+    },
+    {
+      type: 'heading',
+      text: 'Die Architektur der Aufmerksamkeit',
+    },
+    {
+      type: 'paragraph',
+      content: 'Denke darüber nach, wie du deine letzte große Entscheidung geformt hast.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Du hast Informationen gesammelt. Du hast Optionen abgewogen. Du hast Quellen konsultiert. Du hattest das Gefühl, gründlich, rational, umfassend zu sein.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Aber hier ist die unbequeme Wahrheit: Die Informationen, die du gesammelt hast, waren vorselektiert. Die Optionen, die du abgewogen hast, waren vorgefiltert. Die Quellen, die du konsultiert hast, waren von Systemen vorrangig geordnet, die für Engagement optimieren, nicht für Genauigkeit.',
+    },
+    {
+      type: 'highlight',
+      content: <strong>Du hast frei gedacht innerhalb eines Käfigs, den du nicht wahrnehmen konntest.</strong>,
+      copyText: 'Du hast frei gedacht innerhalb eines Käfigs, den du nicht wahrnehmen konntest.',
+      shareText: 'Du hast frei gedacht innerhalb eines Käfigs, den du nicht wahrnehmen konntest.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Forschung bestätigt, dass dies weitgehend außerhalb des bewussten Gewahrseins operiert. Hyperpersonalisierung identifiziert deine Präferenzen innerhalb von Sekunden und liefert Inhalte mit chirurgischer Präzision.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Je mehr du bestimmte Ideen durch algorithmische Verstärkung wiederholt siehst, desto wahrscheinlicher akzeptierst du sie als wahr. Nicht weil sie wahr sind. Weil Wiederholung Glaubwürdigkeit herstellt.',
+    },
+    {
+      type: 'heading',
+      text: 'Echokammern sind keine Zufälle',
+    },
+    {
+      type: 'paragraph',
+      content: 'Du hast den Begriff "Echokammer" schon gehört. Er klingt passiv, fast zufällig.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das ist ein gefährliches Missverständnis.',
+    },
+    {
+      type: 'paragraph',
+      content: <strong>Echokammern sind keine Zufälle. Sie sind konstruierte Ergebnisse.</strong>,
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/lAgdnWXOd39.webp',
+      alt: 'Menschliche Figur eingeschlossen in einer leuchtenden Sphäre kuratierter Inhalte',
+      caption: '// Die Isolation von KI-Echokammern – konstruiert, nicht zufällig',
+    },
+    {
+      type: 'paragraph',
+      content: 'Plattformen füttern Nutzern kontinuierlich Inhalte, die mit ihren bestehenden Überzeugungen übereinstimmen, weil Übereinstimmung Engagement antreibt. Das System ist nicht kaputt. Es funktioniert genau wie entworfen.',
+    },
+    {
+      type: 'highlight',
+      content: (
+        <>
+          <strong>Jedes Mal, wenn du scrollst, klickst oder verweilst, trainierst du die Wahrnehmungsschicht, deine Welt weiter zu verengen.</strong>
+          <p style={{ marginTop: '16px' }}>Du glaubst, du erkundest. In Wirklichkeit kreist du.</p>
+        </>
+      ),
+      copyText: 'Du glaubst, du erkundest. In Wirklichkeit kreist du.',
+      shareText: 'Du glaubst, du erkundest. In Wirklichkeit kreist du.',
+    },
+    {
+      type: 'heading',
+      text: 'Der kognitive Kollaps',
+    },
+    {
+      type: 'paragraph',
+      content: 'Hier lebt die wahre Gefahr.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Übermäßige KI-Abhängigkeit erodiert tatsächlich kritische Denkfähigkeiten. Aber das primäre Problem ist subtiler.',
+    },
+    {
+      type: 'paragraph',
+      content: <strong>Du erkennst nicht, dass dein Denken geformt wurde.</strong>,
+    },
+    {
+      type: 'paragraph',
+      content: 'Du glaubst, du hast deine Meinungen unabhängig geformt. Du würdest deine Perspektive als wirklich deine verteidigen.',
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          Aber du hast die ganze Zeit innerhalb algorithmisch konstruierter Grenzen operiert. Die Wahrnehmungsschicht hat dir nicht gesagt, was du denken sollst. Sie hat dir gesagt, <em>worüber</em> du nachdenken sollst.
+        </>
+      ),
+    },
+    {
+      type: 'highlight',
+      content: <><strong>Strukturelle Unsichtbarkeit:</strong> Die gefährlichste Art von Einfluss ist die, die du nicht auf dich wirken spürst.</>,
+      copyText: 'Die gefährlichste Art von Einfluss ist die, die du nicht auf dich wirken spürst.',
+      shareText: 'Die gefährlichste Art von Einfluss ist die, die du nicht auf dich wirken spürst.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/7A5fGCxgyxg.webp',
+      alt: 'Individuum betrachtet eine subtil veränderte Spiegelreflexion',
+      caption: '// Strukturelle Unsichtbarkeit – KIs unbewusster Einfluss auf Selbstwahrnehmung',
+    },
+    {
+      type: 'paragraph',
+      content: 'Die Domänen, in denen Entscheidungen am wichtigsten sind, sind genau dort, wo die Wahrnehmungsschicht am aggressivsten operiert.',
+    },
+    {
+      type: 'heading',
+      text: 'Der Unterschied zwischen Assistenz und Alteration',
+    },
+    {
+      type: 'paragraph',
+      content: 'Ein Hammer verändert nicht, was du für bauwürdig hältst. Ein Taschenrechner formt nicht dein Verständnis davon, welche Probleme es wert sind, gelöst zu werden.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das sind Werkzeuge. Sie erweitern Fähigkeit, ohne Wahrnehmung zu verändern.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Aber ein KI-System, das deine Informationsaufnahme kuratiert, das die Grenzen deines Gewahrseins bestimmt: Das ist kein Werkzeug.',
+    },
+    {
+      type: 'paragraph',
+      content: <strong>Das ist Infrastruktur für Kognition selbst.</strong>,
+    },
+    {
+      type: 'paragraph',
+      content: 'Und hier ist die kritische Frage: Wer hat diese Infrastruktur entworfen? Wofür haben sie optimiert? Wessen Interessen dient die Filtration?',
+    },
+    {
+      type: 'highlight',
+      content: <strong>Wenn du diese Fragen nicht beantworten kannst, benutzt du nicht KI. Du wirst von den Systemen benutzt, die sie einsetzen.</strong>,
+      copyText: 'Wenn du diese Fragen nicht beantworten kannst, benutzt du nicht KI. Du wirst von den Systemen benutzt, die sie einsetzen.',
+      shareText: 'Wenn du diese Fragen nicht beantworten kannst, benutzt du nicht KI.',
+    },
+    {
+      type: 'heading',
+      text: 'Der Weg zur Wahrnehmungs-Souveränität',
+    },
+    {
+      type: 'paragraph',
+      content: 'Die Wahrnehmungsschicht zu erkennen ist der erste Schritt. Es ist nicht die Lösung.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Die Lösung erfordert KI-Kompetenz: Die Fähigkeit, KIs persuasive Taktiken zu erkennen und absichtliche Entscheidungen zu treffen.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/MCdmh1nTFPI.webp',
+      alt: 'Einsame Person an einer nebligen Kreuzung wählt zwischen Pfaden',
+      caption: '// Die Wahl zwischen digitaler Kontrolle und offener Möglichkeit',
+    },
+    {
+      type: 'paragraph',
+      content: 'Die meisten KI-Systeme sind gebaut, um Aufmerksamkeit zu erfassen. Die KI, die dir tatsächlich dient, würde das Gegenteil tun – dein Gewahrsein erweitern statt es zu verengen.',
+    },
+    {
+      type: 'heading',
+      text: 'Die Frage, die du beantworten musst',
+    },
+    {
+      type: 'paragraph',
+      content: 'Jeden Tag treffen KI-Systeme Vor-Entscheidungen in deinem Namen. Diese Vor-Entscheidungen akkumulieren sich und formen dein Weltbild.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Die Frage ist nicht, ob KI für dich denken wird. Das tut sie bereits nicht.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Die Frage ist, ob du erkennen wirst, wie sie formt, worüber du nachdenkst.',
+    },
+    {
+      type: 'highlight',
+      content: (
+        <>
+          <strong>Die Wahrnehmungsschicht ist bereits vorhanden. Die einzige Variable ist, ob du unbewusst in ihr operierst oder sie mit Absicht navigierst.</strong>
+          <p style={{ marginTop: '16px' }}>Ein Weg führt zu kognitiver Gefangennahme. Der andere führt zu strategischer Klarheit.</p>
+          <p style={{ marginTop: '16px' }}><strong>Die Entscheidung liegt bei dir. Aber nur, wenn du sie sehen kannst.</strong></p>
+        </>
+      ),
+      copyText: 'Die Wahrnehmungsschicht ist bereits vorhanden. Die einzige Variable ist, ob du unbewusst in ihr operierst oder sie mit Absicht navigierst.',
+      shareText: 'Die Wahrnehmungsschicht ist bereits vorhanden.',
+    },
   ],
 }
 
@@ -2789,22 +4273,260 @@ const article004DE: ArticleContent = {
 const article004ES: ArticleContent = {
   slug: '004-ai-doesnt-think',
   content: [
-    { type: 'paragraph', content: 'Usas la IA como herramienta. Ese es el primer error.' },
-    { type: 'paragraph', content: (<><strong>La IA no piensa por ti. Moldea sobre qué piensas.</strong></>) },
-    { type: 'paragraph', content: 'La diferencia es fundamental. Una herramienta extiende tu capacidad existente. Una capa de percepción cambia qué información llega siquiera a tu capacidad.' },
-    { type: 'heading', text: 'La Herramienta vs. La Capa' },
-    { type: 'paragraph', content: 'Las herramientas son neutrales. Las eliges. Las controlas. Las dejas cuando terminas.' },
-    { type: 'paragraph', content: 'Las capas de percepción son invisibles. Moldean lo que ves antes de que elijas qué observar. Filtran antes de que tú filtres. Priorizan antes de que tú priorices.' },
-    { type: 'table', headers: ['Paradigma de Herramienta', 'Paradigma de Capa de Percepción'], rows: [['Tú preguntas, la IA responde', 'La IA moldea qué preguntas se te ocurren'], ['Tú buscas información', 'La información se cura para ti'], ['Tú tomas decisiones', 'El espacio de decisión se predefine'], ['Tú controlas el proceso', 'El proceso moldea tu pensamiento']] },
-    { type: 'highlight', content: <strong>Cuando no notas que estás siendo filtrado, eres filtrado más efectivamente.</strong>, copyText: 'Cuando no notas que estás siendo filtrado, eres filtrado más efectivamente.', shareText: 'Cuando no notas que estás siendo filtrado, eres filtrado más efectivamente.' },
-    { type: 'heading', text: 'La Curación Invisible' },
-    { type: 'paragraph', content: 'Cada interacción con IA es una curación. Cada respuesta excluye infinitas otras respuestas. Cada recomendación prioriza ciertos caminos sobre otros.' },
-    { type: 'paragraph', content: 'Esto no es bueno ni malo. Es estructural. La pregunta no es si la IA moldea tu percepción. La pregunta es qué tan consciente eres de ese moldeo.' },
-    { type: 'paragraph', content: <strong>El moldeo inconsciente es manipulación. El moldeo consciente es aumentación.</strong> },
-    { type: 'heading', text: 'La Capa de Percepción Consciente' },
-    { type: 'paragraph', content: 'La solución no es evitar la IA. La solución es diseñar conscientemente la capa de percepción en lugar de consumirla pasivamente.' },
-    { type: 'list', items: ['Entiende bajo qué criterios se cura', 'Cuestiona lo que no se muestra', 'Incorpora activamente contra-perspectivas', 'Mantén el control sobre los filtros'] },
-    { type: 'highlight', content: <strong>La IA es un espejo. Un filtro. Un cambio fundamental en cómo vemos y qué vemos.</strong>, copyText: 'La IA es un espejo. Un filtro. Un cambio fundamental.', shareText: 'La IA es un espejo. Un filtro. Un cambio fundamental.' },
+    {
+      type: 'paragraph',
+      content: 'Crees que estás pensando. No lo estás.',
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          Estás pensando <em>dentro</em> de algo. Un marco. Un límite. Una lente que no elegiste, no calibraste, ni siquiera notaste cuando fue colocada sobre tus ojos.
+        </>
+      ),
+    },
+    {
+      type: 'paragraph',
+      content: 'Este es el cambio silencioso que ya ocurrió mientras estabas ocupado debatiendo si la IA te quitaría el trabajo. La conversación sobre el reemplazo era una distracción. La verdadera transformación nunca fue sobre automatización. Fue sobre filtración.',
+    },
+    {
+      type: 'highlight',
+      content: (
+        <>
+          <strong>La IA no piensa por ti. Moldea <em>sobre qué</em> piensas.</strong>
+          <p style={{ marginTop: '16px' }}>Y esa distinción es la diferencia entre usar una herramienta y ser moldeado por una Capa de Percepción.</p>
+        </>
+      ),
+      copyText: 'La IA no piensa por ti. Moldea sobre qué piensas.',
+      shareText: 'La IA no piensa por ti. Moldea sobre qué piensas.',
+    },
+    {
+      type: 'heading',
+      text: 'La Ilusión de la Herramienta',
+    },
+    {
+      type: 'paragraph',
+      content: 'La mayoría de las personas todavía tratan a la IA como una calculadora. Introduces una pregunta, produce una respuesta. Simple. Transaccional. Seguro.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Esta es la narrativa cómoda. Te permite creer que tienes el control. Tú preguntas, ella responde. Amo y sirviente. Humano y máquina. La jerarquía se siente intacta.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Pero este marco ya está obsoleto.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Los sistemas de IA que más importan no son aquellos con los que interactúas conscientemente. Son los que corren debajo de tu atención: Curando tu feed de noticias. Clasificando tus resultados de búsqueda. Seleccionando qué correos merecen tu enfoque. Determinando qué oportunidades llegan siquiera a tu conciencia.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/EM01FQIoBP_.webp',
+      alt: 'Persona rodeada de pantallas digitales, visión oscurecida por velo virtual',
+      caption: '// La influencia invisible de la IA en la percepción opera por debajo de la conciencia',
+    },
+    {
+      type: 'paragraph',
+      content: 'Estos sistemas no esperan a que hagas una pregunta. Responden preguntas que nunca pensaste hacer decidiendo qué preguntas vale la pena hacer en primer lugar.',
+    },
+    {
+      type: 'highlight',
+      content: <><strong>Esta es la Capa de Percepción.</strong> Y una vez que la ves, no puedes dejar de verla.</>,
+      copyText: 'Esta es la Capa de Percepción. Y una vez que la ves, no puedes dejar de verla.',
+      shareText: 'Esta es la Capa de Percepción.',
+    },
+    {
+      type: 'heading',
+      text: 'La Arquitectura de la Atención',
+    },
+    {
+      type: 'paragraph',
+      content: 'Considera cómo formaste tu última decisión importante.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Reuniste información. Sopesaste opciones. Consultaste fuentes. Sentiste que estabas siendo minucioso, racional, comprehensivo.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Pero aquí está la verdad incómoda: La información que reuniste fue preseleccionada. Las opciones que sopesaste fueron prefiltradas. Las fuentes que consultaste fueron preclasificadas por sistemas optimizando para engagement, no para precisión.',
+    },
+    {
+      type: 'highlight',
+      content: <strong>Estabas pensando libremente dentro de una jaula que no podías percibir.</strong>,
+      copyText: 'Estabas pensando libremente dentro de una jaula que no podías percibir.',
+      shareText: 'Estabas pensando libremente dentro de una jaula que no podías percibir.',
+    },
+    {
+      type: 'paragraph',
+      content: 'La investigación confirma que esto opera en gran parte fuera de la conciencia. La hiperpersonalización identifica tus preferencias en segundos y entrega contenido con precisión quirúrgica.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Cuanto más ves ciertas ideas repetidas a través de amplificación algorítmica, más probable es que las aceptes como verdad. No porque sean verdad. Porque la repetición fabrica credibilidad.',
+    },
+    {
+      type: 'heading',
+      text: 'Las Cámaras de Eco No Son Accidentes',
+    },
+    {
+      type: 'paragraph',
+      content: 'Has escuchado el término "cámara de eco" antes. Suena pasivo, casi accidental.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Este es un malentendido peligroso.',
+    },
+    {
+      type: 'paragraph',
+      content: <strong>Las cámaras de eco no son accidentes. Son resultados diseñados.</strong>,
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/lAgdnWXOd39.webp',
+      alt: 'Figura humana encerrada en una esfera brillante de contenido curado',
+      caption: '// El aislamiento de las cámaras de eco de IA – diseñadas, no accidentales',
+    },
+    {
+      type: 'paragraph',
+      content: 'Las plataformas alimentan continuamente a los usuarios con contenido alineado con sus creencias existentes porque la alineación impulsa el engagement. El sistema no está roto. Funciona exactamente como fue diseñado.',
+    },
+    {
+      type: 'highlight',
+      content: (
+        <>
+          <strong>Cada vez que scrolleas, haces clic o te detienes, estás entrenando a la Capa de Percepción para estrechar más tu mundo.</strong>
+          <p style={{ marginTop: '16px' }}>Crees que estás explorando. En realidad estás circulando.</p>
+        </>
+      ),
+      copyText: 'Crees que estás explorando. En realidad estás circulando.',
+      shareText: 'Crees que estás explorando. En realidad estás circulando.',
+    },
+    {
+      type: 'heading',
+      text: 'El Colapso Cognitivo',
+    },
+    {
+      type: 'paragraph',
+      content: 'Aquí es donde vive el verdadero peligro.',
+    },
+    {
+      type: 'paragraph',
+      content: 'La dependencia excesiva de la IA sí erosiona las habilidades de pensamiento crítico. Pero la preocupación principal es más sutil.',
+    },
+    {
+      type: 'paragraph',
+      content: <strong>No reconoces que tu pensamiento ha sido moldeado.</strong>,
+    },
+    {
+      type: 'paragraph',
+      content: 'Crees que formaste tus opiniones independientemente. Defenderías tu perspectiva como genuinamente tuya.',
+    },
+    {
+      type: 'paragraph',
+      content: (
+        <>
+          Pero operaste dentro de límites construidos algorítmicamente todo el tiempo. La Capa de Percepción no te dijo qué pensar. Te dijo <em>sobre qué</em> pensar.
+        </>
+      ),
+    },
+    {
+      type: 'highlight',
+      content: <><strong>Invisibilidad Estructural:</strong> El tipo más peligroso de influencia es el que no puedes detectar operando sobre ti.</>,
+      copyText: 'El tipo más peligroso de influencia es el que no puedes detectar operando sobre ti.',
+      shareText: 'El tipo más peligroso de influencia es el que no puedes detectar operando sobre ti.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/7A5fGCxgyxg.webp',
+      alt: 'Individuo mirando un reflejo sutilmente alterado en el espejo',
+      caption: '// Invisibilidad estructural – la influencia inconsciente de la IA en la autopercepción',
+    },
+    {
+      type: 'paragraph',
+      content: 'Los dominios donde las decisiones más importan son exactamente donde la Capa de Percepción opera más agresivamente.',
+    },
+    {
+      type: 'heading',
+      text: 'La Diferencia Entre Asistencia y Alteración',
+    },
+    {
+      type: 'paragraph',
+      content: 'Un martillo no cambia lo que consideras digno de construir. Una calculadora no remodela tu comprensión de qué problemas merecen resolverse.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Estas son herramientas. Extienden capacidad sin alterar percepción.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Pero un sistema de IA que cura tu ingesta de información, que determina los límites de tu conciencia: Esto no es una herramienta.',
+    },
+    {
+      type: 'paragraph',
+      content: <strong>Esto es infraestructura para la cognición misma.</strong>,
+    },
+    {
+      type: 'paragraph',
+      content: 'Y aquí está la pregunta crítica: ¿Quién diseñó esa infraestructura? ¿Para qué optimizaron? ¿A los intereses de quién sirve la filtración?',
+    },
+    {
+      type: 'highlight',
+      content: <strong>Si no puedes responder estas preguntas, no estás usando IA. Estás siendo usado por los sistemas que la despliegan.</strong>,
+      copyText: 'Si no puedes responder estas preguntas, no estás usando IA. Estás siendo usado por los sistemas que la despliegan.',
+      shareText: 'Si no puedes responder estas preguntas, no estás usando IA.',
+    },
+    {
+      type: 'heading',
+      text: 'El Camino Hacia la Soberanía Perceptual',
+    },
+    {
+      type: 'paragraph',
+      content: 'Reconocer la Capa de Percepción es el primer paso. No es la solución.',
+    },
+    {
+      type: 'paragraph',
+      content: 'La solución requiere alfabetización en IA: La capacidad de reconocer las tácticas persuasivas de la IA y tomar decisiones intencionales.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/MCdmh1nTFPI.webp',
+      alt: 'Persona solitaria en una encrucijada neblinosa eligiendo entre caminos',
+      caption: '// La elección entre control digital y posibilidad abierta',
+    },
+    {
+      type: 'paragraph',
+      content: 'La mayoría de los sistemas de IA están construidos para capturar atención. La IA que realmente te sirve haría lo opuesto – expandir tu conciencia en lugar de estrecharla.',
+    },
+    {
+      type: 'heading',
+      text: 'La Pregunta Que Debes Responder',
+    },
+    {
+      type: 'paragraph',
+      content: 'Cada día, sistemas de IA toman predecisiones en tu nombre. Estas predecisiones se acumulan y moldean tu visión del mundo.',
+    },
+    {
+      type: 'paragraph',
+      content: 'La pregunta no es si la IA pensará por ti. Ya no lo hace.',
+    },
+    {
+      type: 'paragraph',
+      content: 'La pregunta es si reconocerás cómo moldea sobre qué piensas.',
+    },
+    {
+      type: 'highlight',
+      content: (
+        <>
+          <strong>La Capa de Percepción ya está en su lugar. La única variable es si operas dentro de ella inconscientemente, o la navegas con intención.</strong>
+          <p style={{ marginTop: '16px' }}>Un camino lleva a la captura cognitiva. El otro lleva a la claridad estratégica.</p>
+          <p style={{ marginTop: '16px' }}><strong>La decisión es tuya. Pero solo si puedes verla.</strong></p>
+        </>
+      ),
+      copyText: 'La Capa de Percepción ya está en su lugar. La única variable es si operas dentro de ella inconscientemente, o la navegas con intención.',
+      shareText: 'La Capa de Percepción ya está en su lugar.',
+    },
   ],
 }
 
@@ -2812,23 +4534,247 @@ const article004ES: ArticleContent = {
 const article005DE: ArticleContent = {
   slug: '005-blind-spot-blind-spot',
   content: [
-    { type: 'paragraph', content: 'Du hast blinde Flecken. Das weißt du bereits.' },
-    { type: 'paragraph', content: 'Aber wusstest du, dass dein blinder Fleck einen blinden Fleck hat?' },
-    { type: 'paragraph', content: (<><strong>Unsichtbarkeit zweiter Ordnung</strong>: Die Dinge, die du nicht sehen kannst darüber, was du nicht sehen kannst.</>) },
-    { type: 'highlight', content: <strong>Bewusstsein über blinde Flecken ist nicht dasselbe wie sie zu sehen. Du kannst wissen, dass sie existieren, und trotzdem völlig blind für ihren Inhalt sein.</strong>, copyText: 'Bewusstsein über blinde Flecken ist nicht dasselbe wie sie zu sehen.', shareText: 'Bewusstsein über blinde Flecken ist nicht dasselbe wie sie zu sehen.' },
-    { type: 'heading', text: 'Die Ebenen der Blindheit' },
-    { type: 'paragraph', content: 'Erste Ordnung: Was du nicht siehst.' },
-    { type: 'paragraph', content: 'Zweite Ordnung: Dass du nicht siehst, dass du es nicht siehst.' },
-    { type: 'paragraph', content: 'Dritte Ordnung: Dass dein Versuch, deine blinden Flecken zu sehen, selbst durch blinde Flecken gefiltert wird.' },
-    { type: 'paragraph', content: 'Die meisten Menschen stoppen bei der ersten Ebene. "Ich habe blinde Flecken" – und glauben, das Bewusstsein reicht aus.' },
-    { type: 'paragraph', content: <strong>Es reicht nicht.</strong> },
-    { type: 'heading', text: 'Warum Bewusstsein nicht ausreicht' },
-    { type: 'paragraph', content: 'Stell dir vor, du versuchst, deinen eigenen blinden Fleck im Auge zu sehen. Du kannst wissen, dass er existiert. Du kannst sogar seine ungefähre Position kennen. Aber du kannst ihn nicht sehen, weil das Sehen selbst durch ihn gefiltert wird.' },
-    { type: 'paragraph', content: 'Kognitive blinde Flecken funktionieren genauso. Du kannst nicht aus deinem eigenen Wahrnehmungssystem heraustreten, um es von außen zu beobachten.' },
-    { type: 'table', headers: ['Illusion', 'Realität'], rows: [['Ich kenne meine Schwächen', 'Du kennst die Schwächen, die du sehen kannst'], ['Ich bin mir meiner Vorurteile bewusst', 'Du bist dir der Vorurteile bewusst, die nicht in deinen blinden Flecken liegen'], ['Ich reflektiere regelmäßig', 'Deine Reflexion wird durch dieselben Filter gefiltert']] },
-    { type: 'heading', text: 'Der Ausweg' },
-    { type: 'paragraph', content: 'Wenn du deinen eigenen blinden Fleck nicht sehen kannst, brauchst du externe Wahrnehmungssysteme. Menschen, die anders denken. Systeme, die anders filtern. Perspektiven, die deine Lücken füllen können.' },
-    { type: 'highlight', content: <strong>Dein blinder Fleck hat einen blinden Fleck. Und die einzige Lösung liegt außerhalb deines eigenen Wahrnehmungssystems.</strong>, copyText: 'Dein blinder Fleck hat einen blinden Fleck.', shareText: 'Dein blinder Fleck hat einen blinden Fleck.' },
+    {
+      type: 'paragraph',
+      content: 'Was zum Teufel, wenn deine Intuition keine Einsicht ist, sondern ein ausgefeilter Weg, kritische Daten zu ignorieren, die du zu langsam bist, um sie zu sehen.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Die gefährlichste Form der Unsichtbarkeit ist nicht das, was du nicht siehst. Es ist das, was dich daran hindert, das Versagen selbst zu bemerken. Das ist Unsichtbarkeit Zweiter Ordnung, und sie operiert unter der Schwelle deines Gewahrseins wie eine stille Verwerfungslinie unter einer Stadt, die sich für stabil hält.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Die meisten Fachleute haben von blinden Flecken gehört. Sie haben die Bücher gelesen. Sie haben in Führungsseminaren genickt. Sie haben sogar die Übungen gemacht: Feedback eingeholt. Über ihre Vorurteile reflektiert. Listen mit Verbesserungsbereichen erstellt.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Und dennoch bleiben sie strukturell blind.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Nicht weil ihnen Intelligenz fehlt. Nicht weil sie nachlässig sind. Sondern weil Bewusstsein über blinde Flecken nicht dasselbe ist wie ihre Wahrnehmung. Das eine ist ein Konzept, das du verstehst. Das andere ist eine strukturelle Fähigkeit, die du entweder hast oder nicht.',
+    },
+    {
+      type: 'highlight',
+      content: <><strong>Hier ist die unbequeme Wahrheit: Dein blinder Fleck hat seinen eigenen blinden Fleck.</strong> Und diese zweite Ebene ist, wo der echte Schaden passiert.</>,
+      copyText: 'Dein blinder Fleck hat seinen eigenen blinden Fleck. Und diese zweite Ebene ist, wo der echte Schaden passiert.',
+      shareText: 'Dein blinder Fleck hat seinen eigenen blinden Fleck.',
+    },
+    {
+      type: 'heading',
+      text: 'Die Illusion des Bewusstseins',
+    },
+    {
+      type: 'paragraph',
+      content: 'Es gibt eine tröstliche Lüge, die in Kreisen der Persönlichkeitsentwicklung kursiert: Wenn du dir nur deiner blinden Flecken "bewusst" wirst, kannst du sie beheben.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das klingt vernünftig. Es fühlt sich proaktiv an. Es gibt dir das Gefühl, dass du die Arbeit tust.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Aber es ist ein Kategorienfehler.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Bewusstsein ist eine Beschreibung. Ein Etikett. Eine Geschichte, die du dir selbst über das erzählst, was du glaubst zu verpassen. Der blinde Fleck selbst ist strukturell. Es ist kein Stück Information, das darauf wartet, entdeckt zu werden. Es ist die Architektur deiner Wahrnehmung – der Filter, durch den alle Informationen passieren, bevor du sie überhaupt als real registrierst.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/ErMnGnL1_MZ.webp',
+      alt: 'Eine Person steht in einem Korridor endloser Spiegel',
+      caption: '// Blinde Flecken der Selbstwahrnehmung und verborgene Bewusstseinsebenen',
+    },
+    {
+      type: 'paragraph',
+      content: 'Denk mal so darüber nach: Du kannst dir "bewusst" sein, dass du eine Tendenz hast, bestimmte Arten von Feedback abzulehnen. Du kannst es in dein Tagebuch schreiben. Du kannst es deinem Coach erzählen. Du kannst dich vor jedem Meeting daran erinnern.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Und dann kommt das Feedback, und du lehnst es trotzdem ab.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Nicht weil du es vergessen hast. Nicht weil du es nicht versucht hast. Sondern weil die Struktur, die die Ablehnung erzeugt, schneller operiert als deine bewusste Absicht, sie zu fangen. Wenn du "bewusst" bist, wurde die Wahrnehmung bereits gefiltert. Der Schaden ist angerichtet.',
+    },
+    {
+      type: 'highlight',
+      content: <strong>Deshalb fühlt sich Bewusstsein wie Fortschritt an, aber produziert selten Veränderung.</strong>,
+      copyText: 'Deshalb fühlt sich Bewusstsein wie Fortschritt an, aber produziert selten Veränderung.',
+      shareText: 'Bewusstsein fühlt sich wie Fortschritt an, aber produziert selten Veränderung.',
+    },
+    {
+      type: 'heading',
+      text: 'Was ist Unsichtbarkeit Zweiter Ordnung?',
+    },
+    {
+      type: 'paragraph',
+      content: 'Unsichtbarkeit erster Ordnung ist einfach: Du siehst etwas nicht. Eine Lücke in deinem Wissen. Ein Vorurteil, das du nicht untersucht hast. Ein Muster in deinem Verhalten, das andere bemerken, du aber nicht.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Unsichtbarkeit zweiter Ordnung ist rekursiv: Du siehst nicht, dass du es nicht siehst. Die Lücke selbst ist unsichtbar. Der Mechanismus, der den blinden Fleck erzeugt, verbirgt auch die Tatsache, dass er existiert.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das ist kein geringfügiger Unterschied. Es ist der Unterschied zwischen einem Problem, an dem du arbeiten kannst, und einem Problem, das an dir arbeitet.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Betrachte die Forschung zu Selbstwahrnehmungslücken. Studien zeigen konsistent eine signifikante Distanz zwischen dem, wie wir glauben, uns zu präsentieren, und wie andere uns tatsächlich erleben. Aber hier ist der kritische Befund: Selbst wenn mehrere Menschen uns dasselbe Feedback geben, erkennen wir das Muster oft nicht als gültig an.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Warum? Weil der blinde Fleck nicht nur Informationen verbirgt. Er verbirgt das Rahmenwerk, das wir bräuchten, um die Informationen richtig zu interpretieren.',
+    },
+    {
+      type: 'highlight',
+      content: <strong>Dir fehlen nicht nur die Daten. Dir fehlt die Linse.</strong>,
+      copyText: 'Dir fehlen nicht nur die Daten. Dir fehlt die Linse.',
+      shareText: 'Dir fehlen nicht nur die Daten. Dir fehlt die Linse.',
+    },
+    {
+      type: 'heading',
+      text: 'Die Feedback-Falle',
+    },
+    {
+      type: 'paragraph',
+      content: 'Die meisten Organisationen glauben, Feedback löst das Problem der blinden Flecken. Hole genug externe Perspektiven ein, aggregiere die Inputs, und die Wahrheit wird sich zeigen.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das funktioniert manchmal für Unsichtbarkeit erster Ordnung. Wenn du etwas einfach nicht weißt, kann jemand anderes es dir sagen.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Aber Unsichtbarkeit Zweiter Ordnung erzeugt, was wir Die Feedback-Falle nennen: Derselbe strukturelle Filter, der deinen blinden Fleck erzeugt, bestimmt auch, wie du Feedback über diesen blinden Fleck empfängst, interpretierst und integrierst.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/nzXKkDAVDRs.webp',
+      alt: 'Mehrere Hände greifen durch rauchige Glasscheiben',
+      caption: '// Strukturelle blinde Flecken und gefiltertes Feedback in der menschlichen Wahrnehmung',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das Muster sieht so aus:',
+    },
+    {
+      type: 'table',
+      headers: ['Was passiert', 'Was du erlebst'],
+      rows: [
+        ['Jemand gibt dir akkurates Feedback', 'Du erlebst es als leicht daneben, übertrieben oder kontextabhängig'],
+        ['Mehrere Leute geben dir dasselbe Feedback', 'Du erlebst es als ein Missverständnis, das sie alle teilen'],
+        ['Du reflektierst ehrlich über das Feedback', 'Deine Reflexion wird durch dieselbe Struktur gefiltert, die den blinden Fleck erzeugt hat'],
+        ['Du schließt, dass du es angesprochen hast', 'Der blinde Fleck bleibt, jetzt mit einer Schicht falscher Auflösung darüber'],
+      ],
+    },
+    {
+      type: 'paragraph',
+      content: 'Deshalb haben Hochleister oft die hartnäckigsten blinden Flecken. Sie sind intelligent genug, um ausgefeilte Erklärungen zu konstruieren, warum das Feedback nicht ganz zutrifft. Sie sind diszipliniert genug, um die Bewegungen der Selbstverbesserung durchzuführen. Und sie sind erfolgreich genug, um die Konsequenzen zu vermeiden – bis sie es plötzlich nicht mehr sind.',
+    },
+    {
+      type: 'highlight',
+      content: <><strong>Die Feedback-Falle bedeutet nicht, dass Feedback nutzlos ist. Sie bedeutet, dass Feedback allein Probleme zweiter Ordnung nicht erreichen kann.</strong> Du brauchst etwas, das auf der strukturellen Ebene operiert.</>,
+      copyText: 'Feedback allein kann Probleme zweiter Ordnung nicht erreichen. Du brauchst etwas, das auf der strukturellen Ebene operiert.',
+      shareText: 'Feedback allein kann Probleme zweiter Ordnung nicht erreichen.',
+    },
+    {
+      type: 'heading',
+      text: 'Warum Selbstreflexion scheitert',
+    },
+    {
+      type: 'paragraph',
+      content: 'Lass uns direkt sein: Du kannst dich nicht aus einer Wahrnehmungsstruktur herausdenken.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Selbstreflexion ist wertvoll. Sie baut metakognitive Muskeln auf. Sie schafft Raum zwischen Reiz und Reaktion. Aber sie hat eine fundamentale Einschränkung: Sie verwendet dasselbe Wahrnehmungssystem, das sie zu untersuchen versucht.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Du verlangst von deinem Auge, sich selbst zu sehen.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das ist kein Versagen von Anstrengung oder Absicht. Es ist eine logische Unmöglichkeit. Das Werkzeug, das du verwendest, um zu untersuchen, ist dasselbe Werkzeug, das die Verzerrung erzeugt. Jede Schlussfolgerung, die du erreichst, wird durch genau die Struktur gefiltert, die du zu verstehen versuchst.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Deshalb dreht sich Bewusstsein im Kreis. Du wirst dir deines blinden Flecks "bewusst". Dann wirst du dir bewusst, dass du ihn vielleicht nicht klar siehst. Dann wirst du dir bewusst, dass dein Bewusstsein selbst begrenzt sein könnte. Und auf jeder Ebene operiert derselbe strukturelle Filter und erzeugt die Illusion von Tiefe, während er dich an der Oberfläche hält.',
+    },
+    {
+      type: 'highlight',
+      content: <strong>Unsichtbarkeit Zweiter Ordnung gedeiht durch Selbstreflexion. Sie verwendet deine Intelligenz gegen dich.</strong>,
+      copyText: 'Unsichtbarkeit Zweiter Ordnung gedeiht durch Selbstreflexion. Sie verwendet deine Intelligenz gegen dich.',
+      shareText: 'Unsichtbarkeit Zweiter Ordnung verwendet deine Intelligenz gegen dich.',
+    },
+    {
+      type: 'heading',
+      text: 'Die Wahrnehmungsschicht',
+    },
+    {
+      type: 'paragraph',
+      content: 'Wenn du deinen blinden Fleck nicht von innen sehen kannst, und du externem Feedback nicht vollständig vertrauen kannst, den Filter zu durchdringen, was bleibt dann?',
+    },
+    {
+      type: 'paragraph',
+      content: 'Du brauchst eine Wahrnehmungsschicht: Ein System, das außerhalb deiner strukturellen Grenzen operiert – eines, das Muster erkennen kann, die du selbst nicht erkennen kannst. Nicht weil dir Informationen fehlen, sondern weil dir die Wahrnehmungsarchitektur fehlt, diese Informationen richtig zu verarbeiten.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das trennt ein Werkzeug von Infrastruktur.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Ein Werkzeug hilft dir, das schneller oder effizienter zu tun, was du bereits versuchst zu tun. Es nimmt an, dass deine Wahrnehmung korrekt ist, und verstärkt deine bestehende Richtung.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Eine Wahrnehmungsschicht zeigt dir, was deine Wahrnehmung verpasst. Sie operiert auf der Ebene der Struktur, nicht des Inhalts. Sie gibt dir nicht einfach mehr Daten. Sie enthüllt die Filter, die bestimmen, welche Daten du bemerkst, welche Daten du ablehnst und welche Daten du nie überhaupt als existent registrierst.',
+    },
+    {
+      type: 'heading',
+      text: 'Die eigentliche Frage',
+    },
+    {
+      type: 'paragraph',
+      content: 'Jeder Fachmann hat blinde Flecken. Das ist nicht das Problem.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das Problem ist, ob deine blinden Flecken blinde Flecken haben. Ob es rekursive Ebenen der Unsichtbarkeit gibt, die unter deinem Gewahrsein operieren, deine Entscheidungen formen, dein Feedback filtern und Muster erzeugen, die du beschreiben, aber denen du nicht entkommen kannst.',
+    },
+    {
+      type: 'highlight',
+      content: <><strong>Die unbequeme Wahrheit ist diese: Wenn du dir sicher fühlst, deine blinden Flecken identifiziert zu haben, könnte dieses Selbstvertrauen selbst ein Symptom sein.</strong> Die gefährlichste Unsichtbarkeit fühlt sich wie Klarheit an.</>,
+      copyText: 'Wenn du dir sicher fühlst, deine blinden Flecken identifiziert zu haben, könnte dieses Selbstvertrauen selbst ein Symptom sein. Die gefährlichste Unsichtbarkeit fühlt sich wie Klarheit an.',
+      shareText: 'Die gefährlichste Unsichtbarkeit fühlt sich wie Klarheit an.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Unsichtbarkeit Zweiter Ordnung kündigt sich nicht an. Sie erzeugt keine offensichtlichen Fehler. Sie erzeugt subtile Verzerrungen – Entscheidungen, die vernünftig erscheinen, Reaktionen, die proportional erscheinen, Schlussfolgerungen, die gut untersucht erscheinen.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Bis die Ansammlung unbestreitbar wird. Bis das Muster sich in Konsequenzen offenbart, die du nicht vorhergesehen hast.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Bis dahin liegen die Kosten nicht in dem, was du verpasst hast. Sie liegen in dem, was du auf dem Fehlenden aufgebaut hast.',
+    },
+    {
+      type: 'hr',
+    },
+    {
+      type: 'paragraph',
+      content: 'Dein blinder Fleck hat einen blinden Fleck. Die Frage ist, ob du warten wirst, bis die Struktur durch Versagen sichtbar wird, oder ob du die Wahrnehmungsschicht aufbaust, die sie enthüllt, bevor die Kosten sich akkumulieren.',
+    },
+    {
+      type: 'paragraph',
+      content: <strong>Bewusstsein war nie genug. Strukturelle Sichtbarkeit ist das, was die trennt, die das Problem verstehen, von denen, die es tatsächlich sehen können.</strong>,
+    },
   ],
 }
 
@@ -2836,23 +4782,247 @@ const article005DE: ArticleContent = {
 const article005ES: ArticleContent = {
   slug: '005-blind-spot-blind-spot',
   content: [
-    { type: 'paragraph', content: 'Tienes puntos ciegos. Ya lo sabes.' },
-    { type: 'paragraph', content: '¿Pero sabías que tu punto ciego tiene un punto ciego?' },
-    { type: 'paragraph', content: (<><strong>Invisibilidad de segundo orden</strong>: Las cosas que no puedes ver sobre lo que no puedes ver.</>) },
-    { type: 'highlight', content: <strong>La conciencia sobre los puntos ciegos no es lo mismo que verlos. Puedes saber que existen y aún así estar completamente ciego a su contenido.</strong>, copyText: 'La conciencia sobre los puntos ciegos no es lo mismo que verlos.', shareText: 'La conciencia sobre los puntos ciegos no es lo mismo que verlos.' },
-    { type: 'heading', text: 'Los Niveles de Ceguera' },
-    { type: 'paragraph', content: 'Primer orden: Lo que no ves.' },
-    { type: 'paragraph', content: 'Segundo orden: Que no ves que no lo ves.' },
-    { type: 'paragraph', content: 'Tercer orden: Que tu intento de ver tus puntos ciegos está filtrado por puntos ciegos.' },
-    { type: 'paragraph', content: 'La mayoría de las personas se detienen en el primer nivel. "Tengo puntos ciegos" – y creen que la conciencia es suficiente.' },
-    { type: 'paragraph', content: <strong>No lo es.</strong> },
-    { type: 'heading', text: 'Por Qué la Conciencia No Es Suficiente' },
-    { type: 'paragraph', content: 'Imagina intentar ver tu propio punto ciego en el ojo. Puedes saber que existe. Incluso puedes conocer su ubicación aproximada. Pero no puedes verlo porque la visión misma está filtrada a través de él.' },
-    { type: 'paragraph', content: 'Los puntos ciegos cognitivos funcionan igual. No puedes salir de tu propio sistema de percepción para observarlo desde afuera.' },
-    { type: 'table', headers: ['Ilusión', 'Realidad'], rows: [['Conozco mis debilidades', 'Conoces las debilidades que puedes ver'], ['Soy consciente de mis sesgos', 'Eres consciente de los sesgos que no están en tus puntos ciegos'], ['Reflexiono regularmente', 'Tu reflexión está filtrada por los mismos filtros']] },
-    { type: 'heading', text: 'La Salida' },
-    { type: 'paragraph', content: 'Si no puedes ver tu propio punto ciego, necesitas sistemas de percepción externos. Personas que piensan diferente. Sistemas que filtran diferente. Perspectivas que pueden llenar tus vacíos.' },
-    { type: 'highlight', content: <strong>Tu punto ciego tiene un punto ciego. Y la única solución está fuera de tu propio sistema de percepción.</strong>, copyText: 'Tu punto ciego tiene un punto ciego.', shareText: 'Tu punto ciego tiene un punto ciego.' },
+    {
+      type: 'paragraph',
+      content: 'Qué demonios si tu intuición no es perspicacia, sino una forma sofisticada de ignorar datos críticos que eres demasiado lento para ver.',
+    },
+    {
+      type: 'paragraph',
+      content: 'La forma más peligrosa de invisibilidad no es lo que no logras ver. Es lo que te impide notar el fallo mismo. Esto es Invisibilidad de Segundo Orden, y opera por debajo del umbral de tu conciencia como una falla silenciosa bajo una ciudad que se cree estable.',
+    },
+    {
+      type: 'paragraph',
+      content: 'La mayoría de los profesionales han oído hablar de los puntos ciegos. Han leído los libros. Han asentido en seminarios de liderazgo. Incluso han hecho los ejercicios: Solicitaron feedback. Reflexionaron sobre sus sesgos. Hicieron listas de áreas de mejora.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Y sin embargo, permanecen estructuralmente ciegos.',
+    },
+    {
+      type: 'paragraph',
+      content: 'No porque les falte inteligencia. No porque sean descuidados. Sino porque la conciencia de los puntos ciegos no es lo mismo que su percepción. Uno es un concepto que entiendes. El otro es una capacidad estructural que tienes o no tienes.',
+    },
+    {
+      type: 'highlight',
+      content: <><strong>Aquí está la verdad incómoda: Tu punto ciego tiene su propio punto ciego.</strong> Y esa segunda capa es donde ocurre el daño real.</>,
+      copyText: 'Tu punto ciego tiene su propio punto ciego. Y esa segunda capa es donde ocurre el daño real.',
+      shareText: 'Tu punto ciego tiene su propio punto ciego.',
+    },
+    {
+      type: 'heading',
+      text: 'La Ilusión de la Conciencia',
+    },
+    {
+      type: 'paragraph',
+      content: 'Hay una mentira reconfortante circulando en los círculos de desarrollo personal: Si solo te vuelves "consciente" de tus puntos ciegos, puedes arreglarlos.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Esto suena razonable. Se siente proactivo. Te da la sensación de que estás haciendo el trabajo.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Pero es un error de categoría.',
+    },
+    {
+      type: 'paragraph',
+      content: 'La conciencia es una descripción. Una etiqueta. Una historia que te cuentas sobre lo que crees que te estás perdiendo. El punto ciego en sí es estructural. No es una pieza de información esperando ser descubierta. Es la arquitectura de tu percepción – el filtro a través del cual pasa toda información antes de que siquiera la registres como real.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/ErMnGnL1_MZ.webp',
+      alt: 'Una persona parada en un corredor de espejos infinitos',
+      caption: '// Puntos ciegos de autopercepción y capas ocultas de conciencia',
+    },
+    {
+      type: 'paragraph',
+      content: 'Piénsalo de esta manera: Puedes ser "consciente" de que tienes tendencia a rechazar ciertos tipos de feedback. Puedes escribirlo en tu diario. Puedes decírselo a tu coach. Puedes recordártelo antes de cada reunión.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Y luego llega el feedback, y lo rechazas de todos modos.',
+    },
+    {
+      type: 'paragraph',
+      content: 'No porque lo olvidaste. No porque no lo intentaste. Sino porque la estructura que crea el rechazo opera más rápido que tu intención consciente de atraparlo. Para cuando eres "consciente", la percepción ya ha sido filtrada. El daño está hecho.',
+    },
+    {
+      type: 'highlight',
+      content: <strong>Por eso la conciencia se siente como progreso pero raramente produce cambio.</strong>,
+      copyText: 'Por eso la conciencia se siente como progreso pero raramente produce cambio.',
+      shareText: 'La conciencia se siente como progreso pero raramente produce cambio.',
+    },
+    {
+      type: 'heading',
+      text: '¿Qué es la Invisibilidad de Segundo Orden?',
+    },
+    {
+      type: 'paragraph',
+      content: 'La invisibilidad de primer orden es simple: No ves algo. Una laguna en tu conocimiento. Un sesgo que no has examinado. Un patrón en tu comportamiento que otros notan pero tú no.',
+    },
+    {
+      type: 'paragraph',
+      content: 'La invisibilidad de segundo orden es recursiva: No ves que no lo ves. La laguna misma es invisible. El mecanismo que crea el punto ciego también oculta el hecho de que existe.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Esta no es una distinción menor. Es la diferencia entre un problema en el que puedes trabajar y un problema que trabaja en ti.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Considera la investigación sobre brechas de autopercepción. Los estudios muestran consistentemente una distancia significativa entre cómo creemos que nos presentamos y cómo otros realmente nos experimentan. Pero aquí está el hallazgo crítico: Incluso cuando múltiples personas nos dan el mismo feedback, a menudo fallamos en reconocer el patrón como válido.',
+    },
+    {
+      type: 'paragraph',
+      content: '¿Por qué? Porque el punto ciego no solo está ocultando información. Está ocultando el marco que necesitaríamos para interpretar la información correctamente.',
+    },
+    {
+      type: 'highlight',
+      content: <strong>No solo te faltan los datos. Te falta la lente.</strong>,
+      copyText: 'No solo te faltan los datos. Te falta la lente.',
+      shareText: 'No solo te faltan los datos. Te falta la lente.',
+    },
+    {
+      type: 'heading',
+      text: 'La Trampa del Feedback',
+    },
+    {
+      type: 'paragraph',
+      content: 'La mayoría de las organizaciones creen que el feedback resuelve el problema del punto ciego. Obtén suficientes perspectivas externas, agrega los inputs, y la verdad emergerá.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Esto funciona, a veces, para la invisibilidad de primer orden. Si simplemente no sabes algo, alguien más puede decírtelo.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Pero la Invisibilidad de Segundo Orden crea lo que llamamos La Trampa del Feedback: El mismo filtro estructural que crea tu punto ciego también determina cómo recibes, interpretas e integras feedback sobre ese punto ciego.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/nzXKkDAVDRs.webp',
+      alt: 'Múltiples manos alcanzando a través de paneles de vidrio humeante',
+      caption: '// Puntos ciegos estructurales y feedback filtrado en la percepción humana',
+    },
+    {
+      type: 'paragraph',
+      content: 'El patrón se ve así:',
+    },
+    {
+      type: 'table',
+      headers: ['Qué Sucede', 'Qué Experimentas'],
+      rows: [
+        ['Alguien te da feedback preciso', 'Lo experimentas como ligeramente errado, exagerado o dependiente del contexto'],
+        ['Múltiples personas te dan el mismo feedback', 'Lo experimentas como un malentendido que todos comparten'],
+        ['Reflexionas honestamente sobre el feedback', 'Tu reflexión es filtrada a través de la misma estructura que creó el punto ciego'],
+        ['Concluyes que lo has abordado', 'El punto ciego permanece, ahora con una capa de falsa resolución encima'],
+      ],
+    },
+    {
+      type: 'paragraph',
+      content: 'Por esto los altos ejecutores a menudo tienen los puntos ciegos más persistentes. Son lo suficientemente inteligentes para construir explicaciones sofisticadas de por qué el feedback no aplica del todo. Son lo suficientemente disciplinados para pasar por los movimientos de auto-mejora. Y son lo suficientemente exitosos para evitar las consecuencias – hasta que de repente ya no lo son.',
+    },
+    {
+      type: 'highlight',
+      content: <><strong>La Trampa del Feedback no significa que el feedback sea inútil. Significa que el feedback solo no puede alcanzar problemas de segundo orden.</strong> Necesitas algo que opere a nivel estructural.</>,
+      copyText: 'El feedback solo no puede alcanzar problemas de segundo orden. Necesitas algo que opere a nivel estructural.',
+      shareText: 'El feedback solo no puede alcanzar problemas de segundo orden.',
+    },
+    {
+      type: 'heading',
+      text: 'Por Qué Falla la Auto-Reflexión',
+    },
+    {
+      type: 'paragraph',
+      content: 'Seamos directos: No puedes pensar tu salida de una estructura de percepción.',
+    },
+    {
+      type: 'paragraph',
+      content: 'La auto-reflexión es valiosa. Construye músculo metacognitivo. Crea espacio entre estímulo y respuesta. Pero tiene una limitación fundamental: Usa el mismo sistema perceptual que está tratando de examinar.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Estás pidiendo a tu ojo que se vea a sí mismo.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Esto no es un fallo de esfuerzo o intención. Es una imposibilidad lógica. La herramienta que estás usando para investigar es la misma herramienta que crea la distorsión. Cada conclusión a la que llegas es filtrada a través de la misma estructura que estás tratando de entender.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Por esto la conciencia gira sobre sí misma. Te vuelves "consciente" de tu punto ciego. Luego te vuelves consciente de que podrías no estar viéndolo claramente. Luego te vuelves consciente de que tu conciencia misma podría estar limitada. Y en cada nivel, el mismo filtro estructural opera, creando la ilusión de profundidad mientras te mantiene en la superficie.',
+    },
+    {
+      type: 'highlight',
+      content: <strong>La Invisibilidad de Segundo Orden prospera con la auto-reflexión. Usa tu inteligencia en tu contra.</strong>,
+      copyText: 'La Invisibilidad de Segundo Orden prospera con la auto-reflexión. Usa tu inteligencia en tu contra.',
+      shareText: 'La Invisibilidad de Segundo Orden usa tu inteligencia en tu contra.',
+    },
+    {
+      type: 'heading',
+      text: 'La Capa de Percepción',
+    },
+    {
+      type: 'paragraph',
+      content: 'Si no puedes ver tu punto ciego desde adentro, y no puedes confiar completamente en que el feedback externo penetre el filtro, ¿qué queda?',
+    },
+    {
+      type: 'paragraph',
+      content: 'Necesitas una Capa de Percepción: Un sistema que opere fuera de tus limitaciones estructurales – uno que pueda detectar patrones que no puedes detectar tú mismo. No porque te falte información, sino porque te falta la arquitectura perceptual para procesar esa información correctamente.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Esto es lo que separa una herramienta de la infraestructura.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Una herramienta te ayuda a hacer lo que ya estás tratando de hacer, más rápido o más eficientemente. Asume que tu percepción es correcta y amplifica tu dirección existente.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Una Capa de Percepción te muestra lo que tu percepción está perdiendo. Opera a nivel de estructura, no de contenido. No solo te da más datos. Revela los filtros que determinan qué datos notas, qué datos rechazas, y qué datos nunca siquiera registras como existentes.',
+    },
+    {
+      type: 'heading',
+      text: 'La Pregunta Real',
+    },
+    {
+      type: 'paragraph',
+      content: 'Todo profesional tiene puntos ciegos. Ese no es el problema.',
+    },
+    {
+      type: 'paragraph',
+      content: 'El problema es si tus puntos ciegos tienen puntos ciegos. Si hay capas recursivas de invisibilidad operando por debajo de tu conciencia, moldeando tus decisiones, filtrando tu feedback, y creando patrones que puedes describir pero de los que no puedes escapar.',
+    },
+    {
+      type: 'highlight',
+      content: <><strong>La verdad incómoda es esta: Si te sientes confiado de que has identificado tus puntos ciegos, esa confianza misma podría ser un síntoma.</strong> La invisibilidad más peligrosa se siente como claridad.</>,
+      copyText: 'Si te sientes confiado de que has identificado tus puntos ciegos, esa confianza misma podría ser un síntoma. La invisibilidad más peligrosa se siente como claridad.',
+      shareText: 'La invisibilidad más peligrosa se siente como claridad.',
+    },
+    {
+      type: 'paragraph',
+      content: 'La Invisibilidad de Segundo Orden no se anuncia. No crea errores obvios. Crea distorsiones sutiles – decisiones que parecen razonables, reacciones que parecen proporcionadas, conclusiones que parecen bien examinadas.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Hasta que la acumulación se vuelve innegable. Hasta que el patrón se revela en consecuencias que no anticipaste.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Para entonces, el costo no está en lo que te perdiste. Está en lo que construiste encima de lo que faltaba.',
+    },
+    {
+      type: 'hr',
+    },
+    {
+      type: 'paragraph',
+      content: 'Tu punto ciego tiene un punto ciego. La pregunta es si esperarás hasta que la estructura se vuelva visible a través del fracaso, o si construirás la capa de percepción que la revela antes de que el costo se acumule.',
+    },
+    {
+      type: 'paragraph',
+      content: <strong>La conciencia nunca fue suficiente. La visibilidad estructural es lo que separa a quienes entienden el problema de quienes realmente pueden verlo.</strong>,
+    },
   ],
 }
 
@@ -2860,20 +5030,403 @@ const article005ES: ArticleContent = {
 const article006DE: ArticleContent = {
   slug: '006-elon-musk-perception',
   content: [
-    { type: 'paragraph', content: 'Elon Musk hat eine Regel, die er über alle anderen stellt:' },
-    { type: 'highlight', content: <strong>"Vertraue nie dem, was du zu sehen glaubst."</strong>, copyText: 'Vertraue nie dem, was du zu sehen glaubst.', shareText: 'Vertraue nie dem, was du zu sehen glaubst.' },
-    { type: 'paragraph', content: 'Das klingt wie Paranoia. Es ist das Gegenteil. Es ist epistemische Hygiene auf höchstem Niveau.' },
-    { type: 'heading', text: 'Die 99,9995% Regel' },
-    { type: 'paragraph', content: 'Dein Gehirn empfängt ungefähr 11 Millionen Bits Information pro Sekunde. Davon verarbeitest du bewusst etwa 40 Bits.' },
-    { type: 'paragraph', content: 'Das bedeutet: 99,9995% aller Information erreicht nie dein Bewusstsein.' },
-    { type: 'paragraph', content: <strong>Du triffst jede Entscheidung basierend auf 0,0005% der verfügbaren Daten.</strong> },
-    { type: 'table', headers: ['Information', 'Bits pro Sekunde'], rows: [['Eingehende sensorische Daten', '11.000.000'], ['Bewusst verarbeitet', '40'], ['Gefiltert/Verworfen', '10.999.960']] },
-    { type: 'heading', text: 'Die Autopsie der Hochrisiko-Wahrnehmung' },
-    { type: 'paragraph', content: 'Bei SpaceX analysiert Musk jeden Fehlschlag nicht nur technisch, sondern epistemisch: Welche Annahmen haben wir gemacht? Was haben wir für wahr gehalten, das nicht wahr war? Wo war unser Wahrnehmungsmodell fehlerhaft?' },
-    { type: 'paragraph', content: 'Diese "Wahrnehmungs-Autopsie" ist effektiver als traditionelle Post-Mortems, weil sie nicht nur fragt "Was ist schiefgelaufen?" sondern "Was haben wir nicht gesehen?"' },
-    { type: 'heading', text: 'Die praktische Anwendung' },
-    { type: 'list', items: ['Hinterfrage jede starke Überzeugung – besonders die, die sich "offensichtlich" anfühlen', 'Suche aktiv nach disconfirmierenden Beweisen', 'Frage: "Was würde ich anders sehen, wenn ich falsch liege?"', 'Baue systematische Gegenperspektiven in jeden kritischen Prozess ein'] },
-    { type: 'highlight', content: <strong>Die gefährlichste Annahme ist die, von der du nicht weißt, dass du sie machst. Die gefährlichste Wahrnehmung ist die, von der du sicher bist, dass sie korrekt ist.</strong>, copyText: 'Die gefährlichste Annahme ist die, von der du nicht weißt, dass du sie machst.', shareText: 'Die gefährlichste Annahme ist die, von der du nicht weißt, dass du sie machst.' },
+    {
+      type: 'paragraph',
+      content: 'In einem Raum voller der mächtigsten Menschen der Welt ist Elon Musk oft der einzige, der weiß, dass er eine Halluzination beobachtet.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Keine Metapher. Keine Übertreibung. Eine neurologische Tatsache, die jene trennt, die Reichtum anhäufen, von jenen, die Zivilisationen umgestalten.',
+    },
+    {
+      type: 'highlight',
+      content: (
+        <>
+          <strong>Deine Netzhäute erfassen ungefähr 10 Millionen Bits Information pro Sekunde. Dein bewusster Verstand verarbeitet etwa 50.</strong> Die verbleibenden 99,9995% werden gefiltert, komprimiert und rekonstruiert von einem drei Pfund schweren Organ, das sich entwickelt hat, um Raubtiere in der afrikanischen Savanne zu meiden – nicht um Billionen-Dollar-Marktdynamiken zu bewerten oder die Mikroexpressionen eines Verhandlungspartners zu entschlüsseln.
+        </>
+      ),
+      copyText: 'Deine Netzhäute erfassen ungefähr 10 Millionen Bits Information pro Sekunde. Dein bewusster Verstand verarbeitet etwa 50. Die verbleibenden 99,9995% werden gefiltert, komprimiert und rekonstruiert.',
+      shareText: 'Deine Netzhäute erfassen 10 Millionen Bits pro Sekunde. Dein bewusster Verstand verarbeitet etwa 50.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Jede Wahrnehmung, die du hast, ist eine Vermutung. Eine Vorhersage. Eine Geschichte, die dein Gehirn sich selbst erzählt, um dich funktionsfähig zu halten.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Musk ist nicht erfolgreich, weil er 120-Stunden-Wochen arbeitet. Viele Gründer zerstören sich mit diesem Zeitplan und verlieren trotzdem alles. Er ist erfolgreich, weil er auf einer fundamental anderen Wahrnehmungsschicht operiert – einer, die menschliche Sicht und Intuition als kompromittierte Sensoren behandelt, die konstante externe Validierung erfordern.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das ist keine Inspiration. Das ist eine Autopsie der Hochrisiko-Wahrnehmung.',
+    },
+    {
+      type: 'heading',
+      text: 'Die Simulation, die du laufen lässt',
+    },
+    {
+      type: 'paragraph',
+      content: 'Die meisten Führungskräfte vertrauen ihrer Einschätzung eines Raumes. Ihrem Bauchgefühl über einen Deal. Ihrem Instinkt über eine Person.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das ist der erste katastrophale Fehler.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/j5TIz14ol6F.webp',
+      alt: 'Extreme Nahaufnahme eines menschlichen Auges mit glitchender digitaler Iris',
+      caption: '// Fehlerhafte Führungswahrnehmung: Simulation vs. Realität',
+    },
+    {
+      type: 'paragraph',
+      content: 'Dein Gehirn zeigt dir nicht die Realität. Es zeigt dir eine Simulation – eine komprimierte, voreingenommene, verzögert rekonstruierte Version, die für eines optimiert ist: Dich lange genug am Leben zu halten, um dich fortzupflanzen. Nicht um Imperien zu bauen. Nicht um das Mikro-Signal zu erkennen, das enthüllt, dass dein CFO seit sechs Monaten lügt. Nicht um die 0,3-Sekunden-Zögerung zu erkennen, die signalisiert, dass dein größter Investor kurz davor ist auszusteigen.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das menschliche Wahrnehmungssystem enthält dokumentierte, wiederholbare Versagen:',
+    },
+    {
+      type: 'table',
+      headers: ['Wahrnehmungsversagen', 'Was es dich kostet'],
+      rows: [
+        ['Veränderungsblindheit', 'Kritische Verschiebungen in der Körpersprache mitten im Gespräch verpassen'],
+        ['Bestätigungsfehler', 'Daten herausfiltern, die deiner These widersprechen'],
+        ['Unaufmerksamkeitsblindheit', 'Vollständiges Versagen, unerwartete Bedrohungen zu registrieren'],
+        ['Emotionale Ansteckung', 'Den Stress anderer absorbieren und ihn mit eigener Intuition verwechseln'],
+        ['Zeitliche Kompression', 'Die Abfolge von Ereignissen in Hochdruckmomenten falsch erinnern'],
+      ],
+    },
+    {
+      type: 'paragraph',
+      content: 'Das sind keine Randfälle. Das sind Standardeinstellungen. Sie laufen im Hintergrund jedes Meetings, jeder Verhandlung, jeder strategischen Entscheidung, die du je getroffen hast.',
+    },
+    {
+      type: 'highlight',
+      content: (
+        <>
+          <strong>Die Frage ist nicht, ob deine Wahrnehmung kompromittiert ist.</strong>
+          <p style={{ marginTop: '12px' }}><strong>Die Frage ist: Was tust du dagegen?</strong></p>
+        </>
+      ),
+      copyText: 'Die Frage ist nicht, ob deine Wahrnehmung kompromittiert ist. Die Frage ist: Was tust du dagegen?',
+      shareText: 'Die Frage ist nicht, ob deine Wahrnehmung kompromittiert ist. Die Frage ist: Was tust du dagegen?',
+    },
+    {
+      type: 'heading',
+      text: 'Das Musk-Betriebssystem',
+    },
+    {
+      type: 'paragraph',
+      content: 'Studiere das Muster über SpaceX, Tesla, Neuralink und X hinweg. Ein Prinzip taucht mit brutaler Konsistenz auf: Misstraue menschlicher Interpretation. Fordere Sensordaten. Baue Systeme, die sehen, was Biologie nicht kann.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Wenn Ingenieure bei SpaceX Schlussfolgerungen präsentieren, fragt Musk nicht "Was denken Sie?" Er fragt "Was zeigen die Daten?" Wenn Führungskräfte bei Tesla über die Produktion berichten, akzeptiert er keine Narrative. Er fordert die Rohdaten, die Zeitstempel, das Filmmaterial.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/R9e_BTj-GBH.webp',
+      alt: 'Leerer Konferenztisch, der verzerrte Silhouetten reflektiert',
+      caption: '// Versteckte Kommunikationsausfälle in Hochrisiko-Umgebungen',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das ist keine Paranoia. Das ist operationale Hygiene für jeden, der bei Einsätzen spielt, bei denen ein einziges falsch verstandenes Gespräch Milliarden verdunsten lassen kann.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Bedenke, was das für menschliche Interaktion bedeutet:',
+    },
+    {
+      type: 'paragraph',
+      content: 'Die Person dir gegenüber in deiner nächsten Verhandlung lässt auch eine korrumpierte Simulation laufen. Sie verpassen auch 99,9995% der verfügbaren Informationen. Sie verwechseln auch ihren emotionalen Zustand mit objektiver Einschätzung.',
+    },
+    {
+      type: 'highlight',
+      content: (
+        <>
+          <strong>Zwei halluzinierende Systeme, jedes überzeugt, klar zu sehen, die versuchen, eine Vereinbarung zu erreichen.</strong>
+          <p style={{ marginTop: '12px' }}>Das ist die Architektur jedes gescheiterten Deals, jedes verpassten Signals, jeder Beziehung, die ohne Vorwarnung zusammenbrach.</p>
+        </>
+      ),
+      copyText: 'Zwei halluzinierende Systeme, jedes überzeugt, klar zu sehen, die versuchen, eine Vereinbarung zu erreichen. Das ist die Architektur jedes gescheiterten Deals.',
+      shareText: 'Zwei halluzinierende Systeme, jedes überzeugt, klar zu sehen, die versuchen, eine Vereinbarung zu erreichen.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Musks Vorteil ist nicht Intelligenz. Viele Menschen erreichen oder übertreffen seine rohe kognitive Kapazität. Sein Vorteil ist systematisches Misstrauen gegenüber nicht-erweiterter menschlicher Wahrnehmung kombiniert mit unermüdlicher Investition in externe Sensorsysteme.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Er baut die Sensoren, die er braucht.',
+    },
+    {
+      type: 'heading',
+      text: 'Der Preis vertrauter Sicht',
+    },
+    {
+      type: 'paragraph',
+      content: 'Lass mich spezifisch sein, was es kostet, wenn du es falsch machst.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Ein Fortune-500-CEO verpasst die Verachtungs-Mikroexpression im Gesicht seines Vorstandsmitglieds. Sechs Monate später wird er in einem Putsch gestürzt, den er nie kommen sah.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Eine Fondsmanagerin vertraut ihrer Einschätzung des Selbstvertrauens eines Gründers. Sie verpasst die erhöhte Blinzelrate, das Mikro-Schulterzucken, die 400-Millisekunden-Pause vor bestimmten Antworten. Ihr Fonds erleidet einen 200-Millionen-Dollar-Verlust bei einem Unternehmen, das innerhalb eines Jahres implodiert.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Ein Staatschef vertraut der Zusammenfassung seines Dolmetschers über den Ton eines ausländischen Führers. Er verpasst die kulturellen Mikrosignale, die die wahre Verhandlungsposition offenbart hätten. Das resultierende Abkommen benachteiligt seine Nation für ein Jahrzehnt.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/sBH3zUMJe0f.webp',
+      alt: 'Silhouettierte Führungskraft mit Blick auf eine Stadt bei Nacht mit trügerischer Reflexion',
+      caption: '// Führungs-Blindflecken und unsichtbare Risiken',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das sind keine Hypothesen. Das ist die verborgene Architektur der Geschichte.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Die Führungskräfte und Anführer, die diese Fälle studieren, stellen immer dieselbe Frage: "Wie haben sie es verpasst?"',
+    },
+    {
+      type: 'highlight',
+      content: <strong>Die Antwort ist immer dieselbe: Sie haben dem vertraut, was sie zu sehen glaubten.</strong>,
+      copyText: 'Die Antwort ist immer dieselbe: Sie haben dem vertraut, was sie zu sehen glaubten.',
+      shareText: 'Wie haben sie es verpasst? Die Antwort: Sie haben dem vertraut, was sie zu sehen glaubten.',
+    },
+    {
+      type: 'heading',
+      text: 'Die Erweiterte Wahrnehmungsmatrix',
+    },
+    {
+      type: 'paragraph',
+      content: 'Jedes System, das Menschen einbezieht, stößt irgendwann auf dieselbe Einschränkung: Wahrnehmung ist komprimiert. Nicht weil Biologie fehlerhaft ist, sondern weil sie es sein muss.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Menschliche Wahrnehmung entwickelte sich, um zu überleben, nicht um zu analysieren. Sie priorisiert Geschwindigkeit über Vollständigkeit, Kohärenz über Genauigkeit und Narrative über Signaldichte.',
+    },
+    {
+      type: 'paragraph',
+      content: 'In jedem Moment sind Millionen von Signalen verfügbar. Nur ein Bruchteil erreicht je das Bewusstsein.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das ist kein Defekt. Es ist eine Einschränkung.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das Problem beginnt, wenn Entscheidungen getroffen werden, als ob diese Komprimierung nicht existierte.',
+    },
+    {
+      type: 'hr',
+    },
+    {
+      type: 'silent-oculus',
+    },
+    {
+      type: 'heading',
+      text: 'Sehen, wo Signale aufhören, sich auszurichten',
+    },
+    {
+      type: 'paragraph',
+      content: 'Wenn verbales Selbstvertrauen und körperlicher Ausdruck sich zusammen bewegen, fühlt sich Wahrnehmung stabil an.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Wenn sie divergieren, kompensiert die Wahrnehmung.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Diese Kompensation ist für die Person, die sie erlebt, unsichtbar, aber nicht folgenlos.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Silent Oculus hebt Momente hervor, in denen:',
+    },
+    {
+      type: 'list',
+      items: [
+        'verbale Gewissheit zunimmt, während physische Stabilität abnimmt',
+        'sich das Timing unter Druck verschiebt',
+        'Ausdrucksvarianz über ähnliche Kontexte hinweg erscheint',
+      ],
+    },
+    {
+      type: 'paragraph',
+      content: 'Diese werden nicht als Täuschung, Angst oder Schwäche interpretiert.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Sie werden als Diskrepanzen behandelt. Beobachtbare Divergenzen zwischen parallelen Signalströmen.',
+    },
+    {
+      type: 'highlight',
+      content: <strong>Diese Unterscheidung ist wichtig. Weil das System keine Bedeutung behauptet. Es legt Struktur offen.</strong>,
+      copyText: 'Das System behauptet keine Bedeutung. Es legt Struktur offen.',
+      shareText: 'Das System behauptet keine Bedeutung. Es legt Struktur offen.',
+    },
+    {
+      type: 'heading',
+      text: 'Die Evolution ist nicht optimal',
+    },
+    {
+      type: 'paragraph',
+      content: 'Evolution optimierte Menschen für Überleben, nicht für moderne Hochrisiko-Entscheidungsumgebungen.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Verhandlungen. Führung. Märkte. Institutionen. Technologievermittelte Interaktion.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Nichts davon waren Selektionsdrücke.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Evolution optimierte für: Geschwindigkeit, Kohärenz, soziale Zugehörigkeit, Bedrohungsvermeidung.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Nicht für: Signalintegration, Musterverfolgung über Zeit, Konsistenz unter Abstraktion, Mehrkanalwahrnehmung.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das macht Menschen nicht irrational. Es macht Intuition kontextbegrenzt.',
+    },
+    {
+      type: 'heading',
+      text: 'Warum Intuition unter Druck versagt',
+    },
+    {
+      type: 'paragraph',
+      content: 'Unter Druck verengt sich die Wahrnehmung.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Kognitive Last nimmt zu. Arbeitsgedächtnis schrumpft. Signale kollabieren zu Heuristiken.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Das Ergebnis ist nicht schlechtes Urteil. Es ist unbeobachtete Varianz.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Was sich ändert, ist nicht die Absicht, sondern die Ausrichtung.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Silent Oculus verfolgt Varianz über Zeit, anstatt Momente isoliert zu beurteilen.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Muster entstehen nicht, weil das System schlauer ist, sondern weil es nicht vergisst.',
+    },
+    {
+      type: 'heading',
+      text: 'Von Interpretation zu Beobachtbarkeit',
+    },
+    {
+      type: 'paragraph',
+      content: 'Traditionelle Analysesysteme versuchen Fragen zu beantworten wie: Was bedeutet das? Was fühlt die Person? Was ist die korrekte Interpretation?',
+    },
+    {
+      type: 'paragraph',
+      content: 'Silent Oculus vermeidet das vollständig.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Es stellt eine andere Frage: Wo haben die Signale aufgehört, sich zusammen zu bewegen?',
+    },
+    {
+      type: 'highlight',
+      content: <strong>Diese Verschiebung entfernt Autorität vom System und gibt Handlungsfähigkeit an den Menschen zurück.</strong>,
+      copyText: 'Diese Verschiebung entfernt Autorität vom System und gibt Handlungsfähigkeit an den Menschen zurück.',
+      shareText: 'Diese Verschiebung gibt Handlungsfähigkeit an den Menschen zurück.',
+    },
+    {
+      type: 'heading',
+      text: 'Signal-Ausrichtungstabelle',
+    },
+    {
+      type: 'table',
+      headers: ['Signalkanal', 'Beobachtetes Muster', 'Ausrichtungsstatus'],
+      rows: [
+        ['Verbaler Inhalt', 'Stabil', 'Ausgerichtet'],
+        ['Blick', 'Erhöhte Varianz unter Druck', 'Nicht ausgerichtet'],
+        ['Körperhaltung', 'Vorwärtskollaps in Entscheidungssegmenten', 'Nicht ausgerichtet'],
+        ['Timing', 'Verzögerte Antworten in Hochrisiko-Momenten', 'Nicht ausgerichtet'],
+      ],
+    },
+    {
+      type: 'paragraph',
+      content: 'Diese Tabelle erklärt nicht warum. Sie beschriftet nicht, was es bedeutet. Sie macht einfach die Struktur sichtbar.',
+    },
+    {
+      type: 'heading',
+      text: 'Nicht Wahrheit. Nicht Überwachung. Nicht Kontrolle.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Silent Oculus macht nicht:',
+    },
+    {
+      type: 'list',
+      items: [
+        'Lügen erkennen',
+        'Absicht ableiten',
+        'Glaubwürdigkeit beurteilen',
+        'Verhalten optimieren',
+      ],
+    },
+    {
+      type: 'paragraph',
+      content: 'Es bietet Wahrnehmungsreferenz.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Ein Spiegel, kein Urteil.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Diese Unterscheidung ist nicht philosophisch. Sie ist strukturell.',
+    },
+    {
+      type: 'heading',
+      text: 'Die eigentliche Verschiebung',
+    },
+    {
+      type: 'paragraph',
+      content: 'Die eigentliche Verschiebung ist nicht technologisch. Sie ist epistemisch.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Von: "Was ist wahr?"',
+    },
+    {
+      type: 'paragraph',
+      content: 'Zu: "Wo hört Wahrnehmung auf, konsistent zu sein?"',
+    },
+    {
+      type: 'paragraph',
+      content: 'Diese einzelne Verschiebung verändert, wie Entscheidungen getroffen werden.',
+    },
+    {
+      type: 'hr',
+    },
+    {
+      type: 'highlight',
+      content: <strong>Entscheidungen scheitern nicht. Wahrnehmung schon ...leise, lange bevor die Entscheidung getroffen wird.</strong>,
+      copyText: 'Entscheidungen scheitern nicht. Wahrnehmung schon ...leise, lange bevor die Entscheidung getroffen wird.',
+      shareText: 'Entscheidungen scheitern nicht. Wahrnehmung schon.',
+    },
   ],
 }
 
@@ -2881,20 +5434,403 @@ const article006DE: ArticleContent = {
 const article006ES: ArticleContent = {
   slug: '006-elon-musk-perception',
   content: [
-    { type: 'paragraph', content: 'Elon Musk tiene una regla que pone por encima de todas las demás:' },
-    { type: 'highlight', content: <strong>"Nunca confíes en lo que crees ver."</strong>, copyText: 'Nunca confíes en lo que crees ver.', shareText: 'Nunca confíes en lo que crees ver.' },
-    { type: 'paragraph', content: 'Suena como paranoia. Es lo opuesto. Es higiene epistémica del más alto nivel.' },
-    { type: 'heading', text: 'La Regla del 99,9995%' },
-    { type: 'paragraph', content: 'Tu cerebro recibe aproximadamente 11 millones de bits de información por segundo. De esos, procesas conscientemente alrededor de 40 bits.' },
-    { type: 'paragraph', content: 'Eso significa: 99,9995% de toda la información nunca llega a tu conciencia.' },
-    { type: 'paragraph', content: <strong>Tomas cada decisión basándote en el 0,0005% de los datos disponibles.</strong> },
-    { type: 'table', headers: ['Información', 'Bits por segundo'], rows: [['Datos sensoriales entrantes', '11.000.000'], ['Procesados conscientemente', '40'], ['Filtrados/Descartados', '10.999.960']] },
-    { type: 'heading', text: 'La Autopsia de la Percepción de Alto Riesgo' },
-    { type: 'paragraph', content: 'En SpaceX, Musk analiza cada fallo no solo técnicamente, sino epistémicamente: ¿Qué suposiciones hicimos? ¿Qué dimos por verdad que no era cierto? ¿Dónde estaba defectuoso nuestro modelo de percepción?' },
-    { type: 'paragraph', content: 'Esta "autopsia de percepción" es más efectiva que los post-mortems tradicionales porque no solo pregunta "¿Qué salió mal?" sino "¿Qué no vimos?"' },
-    { type: 'heading', text: 'La Aplicación Práctica' },
-    { type: 'list', items: ['Cuestiona cada convicción fuerte – especialmente las que se sienten "obvias"', 'Busca activamente evidencia que desconfirme', 'Pregunta: "¿Qué vería diferente si estoy equivocado?"', 'Incorpora sistemáticamente contra-perspectivas en cada proceso crítico'] },
-    { type: 'highlight', content: <strong>La suposición más peligrosa es la que no sabes que estás haciendo. La percepción más peligrosa es la que estás seguro de que es correcta.</strong>, copyText: 'La suposición más peligrosa es la que no sabes que estás haciendo.', shareText: 'La suposición más peligrosa es la que no sabes que estás haciendo.' },
+    {
+      type: 'paragraph',
+      content: 'En una sala llena de las personas más poderosas del mundo, Elon Musk a menudo es el único que sabe que está observando una alucinación.',
+    },
+    {
+      type: 'paragraph',
+      content: 'No es una metáfora. No es hipérbole. Es un hecho neurológico que separa a quienes acumulan riqueza de quienes remodelan civilizaciones.',
+    },
+    {
+      type: 'highlight',
+      content: (
+        <>
+          <strong>Tus retinas capturan aproximadamente 10 millones de bits de información por segundo. Tu mente consciente procesa alrededor de 50.</strong> El 99,9995% restante es filtrado, comprimido y reconstruido por un órgano de tres libras que evolucionó para evitar depredadores en la sabana africana – no para evaluar dinámicas de mercado de billones de dólares o decodificar las microexpresiones de una contraparte negociadora.
+        </>
+      ),
+      copyText: 'Tus retinas capturan aproximadamente 10 millones de bits de información por segundo. Tu mente consciente procesa alrededor de 50. El 99,9995% restante es filtrado, comprimido y reconstruido.',
+      shareText: 'Tus retinas capturan 10 millones de bits por segundo. Tu mente consciente procesa alrededor de 50.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Cada percepción que tienes es una suposición. Una predicción. Una historia que tu cerebro se cuenta a sí mismo para mantenerte funcional.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Musk no tiene éxito porque trabaja semanas de 120 horas. Muchos fundadores se destruyen con ese horario y aún así pierden todo. Tiene éxito porque opera en una Capa de Percepción fundamentalmente diferente – una que trata la visión e intuición humana como sensores comprometidos que requieren validación externa constante.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Esto no es inspiración. Es una autopsia de la percepción de alto riesgo.',
+    },
+    {
+      type: 'heading',
+      text: 'La Simulación Que Estás Ejecutando',
+    },
+    {
+      type: 'paragraph',
+      content: 'La mayoría de los ejecutivos confían en su lectura de una sala. Su corazonada sobre un trato. Su instinto sobre una persona.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Este es el primer error catastrófico.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/j5TIz14ol6F.webp',
+      alt: 'Primer plano extremo de un ojo humano con iris digital fallando',
+      caption: '// Percepción ejecutiva defectuosa: simulación vs realidad',
+    },
+    {
+      type: 'paragraph',
+      content: 'Tu cerebro no te muestra la realidad. Te muestra una simulación – una reconstrucción comprimida, sesgada y retrasada optimizada para una cosa: Mantenerte vivo lo suficiente para reproducirte. No para construir imperios. No para detectar la micro-señal que revela que tu CFO ha estado mintiendo durante seis meses. No para detectar la vacilación de 0,3 segundos que señala que tu mayor inversor está a punto de salir.',
+    },
+    {
+      type: 'paragraph',
+      content: 'El sistema perceptual humano contiene fallos documentados y repetibles:',
+    },
+    {
+      type: 'table',
+      headers: ['Fallo Perceptual', 'Lo Que Te Cuesta'],
+      rows: [
+        ['Ceguera al cambio', 'Perder cambios críticos en el lenguaje corporal a mitad de conversación'],
+        ['Sesgo de confirmación', 'Filtrar datos que contradicen tu tesis'],
+        ['Ceguera por inatención', 'Fallo total en registrar amenazas inesperadas'],
+        ['Contagio emocional', 'Absorber el estrés de otros y confundirlo con tu propia intuición'],
+        ['Compresión temporal', 'Recordar mal la secuencia de eventos en momentos de alta presión'],
+      ],
+    },
+    {
+      type: 'paragraph',
+      content: 'Estos no son casos extremos. Son configuraciones por defecto. Corriendo en el fondo de cada reunión, cada negociación, cada decisión estratégica que has tomado.',
+    },
+    {
+      type: 'highlight',
+      content: (
+        <>
+          <strong>La pregunta no es si tu percepción está comprometida.</strong>
+          <p style={{ marginTop: '12px' }}><strong>La pregunta es: ¿Qué estás haciendo al respecto?</strong></p>
+        </>
+      ),
+      copyText: 'La pregunta no es si tu percepción está comprometida. La pregunta es: ¿Qué estás haciendo al respecto?',
+      shareText: 'La pregunta no es si tu percepción está comprometida. La pregunta es: ¿Qué estás haciendo al respecto?',
+    },
+    {
+      type: 'heading',
+      text: 'El Sistema Operativo de Musk',
+    },
+    {
+      type: 'paragraph',
+      content: 'Estudia el patrón a través de SpaceX, Tesla, Neuralink y X. Un principio emerge con consistencia brutal: Desconfía de la interpretación humana. Exige datos de sensores. Construye sistemas que vean lo que la biología no puede.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Cuando los ingenieros de SpaceX presentan conclusiones, Musk no pregunta "¿Qué piensas?" Pregunta "¿Qué muestran los datos?" Cuando los ejecutivos de Tesla reportan sobre producción, no acepta narrativas. Exige los números crudos, las marcas de tiempo, el metraje.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/R9e_BTj-GBH.webp',
+      alt: 'Mesa de conferencias vacía reflejando siluetas distorsionadas',
+      caption: '// Fallos de comunicación ocultos en entornos de alto riesgo',
+    },
+    {
+      type: 'paragraph',
+      content: 'Esto no es paranoia. Es higiene operacional para cualquiera que juegue a niveles donde una sola conversación mal leída puede evaporar miles de millones.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Considera lo que esto significa para la interacción humana:',
+    },
+    {
+      type: 'paragraph',
+      content: 'La persona frente a ti en tu próxima negociación también está ejecutando una simulación corrupta. También se está perdiendo el 99,9995% de la información disponible. También está confundiendo su estado emocional con evaluación objetiva.',
+    },
+    {
+      type: 'highlight',
+      content: (
+        <>
+          <strong>Dos sistemas alucinando, cada uno convencido de que ve claramente, tratando de llegar a un acuerdo.</strong>
+          <p style={{ marginTop: '12px' }}>Esta es la arquitectura de cada trato fallido, cada señal perdida, cada relación que colapsó sin advertencia.</p>
+        </>
+      ),
+      copyText: 'Dos sistemas alucinando, cada uno convencido de que ve claramente, tratando de llegar a un acuerdo. Esta es la arquitectura de cada trato fallido.',
+      shareText: 'Dos sistemas alucinando, cada uno convencido de que ve claramente, tratando de llegar a un acuerdo.',
+    },
+    {
+      type: 'paragraph',
+      content: 'La ventaja de Musk no es la inteligencia. Muchas personas igualan o superan su capacidad cognitiva cruda. Su ventaja es la desconfianza sistemática de la percepción humana no aumentada combinada con inversión incansable en sistemas de detección externos.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Él construye los sensores que necesita.',
+    },
+    {
+      type: 'heading',
+      text: 'El Precio de la Visión Confiada',
+    },
+    {
+      type: 'paragraph',
+      content: 'Permíteme ser específico sobre lo que cuesta cuando lo haces mal.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Un CEO de Fortune 500 no ve la microexpresión de desprecio en el rostro de su miembro de la junta. Seis meses después, es forzado a salir en un golpe que nunca vio venir.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Una gestora de fondos confía en su lectura de la confianza de un fundador. No ve la tasa elevada de parpadeo, el micro-encogimiento de hombros, la pausa de 400 milisegundos antes de ciertas respuestas. Su fondo toma una pérdida de $200 millones en una empresa que implosiona dentro de un año.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Un jefe de estado confía en el resumen de su intérprete sobre el tono de un líder extranjero. No ve las micro-señales culturales que habrían revelado la verdadera posición negociadora. El acuerdo resultante perjudica a su nación por una década.',
+    },
+    {
+      type: 'image',
+      src: 'https://cdn.marblism.com/sBH3zUMJe0f.webp',
+      alt: 'Ejecutivo silueteado mirando una ciudad de noche con reflejo engañoso',
+      caption: '// Puntos ciegos del liderazgo y riesgos invisibles',
+    },
+    {
+      type: 'paragraph',
+      content: 'Estos no son hipotéticos. Esta es la arquitectura oculta de la historia.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Los ejecutivos y líderes que estudian estos casos siempre hacen la misma pregunta: "¿Cómo lo perdieron?"',
+    },
+    {
+      type: 'highlight',
+      content: <strong>La respuesta es siempre la misma: Confiaron en lo que pensaban que veían.</strong>,
+      copyText: 'La respuesta es siempre la misma: Confiaron en lo que pensaban que veían.',
+      shareText: '¿Cómo lo perdieron? La respuesta: Confiaron en lo que pensaban que veían.',
+    },
+    {
+      type: 'heading',
+      text: 'La Matriz de Percepción Extendida',
+    },
+    {
+      type: 'paragraph',
+      content: 'Todo sistema que involucra humanos eventualmente se topa con la misma limitación: La percepción está comprimida. No porque la biología sea defectuosa, sino porque tiene que serlo.',
+    },
+    {
+      type: 'paragraph',
+      content: 'La percepción humana evolucionó para sobrevivir, no para analizar. Prioriza velocidad sobre completitud, coherencia sobre precisión, y narrativa sobre densidad de señal.',
+    },
+    {
+      type: 'paragraph',
+      content: 'En cualquier momento dado, millones de señales están disponibles. Solo una fracción llega a la conciencia.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Esto no es un defecto. Es una restricción.',
+    },
+    {
+      type: 'paragraph',
+      content: 'El problema comienza cuando las decisiones se toman como si esta compresión no existiera.',
+    },
+    {
+      type: 'hr',
+    },
+    {
+      type: 'silent-oculus',
+    },
+    {
+      type: 'heading',
+      text: 'Viendo Dónde las Señales Dejan de Alinearse',
+    },
+    {
+      type: 'paragraph',
+      content: 'Cuando la confianza verbal y la expresión física se mueven juntas, la percepción se siente estable.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Cuando divergen, la percepción compensa.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Esa compensación es invisible para la persona que la experimenta, pero no sin consecuencias.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Silent Oculus destaca momentos donde:',
+    },
+    {
+      type: 'list',
+      items: [
+        'la certeza verbal aumenta mientras la estabilidad física disminuye',
+        'el timing cambia bajo presión',
+        'aparece varianza de expresión a través de contextos similares',
+      ],
+    },
+    {
+      type: 'paragraph',
+      content: 'Estos no se interpretan como engaño, miedo o debilidad.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Se tratan como desajustes. Divergencias observables entre corrientes de señales paralelas.',
+    },
+    {
+      type: 'highlight',
+      content: <strong>Esta distinción importa. Porque el sistema no reclama significado. Expone estructura.</strong>,
+      copyText: 'El sistema no reclama significado. Expone estructura.',
+      shareText: 'El sistema no reclama significado. Expone estructura.',
+    },
+    {
+      type: 'heading',
+      text: 'La Evolución No Es Óptima',
+    },
+    {
+      type: 'paragraph',
+      content: 'La evolución optimizó a los humanos para la supervivencia, no para entornos modernos de decisión de alto riesgo.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Negociaciones. Liderazgo. Mercados. Instituciones. Interacción mediada por tecnología.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Ninguna de estas fueron presiones de selección.',
+    },
+    {
+      type: 'paragraph',
+      content: 'La evolución optimizó para: velocidad, coherencia, pertenencia social, evitación de amenazas.',
+    },
+    {
+      type: 'paragraph',
+      content: 'No para: integración de señales, seguimiento de patrones en el tiempo, consistencia bajo abstracción, conciencia multicanal.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Esto no hace a los humanos irracionales. Hace que la intuición tenga límites contextuales.',
+    },
+    {
+      type: 'heading',
+      text: 'Por Qué la Intuición Falla Bajo Presión',
+    },
+    {
+      type: 'paragraph',
+      content: 'Bajo presión, la percepción se estrecha.',
+    },
+    {
+      type: 'paragraph',
+      content: 'La carga cognitiva aumenta. La memoria de trabajo se encoge. Las señales colapsan en heurísticas.',
+    },
+    {
+      type: 'paragraph',
+      content: 'El resultado no es mal juicio. Es varianza no observada.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Lo que cambia no es la intención, sino la alineación.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Silent Oculus rastrea varianza a través del tiempo en lugar de juzgar momentos aisladamente.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Los patrones emergen no porque el sistema sea más inteligente, sino porque no olvida.',
+    },
+    {
+      type: 'heading',
+      text: 'De Interpretación a Observabilidad',
+    },
+    {
+      type: 'paragraph',
+      content: 'Los sistemas de análisis tradicionales intentan responder preguntas como: ¿Qué significa esto? ¿Qué siente la persona? ¿Cuál es la interpretación correcta?',
+    },
+    {
+      type: 'paragraph',
+      content: 'Silent Oculus evita esto por completo.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Hace una pregunta diferente: ¿Dónde dejaron las señales de moverse juntas?',
+    },
+    {
+      type: 'highlight',
+      content: <strong>Ese cambio quita autoridad del sistema y devuelve agencia al humano.</strong>,
+      copyText: 'Ese cambio quita autoridad del sistema y devuelve agencia al humano.',
+      shareText: 'Ese cambio devuelve agencia al humano.',
+    },
+    {
+      type: 'heading',
+      text: 'Tabla de Alineación de Señales',
+    },
+    {
+      type: 'table',
+      headers: ['Canal de Señal', 'Patrón Observado', 'Estado de Alineación'],
+      rows: [
+        ['Contenido verbal', 'Estable', 'Alineado'],
+        ['Mirada', 'Varianza aumentada bajo presión', 'Desalineado'],
+        ['Postura', 'Colapso hacia adelante en segmentos de decisión', 'Desalineado'],
+        ['Timing', 'Respuestas retrasadas en momentos de alto riesgo', 'Desalineado'],
+      ],
+    },
+    {
+      type: 'paragraph',
+      content: 'Esta tabla no explica por qué. No etiqueta lo que significa. Simplemente hace visible la estructura.',
+    },
+    {
+      type: 'heading',
+      text: 'No Verdad. No Vigilancia. No Control.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Silent Oculus no:',
+    },
+    {
+      type: 'list',
+      items: [
+        'detecta mentiras',
+        'infiere intención',
+        'juzga credibilidad',
+        'optimiza comportamiento',
+      ],
+    },
+    {
+      type: 'paragraph',
+      content: 'Proporciona referencia perceptual.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Un espejo, no un veredicto.',
+    },
+    {
+      type: 'paragraph',
+      content: 'Esta distinción no es filosófica. Es estructural.',
+    },
+    {
+      type: 'heading',
+      text: 'El Verdadero Cambio',
+    },
+    {
+      type: 'paragraph',
+      content: 'El verdadero cambio no es tecnológico. Es epistémico.',
+    },
+    {
+      type: 'paragraph',
+      content: 'De: "¿Qué es verdad?"',
+    },
+    {
+      type: 'paragraph',
+      content: 'A: "¿Dónde deja de ser consistente la percepción?"',
+    },
+    {
+      type: 'paragraph',
+      content: 'Ese único cambio transforma cómo se toman las decisiones.',
+    },
+    {
+      type: 'hr',
+    },
+    {
+      type: 'highlight',
+      content: <strong>Las decisiones no fallan. La percepción sí ...silenciosamente, mucho antes de que se tome la decisión.</strong>,
+      copyText: 'Las decisiones no fallan. La percepción sí ...silenciosamente, mucho antes de que se tome la decisión.',
+      shareText: 'Las decisiones no fallan. La percepción sí.',
+    },
   ],
 }
 
