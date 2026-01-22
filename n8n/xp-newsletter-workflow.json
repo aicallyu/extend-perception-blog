@@ -58,7 +58,7 @@
     {
       "parameters": {
         "chatId": "YOUR_TELEGRAM_CHAT_ID",
-        "text": "=🎉 *Neuer Newsletter-Abonnent!*\n\n👤 *Name:* {{ $('Webhook').item.json.body.name }}\n📧 *Email:* {{ $('Webhook').item.json.body.email }}\n🌐 *Sprache:* {{ $('Webhook').item.json.body.language }}\n📍 *Quelle:* {{ $('Webhook').item.json.body.source }}\n🕐 *Zeit:* {{ $now.format('dd.MM.yyyy HH:mm') }}",
+        "text": "=🎉 *New Newsletter Subscriber!*\n\n👤 *Name:* {{ $('Webhook').item.json.body.name }}\n📧 *Email:* {{ $('Webhook').item.json.body.email }}\n🌐 *Language:* {{ $('Webhook').item.json.body.language }}\n📍 *Source:* {{ $('Webhook').item.json.body.source }}\n🕐 *Time:* {{ $now.format('yyyy-MM-dd HH:mm') }}",
         "additionalFields": {
           "parse_mode": "Markdown"
         }
