@@ -1,6 +1,6 @@
-# UNBLIND Newsletter System - Setup Guide
+# Extend Perception Newsletter System - Setup Guide
 
-Dieses Dokument erklärt, wie du das Newsletter-System für UNBLIND einrichtest.
+Dieses Dokument erklärt, wie du das Newsletter-System für Extend Perception einrichtest.
 
 ## Architektur
 
@@ -24,7 +24,7 @@ Dieses Dokument erklärt, wie du das Newsletter-System für UNBLIND einrichtest.
 ### 1.1 Neues Spreadsheet erstellen
 
 1. Gehe zu [Google Sheets](https://sheets.google.com)
-2. Erstelle ein neues Spreadsheet mit dem Namen: **UNBLIND Subscribers**
+2. Erstelle ein neues Spreadsheet mit dem Namen: **Extend Perception Subscribers**
 3. Benenne das erste Sheet: **Subscribers**
 4. Erstelle folgende Spalten in Zeile 1:
 
@@ -52,7 +52,7 @@ https://docs.google.com/spreadsheets/d/[DIESE_ID_KOPIEREN]/edit
 ### 2.2 API Key erstellen
 
 1. Gehe zu **API Keys** → **Create API Key**
-2. Name: `UNBLIND Newsletter`
+2. Name: `Extend Perception Newsletter`
 3. Permission: `Sending access`
 4. Kopiere den API Key (wird nur einmal angezeigt!)
 
@@ -64,7 +64,7 @@ https://docs.google.com/spreadsheets/d/[DIESE_ID_KOPIEREN]/edit
 
 1. Öffne dein n8n Dashboard
 2. Gehe zu **Workflows** → **Import from File**
-3. Wähle die Datei: `n8n/unblind-newsletter-workflow.json`
+3. Wähle die Datei: `n8n/xp-newsletter-workflow.json`
 
 ### 3.2 Credentials einrichten
 
@@ -90,7 +90,7 @@ https://docs.google.com/spreadsheets/d/[DIESE_ID_KOPIEREN]/edit
 ### 3.4 Resend Absender-E-Mail eintragen
 
 1. Öffne den "Send Welcome Email" Node
-2. Setze die "From Email" auf deine verifizierte Domain (z.B. `hello@unblind.io`)
+2. Setze die "From Email" auf deine verifizierte Domain (z.B. `hello@extendperception.com`)
 
 ### 3.5 Workflow aktivieren
 
@@ -108,7 +108,7 @@ https://docs.google.com/spreadsheets/d/[DIESE_ID_KOPIEREN]/edit
 
 ```env
 # Newsletter subscription webhook URL (n8n)
-VITE_SUBSCRIBE_WEBHOOK_URL=https://dein-n8n-server.com/webhook/unblind-subscribe
+VITE_SUBSCRIBE_WEBHOOK_URL=https://dein-n8n-server.com/webhook/xp-subscribe
 ```
 
 ### 4.2 Neu builden und deployen
@@ -121,7 +121,7 @@ npm run build
 
 ## Schritt 5: Testen
 
-1. Öffne deine UNBLIND Website
+1. Öffne deine Extend Perception Website
 2. Scrolle zum Subscribe-Formular
 3. Gib einen Test-Namen und E-Mail ein
 4. Klicke auf "Subscribe"
@@ -169,7 +169,7 @@ Falls es trotzdem Probleme gibt, prüfe deine n8n CORS-Einstellungen.
 3. Teste den Webhook mit curl:
 
 ```bash
-curl -X POST https://dein-n8n-server.com/webhook/unblind-subscribe \
+curl -X POST https://dein-n8n-server.com/webhook/xp-subscribe \
   -H "Content-Type: application/json" \
   -d '{"name":"Test","email":"test@example.com","language":"en","source":"test","timestamp":"2024-01-01T00:00:00.000Z"}'
 ```
@@ -186,7 +186,7 @@ curl -X POST https://dein-n8n-server.com/webhook/unblind-subscribe \
 
 ```
 n8n/
-├── unblind-newsletter-workflow.json  # Importierbarer n8n Workflow
+├── xp-newsletter-workflow.json  # Importierbarer n8n Workflow
 └── SETUP.md                          # Diese Anleitung
 ```
 

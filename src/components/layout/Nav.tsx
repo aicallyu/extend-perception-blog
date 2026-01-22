@@ -22,9 +22,11 @@ export default function Nav({ isArticlePage = false }: NavProps) {
     <nav>
       <div className="container">
         <div className="nav-content flex justify-between items-center">
-          <Link to="/" className="logo">
-            <div className="logo-icon"></div>
-            <span className="logo-text">UNBLIND</span>
+          <Link to="/" className="logo" aria-label="Extend Perception - Home">
+            <span className="logo-text" style={{ fontWeight: 800 }}>
+              <span style={{ color: 'var(--accent-cyan)' }}>X</span>
+              <span style={{ color: 'var(--accent-purple)' }}>P</span>
+            </span>
           </Link>
           <ul className="nav-links">
             <li>
