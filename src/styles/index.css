@@ -461,10 +461,31 @@ nav {
   }
 
   .theme-toggle {
-    right: 20px;
+    right: 80px;
+    top: 20px;
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
   }
 
   .container {
     padding: 0 24px;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  nav {
+    padding: 16px 0;
+  }
+
+  .nav-content {
+    padding-right: 10px;
   }
 }

@@ -134,11 +134,13 @@ export interface Translations {
     rotatingSnakes: {
       title: string
       subtitle: string
+      whatsHappening: string
       instruction: string
     }
     mullerLyer: {
       title: string
       subtitle: string
+      whatsHappening: string
       instruction: string
       reveal: string
     }
@@ -210,7 +212,7 @@ export const translations: Record<Language, Translations> = {
         highlight: 'ARRIVES',
         line2: 'BEFORE THE NOISE',
       },
-      subtitle: 'Most interventions happen too late. We work at the perception layer—before interpretation, before decisions, before action. Where reality is shaped.',
+      subtitle: 'Most interventions happen too late. We work at the perception layer: before interpretation, before decisions, before action. Where reality is shaped.',
       cta: {
         explore: 'EXPLORE',
         subscribe: 'SUBSCRIBE',
@@ -309,10 +311,10 @@ export const translations: Record<Language, Translations> = {
       label: 'THE NUMBERS',
       title: 'The Perception Gap',
       items: {
-        decisions: '% of decisions made unconsciously',
-        bitsPerSecond: 'Million bits of info per second',
-        conscious: 'Bits consciously processed',
-        dailyDecisions: 'K daily decisions average',
+        decisions: 'of decisions made unconsciously',
+        bitsPerSecond: 'bits of info per second',
+        conscious: 'bits consciously processed',
+        dailyDecisions: 'daily decisions average',
       },
     },
     featured: {
@@ -362,19 +364,21 @@ export const translations: Record<Language, Translations> = {
       rotatingSnakes: {
         title: 'The Rotating Snakes',
         subtitle: 'Stare at the center. Are the circles moving?',
-        instruction: "What's happening: Your brain is interpreting static patterns as motion. The asymmetric luminance gradients trick your motion-detection neurons into firing. You're seeing movement that doesn't exist—a manufactured reality from unchanging pixels.",
+        whatsHappening: "What's happening",
+        instruction: "Your brain is interpreting static patterns as motion. The asymmetric luminance gradients trick your motion-detection neurons into firing. You're seeing movement that doesn't exist, a manufactured reality from unchanging pixels.",
       },
       mullerLyer: {
         title: 'The Müller-Lyer Illusion',
         subtitle: 'Which horizontal line is longer?',
-        instruction: "What's happening: The lines are exactly the same length. But your visual system—trained by years of processing 3D environments—interprets the arrows as depth cues. You literally cannot see equal lengths even when you know they're equal.",
+        whatsHappening: "What's happening",
+        instruction: "The lines are exactly the same length. But your visual system, trained by years of processing 3D environments, interprets the arrows as depth cues. You literally cannot see equal lengths even when you know they're equal.",
         reveal: 'REVEAL THE TRUTH',
       },
       hermannGrid: {
         title: 'The Hermann Grid',
         subtitle: "Focus on any white intersection. Do you see gray dots at the intersections you're NOT looking at?",
         whatsHappening: "What's happening",
-        instruction: "You perceive dark spots at intersections you're not directly looking at, but they vanish when you focus on them. This is lateral inhibition—your retinal ganglion cells suppress signals from neighboring areas, creating phantom darkness where none exists. You're literally hallucinating in plain sight.",
+        instruction: "You perceive dark spots at intersections you're not directly looking at, but they vanish when you focus on them. This is lateral inhibition: your retinal ganglion cells suppress signals from neighboring areas, creating phantom darkness where none exists. You're literally hallucinating in plain sight.",
       },
     },
     categories: {
@@ -434,7 +438,7 @@ export const translations: Record<Language, Translations> = {
         highlight: 'KOMMT',
         line2: 'VOR DEM RAUSCHEN',
       },
-      subtitle: 'Die meisten Interventionen kommen zu spät. Wir arbeiten auf der Wahrnehmungsebene—vor der Interpretation, vor den Entscheidungen, vor dem Handeln. Wo Realität geformt wird.',
+      subtitle: 'Die meisten Interventionen kommen zu spät. Wir arbeiten auf der Wahrnehmungsebene: vor der Interpretation, vor den Entscheidungen, vor dem Handeln. Wo Realität geformt wird.',
       cta: {
         explore: 'ERKUNDEN',
         subscribe: 'ABONNIEREN',
@@ -536,10 +540,10 @@ export const translations: Record<Language, Translations> = {
       label: 'DIE ZAHLEN',
       title: 'Die Wahrnehmungslücke',
       items: {
-        decisions: '% der Entscheidungen unbewusst getroffen',
-        bitsPerSecond: 'Millionen Bits Info pro Sekunde',
+        decisions: 'der Entscheidungen unbewusst getroffen',
+        bitsPerSecond: 'Bits Info pro Sekunde',
         conscious: 'Bits bewusst verarbeitet',
-        dailyDecisions: 'K tägliche Entscheidungen',
+        dailyDecisions: 'tägliche Entscheidungen',
       },
     },
     featured: {
@@ -589,19 +593,21 @@ export const translations: Record<Language, Translations> = {
       rotatingSnakes: {
         title: 'Die Rotierenden Schlangen',
         subtitle: 'Starre auf die Mitte. Bewegen sich die Kreise?',
-        instruction: 'Was passiert: Dein Gehirn interpretiert statische Muster als Bewegung. Die asymmetrischen Helligkeitsgradienten täuschen deine Bewegungserkennungs-Neuronen. Du siehst Bewegung, die nicht existiert—eine konstruierte Realität aus unveränderlichen Pixeln.',
+        whatsHappening: 'Was passiert',
+        instruction: 'Dein Gehirn interpretiert statische Muster als Bewegung. Die asymmetrischen Helligkeitsgradienten täuschen deine Bewegungserkennungs-Neuronen. Du siehst Bewegung, die nicht existiert, eine konstruierte Realität aus unveränderlichen Pixeln.',
       },
       mullerLyer: {
         title: 'Die Müller-Lyer Illusion',
         subtitle: 'Welche horizontale Linie ist länger?',
-        instruction: 'Was passiert: Die Linien sind exakt gleich lang. Aber dein visuelles System—trainiert durch Jahre der Verarbeitung von 3D-Umgebungen—interpretiert die Pfeile als Tiefenhinweise. Du kannst buchstäblich keine gleichen Längen sehen, selbst wenn du weißt, dass sie gleich sind.',
+        whatsHappening: 'Was passiert',
+        instruction: 'Die Linien sind exakt gleich lang. Aber dein visuelles System, trainiert durch Jahre der Verarbeitung von 3D-Umgebungen, interpretiert die Pfeile als Tiefenhinweise. Du kannst buchstäblich keine gleichen Längen sehen, selbst wenn du weißt, dass sie gleich sind.',
         reveal: 'WAHRHEIT ENTHÜLLEN',
       },
       hermannGrid: {
         title: 'Das Hermann-Gitter',
         subtitle: 'Fokussiere auf eine weiße Kreuzung. Siehst du graue Punkte an den Kreuzungen, die du NICHT anschaust?',
         whatsHappening: 'Was passiert',
-        instruction: 'Du nimmst dunkle Flecken an Kreuzungen wahr, die du nicht direkt anschaust, aber sie verschwinden, wenn du sie fokussierst. Das ist laterale Hemmung—deine retinalen Ganglienzellen unterdrücken Signale aus benachbarten Bereichen und erzeugen Phantomdunkelheit, wo keine existiert. Du halluzinierst buchstäblich bei hellem Tageslicht.',
+        instruction: 'Du nimmst dunkle Flecken an Kreuzungen wahr, die du nicht direkt anschaust, aber sie verschwinden, wenn du sie fokussierst. Das ist laterale Hemmung: Deine retinalen Ganglienzellen unterdrücken Signale aus benachbarten Bereichen und erzeugen Phantomdunkelheit, wo keine existiert. Du halluzinierst buchstäblich bei hellem Tageslicht.',
       },
     },
     categories: {
@@ -661,7 +667,7 @@ export const translations: Record<Language, Translations> = {
         highlight: 'LLEGA',
         line2: 'ANTES DEL RUIDO',
       },
-      subtitle: 'La mayoría de las intervenciones llegan demasiado tarde. Trabajamos en la capa de percepción—antes de la interpretación, antes de las decisiones, antes de la acción. Donde se forma la realidad.',
+      subtitle: 'La mayoría de las intervenciones llegan demasiado tarde. Trabajamos en la capa de percepción: antes de la interpretación, antes de las decisiones, antes de la acción. Donde se forma la realidad.',
       cta: {
         explore: 'EXPLORAR',
         subscribe: 'SUSCRIBIRSE',
@@ -758,10 +764,10 @@ export const translations: Record<Language, Translations> = {
       label: 'LOS NÚMEROS',
       title: 'La Brecha de Percepción',
       items: {
-        decisions: '% de decisiones tomadas inconscientemente',
-        bitsPerSecond: 'Millones de bits de info por segundo',
-        conscious: 'Bits procesados conscientemente',
-        dailyDecisions: 'K decisiones diarias promedio',
+        decisions: 'de decisiones tomadas inconscientemente',
+        bitsPerSecond: 'bits de info por segundo',
+        conscious: 'bits procesados conscientemente',
+        dailyDecisions: 'decisiones diarias promedio',
       },
     },
     featured: {
@@ -811,19 +817,21 @@ export const translations: Record<Language, Translations> = {
       rotatingSnakes: {
         title: 'Las Serpientes Rotantes',
         subtitle: '¿Se están moviendo los círculos? Mira fijamente al centro.',
-        instruction: 'Qué está pasando: Tu cerebro interpreta patrones estáticos como movimiento. Los gradientes de luminancia asimétricos engañan a tus neuronas de detección de movimiento. Estás viendo movimiento que no existe—una realidad fabricada de píxeles inmutables.',
+        whatsHappening: 'Qué está pasando',
+        instruction: 'Tu cerebro interpreta patrones estáticos como movimiento. Los gradientes de luminancia asimétricos engañan a tus neuronas de detección de movimiento. Estás viendo movimiento que no existe, una realidad fabricada de píxeles inmutables.',
       },
       mullerLyer: {
         title: 'La Ilusión de Müller-Lyer',
         subtitle: '¿Qué línea horizontal es más larga?',
-        instruction: 'Qué está pasando: Las líneas tienen exactamente la misma longitud. Pero tu sistema visual—entrenado por años de procesar entornos 3D—interpreta las flechas como señales de profundidad. Literalmente no puedes ver longitudes iguales incluso cuando sabes que son iguales.',
+        whatsHappening: 'Qué está pasando',
+        instruction: 'Las líneas tienen exactamente la misma longitud. Pero tu sistema visual, entrenado por años de procesar entornos 3D, interpreta las flechas como señales de profundidad. Literalmente no puedes ver longitudes iguales incluso cuando sabes que son iguales.',
         reveal: 'REVELAR LA VERDAD',
       },
       hermannGrid: {
         title: 'La Cuadrícula de Hermann',
         subtitle: '¿Ves puntos grises en las intersecciones que NO estás mirando?',
         whatsHappening: 'Qué está pasando',
-        instruction: 'Percibes puntos oscuros en las intersecciones que no estás mirando directamente, pero desaparecen cuando te enfocas en ellos. Esto es inhibición lateral—tus células ganglionares retinales suprimen señales de áreas vecinas, creando oscuridad fantasma donde no existe ninguna. Literalmente estás alucinando a plena vista.',
+        instruction: 'Percibes puntos oscuros en las intersecciones que no estás mirando directamente, pero desaparecen cuando te enfocas en ellos. Esto es inhibición lateral: tus células ganglionares retinales suprimen señales de áreas vecinas, creando oscuridad fantasma donde no existe ninguna. Literalmente estás alucinando a plena vista.',
       },
     },
     categories: {

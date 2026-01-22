@@ -105,7 +105,7 @@ export default function Quote({ words, author }: QuoteProps) {
           className="quote-author mt-[30px] font-mono text-sm tracking-[0.1em]"
           style={{ color: 'var(--text-muted)' }}
         >
-          — {author}
+          – {author}
         </p>
       </div>
     </section>

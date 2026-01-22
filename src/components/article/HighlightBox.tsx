@@ -21,7 +21,7 @@ export default function HighlightBox({ children, copyText, shareText }: Highligh
 
   const handleShare = async () => {
     const url = window.location.href
-    const text = `"${shareText}" — from UNBLIND`
+    const text = `"${shareText}" – from UNBLIND`
 
     if (navigator.share) {
       try {

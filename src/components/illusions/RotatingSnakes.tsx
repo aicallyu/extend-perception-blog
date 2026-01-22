@@ -112,7 +112,7 @@ export default function RotatingSnakes() {
           }}
         >
           <p className="m-0 text-[15px] leading-[1.7]" style={{ color: 'var(--text-secondary)' }}>
-            <strong style={{ color: 'var(--accent-cyan)' }}>What's happening:</strong>{' '}
+            <strong style={{ color: 'var(--accent-cyan)' }}>{t.illusions.rotatingSnakes.whatsHappening}:</strong>{' '}
             {t.illusions.rotatingSnakes.instruction}
           </p>
         </div>

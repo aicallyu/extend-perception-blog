@@ -6,10 +6,10 @@ import { useLanguage } from '@/i18n'
 gsap.registerPlugin(ScrollTrigger)
 
 const statsData = [
-  { target: 90, key: 'decisions' as const },
-  { target: 11, key: 'bitsPerSecond' as const },
-  { target: 40, key: 'conscious' as const },
-  { target: 35, key: 'dailyDecisions' as const },
+  { target: 90, suffix: '%', key: 'decisions' as const },
+  { target: 10, suffix: 'M', key: 'bitsPerSecond' as const },
+  { target: 50, suffix: '', key: 'conscious' as const },
+  { target: 35, suffix: 'K', key: 'dailyDecisions' as const },
 ]
 
 export default function Stats() {
@@ -117,7 +117,7 @@ export default function Stats() {
                   backgroundClip: 'text',
                 }}
               >
-                {counters[index]}
+                {counters[index]}{stat.suffix}
               </div>
               <div
                 className="stat-label font-mono text-xs tracking-[0.15em] uppercase"

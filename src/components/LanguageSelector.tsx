@@ -17,14 +17,14 @@ export default function LanguageSelector() {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300"
+        className="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg text-sm font-medium transition-all duration-300"
         style={{
           background: 'var(--bg-card)',
           border: '1px solid var(--border-color)',
           color: 'var(--text-secondary)',
         }}
       >
-        <span>{currentLang?.flag}</span>
+        <span className="text-base sm:text-lg">{currentLang?.flag}</span>
         <span className="hidden sm:inline">{currentLang?.code.toUpperCase()}</span>
         <svg
           className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
