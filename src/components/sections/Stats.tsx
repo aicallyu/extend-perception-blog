@@ -59,9 +59,6 @@ export default function Stats() {
       })
     })
 
-    return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill())
-    }
   }, [])
 
   return (
@@ -81,7 +78,6 @@ export default function Stats() {
             <div
               key={stat.label}
               className="stat-item text-center"
-              style={{ opacity: 0, transform: 'translateY(30px)' }}
             >
               <div
                 className="stat-number font-display font-black leading-none mb-2.5"

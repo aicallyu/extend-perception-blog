@@ -112,7 +112,6 @@ export default function Library() {
     document.addEventListener('keydown', handleKeyDown)
 
     return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill())
       document.removeEventListener('keydown', handleKeyDown)
       stopAutoPlay()
     }
@@ -144,7 +143,7 @@ export default function Library() {
       <div className="library-header text-center mb-[100px] relative z-10">
         <div
           className="library-label font-mono text-xs tracking-[0.3em] uppercase mb-6 inline-flex items-center gap-5"
-          style={{ color: 'var(--accent-cyan)', opacity: 0 }}
+          style={{ color: 'var(--accent-cyan)' }}
         >
           FEATURED POSTS
         </div>
@@ -158,7 +157,6 @@ export default function Library() {
             backgroundClip: 'text',
             animation: 'titleShine 4s ease-in-out infinite',
             letterSpacing: '-0.03em',
-            opacity: 0,
           }}
         >
           Start here

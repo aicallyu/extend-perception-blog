@@ -50,9 +50,6 @@ export default function Posts() {
       })
     })
 
-    return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill())
-    }
   }, [])
 
   return (
@@ -90,8 +87,6 @@ export default function Posts() {
                 border: '1px solid rgba(255, 255, 255, 0.03)',
                 color: 'var(--text-primary)',
                 transition: 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
-                opacity: 0,
-                transform: 'translateX(-50px)',
               }}
             >
               {/* Left accent bar */}
