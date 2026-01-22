@@ -21,10 +21,10 @@ export default function ArticlePage() {
   const { slug } = useParams<{ slug: string }>()
   const { isDark, toggleTheme } = useTheme()
   const [progress, setProgress] = useState(0)
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
 
   const article = slug ? getArticleBySlug(slug) : undefined
-  const articleContent = slug ? getArticleContent(slug) : undefined
+  const articleContent = slug ? getArticleContent(slug, language) : undefined
 
   // Übersetzte Artikel-Daten
   const getTranslatedArticle = () => {
