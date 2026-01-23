@@ -6,7 +6,7 @@ import { useLanguage } from '@/i18n'
 gsap.registerPlugin(ScrollTrigger)
 
 // n8n Webhook URL - replace with your actual webhook URL after importing the workflow
-const WEBHOOK_URL = import.meta.env.VITE_SUBSCRIBE_WEBHOOK_URL || 'https://your-n8n-instance.com/webhook/unblind-subscribe'
+const WEBHOOK_URL = import.meta.env.VITE_SUBSCRIBE_WEBHOOK_URL || 'https://your-n8n-instance.com/webhook/xp-subscribe'
 
 type SubmitStatus = 'idle' | 'sending' | 'success' | 'error'
 

@@ -21,6 +21,7 @@ import FeaturedPost from '@/components/sections/FeaturedPost'
 import Library from '@/components/sections/Library'
 import Posts from '@/components/sections/Posts'
 import Subscribe from '@/components/sections/Subscribe'
+import SubscribeInline from '@/components/sections/SubscribeInline'
 import { useLanguage } from '@/i18n'
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin)
@@ -90,6 +91,8 @@ export default function LandingPage() {
 
         <Topics />
 
+        <SubscribeInline source="after-topics" />
+
         <RotatingSnakes />
 
         <MullerLyer />
@@ -101,6 +104,8 @@ export default function LandingPage() {
         <Stats />
 
         <FeaturedPost />
+
+        <SubscribeInline source="after-featured" />
 
         <Library />
 
